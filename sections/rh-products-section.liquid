@@ -59,7 +59,7 @@
     </div>
     {% if section.settings.show_browse_button %}
       <div class="course-button">
-        <a href="{{ section.settings.browse_button_link }}" class="rh-primary-button">
+        <a href="{% if section.settings.browse_button_link != blank %}{{ section.settings.browse_button_link }}{% else %}{{ routes.collections_url }}/all{% endif %}" class="rh-primary-button">
           {{ section.settings.browse_button_text }}
         </a>
       </div>
@@ -167,7 +167,8 @@
     {
       "type": "url",
       "id": "browse_button_link",
-      "label": "Button Link"
+      "label": "Button Link",
+      "default": "/collections/all"
     }
   ],
   "presets": [

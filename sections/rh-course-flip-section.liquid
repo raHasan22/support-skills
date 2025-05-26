@@ -60,7 +60,7 @@
       <p class="section-description">
         {{ section.settings.section_description }}
       </p>
-      <a href="{{ section.settings.button_link }}" class="rh-primary-button">
+      <a href="{% if section.settings.button_link != blank %}{{ section.settings.button_link }}{% else %}{{ routes.collections_url }}/all{% endif %}" class="rh-primary-button">
         {{ section.settings.button_text }}
       </a>
     </div>
@@ -111,6 +111,22 @@
     letter-spacing: 0%;
     color: #282c30;
     margin: 0 0 32px;
+  }
+  @media (max-width: 1200px) {
+    .course-flip-section .container-rh {
+      gap: 30px;
+    }
+    .course-flip-section .container-rh .rec-courses {
+      width: 65%;
+      gap: 10px;
+    }
+    .course-flip-section .container-rh .text-part {
+      width: 45%;
+    }
+    .course-flip-section .container-rh .rec-courses .common-course-card-rh {
+      max-width: 210px;
+      width: 100%;
+    }
   }
   @media (max-width: 1024px) {
     .course-flip-section .container-rh {
@@ -234,7 +250,8 @@
     {
       "type": "url",
       "id": "button_link",
-      "label": "Button Link"
+      "label": "Button Link",
+      "default": "/collections/all"
     },
     {
       "type": "header",

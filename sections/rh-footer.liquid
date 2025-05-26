@@ -223,7 +223,7 @@
 
   /* Footer Bottom Section */
   .footer-bottom {
-    justify-content: space-between;
+    justify-content: center;
     align-items: start;
     border-top: 1px solid rgba(57, 76, 96, 0.15);
     display: flex;
@@ -240,50 +240,6 @@
       max-width: 100%;
       margin-top: 40px;
     }
-  }
-
-  /* Language Selector */
-  .language-selector {
-    align-items: center;
-    border-radius: 8px;
-    border: 1px solid #a8aaab;
-    display: flex;
-    padding: 8px 16px;
-    gap: 8px;
-    overflow: hidden;
-    font-size: 14px;
-    color: #0d1216;
-    font-weight: 400;
-    line-height: 1.6;
-    justify-content: start;
-  }
-
-  .language-icon {
-    aspect-ratio: 1;
-    object-fit: contain;
-    object-position: center;
-    width: 24px;
-    align-self: stretch;
-    margin-top: auto;
-    margin-bottom: auto;
-    flex-shrink: 0;
-  }
-
-  .language-text {
-    color: #0d1216;
-    align-self: stretch;
-    margin-top: auto;
-    margin-bottom: auto;
-  }
-
-  .arrow-down {
-    align-self: stretch;
-    display: flex;
-    margin-top: auto;
-    margin-bottom: auto;
-    width: 24px;
-    flex-shrink: 0;
-    height: 24px;
   }
 
   /* Copyright Section */
@@ -418,27 +374,28 @@
                   {{ block.settings.description }}
                 </p>
               </div>
-              <div class="certificate-form">
+              <form method="post" action="/contact#ContactFooter" id="ContactFooter" accept-charset="UTF-8" class="certificate-form">
+                <input type="hidden" name="form_type" value="customer">
+                <input type="hidden" name="utf8" value="✓">
                 <div class="input-wrapper">
-                  <input type="text" class="certificate-input" placeholder="{{ block.settings.placeholder }}">
+                  <input type="email" 
+                    name="contact[email]"
+                    class="certificate-input"
+                    value=""
+                    placeholder="{{ block.settings.placeholder }}"
+                    required
+                  >
                 </div>
-                <button class="check-button">
+                <button type="submit" class="check-button">
                   <span class="button-text">{{ block.settings.button_text }}</span>
-                  <span class="search-icon"></span>
                 </button>
-              </div>
+              </form>
             </section>
         {% endcase %}
       {% endfor %}
     </nav>
 
     <div class="footer-bottom">
-      <div class="language-selector">
-        <img src="{{ 'Globe.png' | asset_img_url: '24x' }}" class="language-icon" alt="Language icon">
-        <span class="language-text">{{ 'general.language' | t }}</span>
-        <span class="arrow-down"></span>
-      </div>
-
       <div class="copyright-section">
         <div class="copyright-text">
           <p class="copyright-notice">
@@ -513,32 +470,32 @@
     },
     {
       "type": "certificate",
-      "name": "Certificate validator",
+      "name": "Newsletter Subscription",
       "limit": 1,
       "settings": [
         {
           "type": "text",
           "id": "heading",
           "label": "Heading",
-          "default": "Certificate Validator"
+          "default": "Subscribe to our newsletter"
         },
         {
           "type": "text",
           "id": "description",
           "label": "Description",
-          "default": "Quickly and easily check the validity of your course certificates with our Certificate Validator tool."
+          "default": "Stay up to date with our latest courses, updates, and educational resources."
         },
         {
           "type": "text",
           "id": "placeholder",
           "label": "Input placeholder",
-          "default": "Certificate code"
+          "default": "Enter your email"
         },
         {
           "type": "text",
           "id": "button_text",
           "label": "Button text",
-          "default": "Check"
+          "default": "Subscribe"
         }
       ]
     }

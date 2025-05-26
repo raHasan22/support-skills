@@ -16,17 +16,37 @@ var swiper = new Swiper(".mySwiper", {
       slidesPerView: 1.2,
       spaceBetween: 10,
     },
+    480: {
+      slidesPerView: 1.5,
+      spaceBetween: 15,
+    },
+    576: {
+      slidesPerView: 1.8,
+      spaceBetween: 15,
+    },
     640: {
       slidesPerView: 2.2,
       spaceBetween: 20,
     },
     768: {
+      slidesPerView: 3.2,
+      spaceBetween: 20,
+    },
+    992: {
       slidesPerView: 4.2,
       spaceBetween: 20,
     },
     1024: {
-      slidesPerView: 7.2,
+      slidesPerView: 4.2,
       spaceBetween: 20,
+    },
+    1190: {
+      slidesPerView: 4.2,
+      spaceBetween: 25,
+    },
+    1440: {
+      slidesPerView: 7.2,
+      spaceBetween: 30,
     },
   },
 });
