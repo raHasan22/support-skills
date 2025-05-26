@@ -1,3 +1,5 @@
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+<script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
 <section class="rec-course-rh">
   <div class="container-rh">
     <h2 class="section-title">{{ section.settings.title | default: "Courses Recommended for You" }}</h2>
@@ -86,14 +88,19 @@
   margin: 0 0 64px;
 }
 .rec-course-rh .container-rh .rec-courses {
-  display: flex;
+  /* display: flex;
   gap: 16px;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: center; */
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  width: 100%;
 }
 .rec-course-rh .container-rh .rec-courses .common-course-card-rh {
-  max-width: 266px;
-  width: 100%;
+  width: calc((100% - 80px) / 6); /* 6 columns with 16px gap (5 gaps = 80px) */
+  margin: 0 0 16px;
 }
 
 .rec-course-rh .container-rh .course-button{
@@ -106,6 +113,24 @@
   .rec-course-rh .container-rh .section-title {
     font-size: 34px;
     margin: 0 0 34px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .rec-course-rh .container-rh .rec-courses .common-course-card-rh {
+    width: calc((100% - 48px) / 4); /* 4 columns */
+  }
+}
+
+@media (max-width: 768px) {
+  .rec-course-rh .container-rh .rec-courses .common-course-card-rh {
+    width: calc((100% - 32px) / 3); /* 3 columns */
+  }
+}
+
+@media (max-width: 480px) {
+  .rec-course-rh .container-rh .rec-courses .common-course-card-rh {
+    width: calc((100% - 16px) / 2); /* 2 columns */
   }
 }
 </style>
@@ -179,3 +204,16 @@
   ]
 }
 {% endschema %}
+
+<script>
+var grid = document.querySelector('.rec-courses');
+imagesLoaded(grid, function() {
+    var masonry = new Masonry(grid, {
+        itemSelector: '.common-course-card-rh',
+        columnWidth: '.common-course-card-rh',
+        gutter: 16,
+        percentPosition: true,
+        initLayout: true
+    });
+});
+</script>
