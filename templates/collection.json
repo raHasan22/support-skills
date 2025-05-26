@@ -1,0 +1,126 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "rh_all_courses_hero_V4Etfc": {
+      "type": "rh-all-courses-hero",
+      "blocks": {
+        "slide_RwpNbM": {
+          "type": "slide",
+          "settings": {
+            "card_heading": "Unlimited Learning",
+            "card_text": "Access our entire catalog of 80+ Nanodegree programs, 350+ courses, and 2,500+ skills."
+          }
+        },
+        "slide_tp6Nta": {
+          "type": "slide",
+          "settings": {
+            "card_heading": "Expert Instructors",
+            "card_text": "Learn from industry professionals with real-world experience."
+          }
+        },
+        "slide_XyMY4M": {
+          "type": "slide",
+          "settings": {
+            "card_heading": "Flexible Learning",
+            "card_text": "Study at your own pace with 24/7 access to materials."
+          }
+        }
+      },
+      "block_order": [
+        "slide_RwpNbM",
+        "slide_tp6Nta",
+        "slide_XyMY4M"
+      ],
+      "name": "Hero Section with Slider",
+      "settings": {
+        "hero_text": "Bootcamp level quality, on your own time, at a fraction of the cost.",
+        "background_image": "shopify://shop_images/Frame_40627.png",
+        "shape_image": "shopify://shop_images/Abstract-Rainbow-Curly-Line-2--Streamline-Variable-Scribbles.png",
+        "star_image": "shopify://shop_images/Line-Asterisk--Streamline-Variable-Scribbles.png"
+      }
+    },
+    "banner": {
+      "type": "main-collection-banner",
+      "custom_css": [
+        ".collection-hero__title {text-align: center;}"
+      ],
+      "settings": {
+        "show_collection_description": true,
+        "show_collection_image": false,
+        "color_scheme": "scheme-1"
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "custom_css": [],
+      "settings": {
+        "products_per_page": 36,
+        "columns_desktop": 6,
+        "columns_mobile": "1",
+        "color_scheme": "scheme-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "enable_filtering": true,
+        "filter_type": "horizontal",
+        "enable_sorting": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rh_all_collection_section_iqfiAr": {
+      "type": "rh-all-collection-section",
+      "blocks": {
+        "collection_bxLUnn": {
+          "type": "collection",
+          "settings": {
+            "collection": "all-courses",
+            "custom_image": "shopify://shop_images/Device_-_Macbook_Pro.png",
+            "background_color": "#ebe4ff"
+          }
+        },
+        "collection_x3cRH6": {
+          "type": "collection",
+          "settings": {
+            "collection": "frontpage",
+            "custom_image": "shopify://shop_images/Device_-_Macbook_Pro.png",
+            "background_color": "#e4ffee"
+          }
+        },
+        "collection_XbqtyW": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "background_color": "#ffe4e4"
+          }
+        }
+      },
+      "block_order": [
+        "collection_bxLUnn",
+        "collection_x3cRH6",
+        "collection_XbqtyW"
+      ],
+      "name": "RH All Collection Cards",
+      "settings": {
+        "heading": "Discover our Skill Collections"
+      }
+    }
+  },
+  "order": [
+    "rh_all_courses_hero_V4Etfc",
+    "banner",
+    "product-grid",
+    "rh_all_collection_section_iqfiAr"
+  ]
+}

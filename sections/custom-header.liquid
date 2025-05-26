@@ -1,0 +1,414 @@
+<header class="frame">
+  <div class="div">
+    <!-- Dynamic Site Logo -->
+    <a href="/" class="site-logo">
+      {% if section.settings.logo %}
+        <img src="{{ section.settings.logo | img_url: 'master' }}" alt="{{ shop.name }}">
+      {% else %}
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20 0C9 0 0 9 0 20C0 31 9 40 20 40C31 40 40 31 40 20C40 9 31 0 20 0ZM20 36C11.7 36 5 29.3 5 20C5 10.7 11.7 4 20 4C28.3 4 35 10.7 35 20C35 29.3 28.3 36 20 36Z" fill="#141B34"/>
+        </svg>
+      {% endif %}
+    </a>
+
+    <!-- Hamburger Menu -->
+    <div class="hamburger-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- Dynamic Navigation Menu -->
+    <ul class="nav-list">
+      {%- for link in section.settings.main_menu.links -%}
+        <li>
+          <a href="{{ link.url }}" class="nav-link">
+            {{ link.title }}
+            {%- if link.child_list != blank -%}
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 9L11.2929 14.2929C11.6262 14.6262 11.7929 14.7929 12 14.7929C12.2071 14.7929 12.3738 14.6262 12.7071 14.2929L18 9" stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            {%- endif -%}
+          </a>
+        </li>
+      {%- endfor -%}
+    </ul>
+  </div>
+
+  <div class="div-3">
+    <!-- Search Bar -->
+    <div class="search-bar">
+      {% render 'header-search', input_id: 'Search-In-Modal' %}
+    </div>
+
+    <!-- Account Links (Conditional) -->
+    {% if customer %}
+      <!-- Show when logged in -->
+      <a href="/account" class="div-wrapper">
+        <div class="text-wrapper">My Account</div>
+      </a>
+      <a href="/account/logout" class="button-3">
+        <div class="contact-us-2">Log Out</div>
+      </a>
+    {% else %}
+      <!-- Show when logged out -->
+      <a href="/account/login" class="div-wrapper">
+        <div class="text-wrapper">Log in</div>
+      </a>
+      <a href="/account/register" class="button-3">
+        <div class="contact-us-2">Join for Free</div>
+      </a>
+    {% endif %}
+  </div>
+</header>
+
+<style>
+  .frame {
+    display: flex;
+    height: 80px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 110px;
+    position: relative;
+    background-color: #ffffff;
+  }
+
+  .frame .div {
+    gap: 24px;
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    flex: 0 0 auto;
+  }
+
+  .frame .support-skills {
+    position: relative;
+    width: 185px;
+    height: 30px;
+  }
+
+  .frame .div-2 {
+    gap: 4px;
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    flex: 0 0 auto;
+  }
+
+  .frame .button {
+    all: unset;
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 16px;
+    position: relative;
+    flex: 0 0 auto;
+    border-radius: 8px;
+  }
+
+  .frame .contact-us {
+    position: relative;
+    width: fit-content;
+    margin-top: -1.00px;
+    font-family: "Bricolage Grotesque", Helvetica;
+    font-weight: 400;
+    color: rgba(13, 18, 22, 1);
+    font-size: 16px;
+    letter-spacing: 0px;
+    line-height: 160.0000023841858%;
+    white-space: nowrap;
+    font-style: normal;
+  }
+
+  .frame .img {
+    position: relative;
+    width: 24px;
+    height: 24px;
+  }
+
+  .frame .contact-us-wrapper {
+    all: unset;
+    box-sizing: border-box;
+    align-items: flex-end;
+    gap: 8px;
+    padding: 7px 16px;
+    display: inline-flex;
+    position: relative;
+    flex: 0 0 auto;
+    border-radius: 8px;
+  }
+
+  .frame .div-3 {
+    gap: 16px;
+    display: inline-flex;
+    align-items: center;
+    flex: 0 0 auto;
+  }
+
+  .frame .button-2 {
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    display: inline-flex;
+    position: relative;
+    flex: 0 0 auto;
+    border-radius: 8px;
+  }
+
+  .frame .div-wrapper {
+    all: unset;
+    box-sizing: border-box;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 7px 14px;
+    background-color: #ffffff;
+    border: 1px solid;
+    border-color: rgba(195, 196, 197, 1);
+    display: inline-flex;
+    position: relative;
+    flex: 0 0 auto;
+    border-radius: 8px;
+  }
+
+  .frame .text-wrapper {
+    color: rgba(13, 18, 22, 1);
+    position: relative;
+    width: fit-content;
+    margin-top: -1.00px;
+    font-family: "Bricolage Grotesque", Helvetica;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 0px;
+    line-height: 160.0000023841858%;
+    white-space: nowrap;
+    font-style: normal;
+  }
+
+  .frame .button-3 {
+    all: unset;
+    box-sizing: border-box;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 7px 14px;
+    background-color: rgba(139, 61, 255, 1);
+    display: inline-flex;
+    position: relative;
+    flex: 0 0 auto;
+    border-radius: 8px;
+  }
+
+  .frame .contact-us-2 {
+    color: #ffffff;
+    position: relative;
+    width: fit-content;
+    margin-top: -1.00px;
+    font-family: "Bricolage Grotesque", Helvetica;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 0px;
+    line-height: 160.0000023841858%;
+    white-space: nowrap;
+    font-style: normal;
+  }
+
+  /* New navigation styles */
+  .nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 4px;
+    align-items: center;
+  }
+
+  .nav-list li {
+    display: inline-block;
+  }
+
+  .nav-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 16px;
+    border-radius: 8px;
+    font-family: "Bricolage Grotesque", Helvetica;
+    font-weight: 400;
+    color: rgba(13, 18, 22, 1);
+    font-size: 16px;
+    white-space: nowrap;
+    text-decoration: none;
+  }
+
+  .nav-link:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+
+  /* Hamburger Menu Styles - Hidden by default */
+  .hamburger-menu {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+  }
+
+  .hamburger-menu span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #141B34;
+    transition: all 0.3s ease;
+  }
+
+  /* Responsive Styles */
+  @media (max-width: 1200px) {
+    .frame {
+      padding: 20px 60px;
+    }
+  }
+
+  @media (max-width: 992px) {
+    .frame {
+      padding: 20px 40px;
+    }
+
+    .nav-list {
+      gap: 2px;
+    }
+
+    .nav-link {
+      padding: 7px 12px;
+      font-size: 15px;
+    }
+
+    .div-3 {
+      gap: 12px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .frame {
+      flex-wrap: wrap;
+      height: auto;
+      padding: 15px 20px;
+      gap: 15px;
+    }
+
+    .frame .div {
+      width: 100%;
+      justify-content: space-between;
+    }
+
+    .hamburger-menu {
+      display: flex;
+      order: 2;
+    }
+
+    .nav-list {
+      display: none;
+      position: absolute;
+      top: 70px;
+      left: 0;
+      width: 100%;
+      background-color: #ffffff;
+      flex-direction: column;
+      padding: 15px 20px;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+      z-index: 1000;
+    }
+
+    .nav-list.active {
+      display: flex;
+    }
+
+    .nav-list li {
+      width: 100%;
+    }
+
+    .nav-link {
+      width: 100%;
+      padding: 12px 16px;
+    }
+
+    .div-3 {
+      width: 100%;
+      justify-content: center;
+      order: 3;
+      padding-top: 15px;
+      border-top: 1px solid #eee;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .frame {
+      padding: 15px;
+    }
+
+    .div-3 {
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .search-bar {
+      width: 100%;
+      order: 1;
+      margin-bottom: 10px;
+    }
+
+    .div-wrapper, .button-3 {
+      flex-grow: 1;
+      text-align: center;
+    }
+  }
+  .div-3 a{
+    cursor: pointer !important;
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const hamburgerMenu = document.querySelector('.hamburger-menu');
+    const navList = document.querySelector('.nav-list');
+
+    if (hamburgerMenu && navList) {
+      hamburgerMenu.addEventListener('click', function () {
+        navList.classList.toggle('active');
+        hamburgerMenu.classList.toggle('active');
+      });
+    }
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', function(e) {
+      if (!e.target.closest('.div') && navList.classList.contains('active')) {
+        navList.classList.remove('active');
+        hamburgerMenu.classList.remove('active');
+      }
+    });
+  });
+</script>
+{% schema %}
+{
+  "name": "Custom Header",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo"
+    },
+    {
+      "type": "link_list",
+      "id": "main_menu",
+      "label": "Main Menu",
+      "default": "main-menu"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Header",
+      "category": "custom"
+    }
+  ]
+}
+{% endschema %}

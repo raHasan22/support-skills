@@ -1,0 +1,456 @@
+<section class="landing-container-rh">
+  <section class="business-section">
+    <div class="business-content">
+      <div class="business-info">
+        <h2 class="main-heading">{{ section.settings.business_heading }}</h2>
+        <div class="features-container">
+          <h3 class="features-heading">
+            {{ section.settings.features_heading }}
+          </h3>
+          
+          {% for block in section.blocks %}
+            {% if block.type == 'business_feature' %}
+              <div class="feature-item">
+                <img
+                  src="{{ block.settings.feature_icon | img_url: '50x50' }}"
+                  alt="{{ block.settings.feature_icon.alt }}"
+                  class="feature-icon"
+                />
+                <p class="feature-text">{{ block.settings.feature_text }}</p>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+        <div class="cta-container">
+          <a href="{{ section.settings.primary_button_link }}" class="cta-button primary">
+            {{ section.settings.primary_button_text }}
+          </a>
+          <a href="{{ section.settings.secondary_button_link }}" class="cta-button secondary">
+            {{ section.settings.secondary_button_text }}
+          </a>
+        </div>
+      </div>
+      <div class="business-image-container">
+        <img
+          src="{{ section.settings.business_image | img_url: '800x' }}"
+          alt="{{ section.settings.business_image.alt }}"
+          class="business-image"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="government-section">
+    <div class="government-content">
+      <div class="government-info">
+        <div class="government-text">
+          <h2 class="government-heading">{{ section.settings.government_heading }}</h2>
+          <p class="government-description">
+            {{ section.settings.government_description }}
+          </p>
+        </div>
+        <a href="{{ section.settings.government_button_link }}" class="cta-button secondary">
+          {{ section.settings.government_button_text }}
+        </a>
+      </div>
+      <img
+        src="{{ section.settings.government_image | img_url: '800x' }}"
+        alt="{{ section.settings.government_image.alt }}"
+        class="government-image"
+      />
+    </div>
+  </section>
+</section>
+
+{% schema %}
+{
+  "name": "Business & Government",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Business Section"
+    },
+    {
+      "type": "text",
+      "id": "business_heading",
+      "label": "Business Heading",
+      "default": "SupportSkills for Business"
+    },
+    {
+      "type": "text",
+      "id": "features_heading",
+      "label": "Features Heading",
+      "default": "Scale skills development for your organization"
+    },
+    {
+      "type": "image_picker",
+      "id": "business_image",
+      "label": "Business Section Image"
+    },
+    {
+      "type": "text",
+      "id": "primary_button_text",
+      "label": "Primary Button Text",
+      "default": "Learn more"
+    },
+    {
+      "type": "url",
+      "id": "primary_button_link",
+      "label": "Primary Button Link"
+    },
+    {
+      "type": "text",
+      "id": "secondary_button_text",
+      "label": "Secondary Button Text",
+      "default": "Contact us"
+    },
+    {
+      "type": "url",
+      "id": "secondary_button_link",
+      "label": "Secondary Button Link"
+    },
+    {
+      "type": "header",
+      "content": "Government Section"
+    },
+    {
+      "type": "text",
+      "id": "government_heading",
+      "label": "Government Heading",
+      "default": "SupportSkills For Government"
+    },
+    {
+      "type": "textarea",
+      "id": "government_description",
+      "label": "Government Description",
+      "default": "SupportSkills creates job opportunities with GDP impact for nations embracing the global digital era."
+    },
+    {
+      "type": "image_picker",
+      "id": "government_image",
+      "label": "Government Section Image"
+    },
+    {
+      "type": "text",
+      "id": "government_button_text",
+      "label": "Government Button Text",
+      "default": "Learn more"
+    },
+    {
+      "type": "url",
+      "id": "government_button_link",
+      "label": "Government Button Link"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "business_feature",
+      "name": "Business Feature",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "feature_icon",
+          "label": "Feature Icon",
+          "info": "Recommended size: 50x50px"
+        },
+        {
+          "type": "text",
+          "id": "feature_text",
+          "label": "Feature Text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "RH Business & Government Sections",
+      "category": "Custom Sections",
+      "blocks": [
+        {
+          "type": "business_feature",
+          "settings": {
+            "feature_text": "Hands-on project-based approach"
+          }
+        },
+        {
+          "type": "business_feature",
+          "settings": {
+            "feature_text": "Top content co-developed with industry leaders"
+          }
+        },
+        {
+          "type": "business_feature",
+          "settings": {
+            "feature_text": "Global mentor network with 700+ domain experts"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+    <style>
+      .landing-container-rh {
+        align-self: stretch;
+        background-color: #fff;
+        padding: 120px 20px;
+      }
+
+      .landing-container-rh .business-section {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        gap: 40px 144px;
+        justify-content: start;
+        flex-wrap: wrap;
+        max-width: 1416px;
+        margin: 0 auto;
+      }
+
+      .landing-container-rh .business-content {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        gap: 40px 144px;
+        justify-content: start;
+        flex-wrap: wrap;
+      }
+
+      .landing-container-rh .business-info {
+        align-self: stretch;
+        display: flex;
+        min-width: 240px;
+        margin: auto 0;
+        flex-direction: column;
+        align-items: stretch;
+        font-family: "Bricolage Grotesque", -apple-system, Roboto, Helvetica,
+          sans-serif;
+        font-size: 16px;
+        line-height: 1.6;
+        justify-content: start;
+        flex: 1;
+        width: 461px;
+      }
+
+      .landing-container-rh .main-heading {
+        width: 100%;
+        font-family: "Bricolage Grotesque";
+        font-size: 48px;
+        color: #0d1216;
+        font-weight: 500;
+        letter-spacing: -0.29px;
+        line-height: 50px;
+        margin: 0;
+      }
+
+      .landing-container-rh .features-container {
+        margin-top: 32px;
+        width: 100%;
+        color: #0d1216;
+        font-weight: 400;
+      }
+
+      .landing-container-rh .features-heading {
+        font-size: 20px;
+        font-family: "Bricolage Grotesque";
+        font-weight: 600;
+        margin: 0;
+      }
+
+      .landing-container-rh .feature-item {
+        display: flex;
+        margin-top: 16px;
+        width: 100%;
+        align-items: start;
+        gap: 8px;
+        justify-content: start;
+        flex-wrap: wrap;
+      }
+
+      .landing-container-rh .feature-icon {
+        aspect-ratio: 1;
+        object-fit: contain;
+        object-position: center;
+        width: 24px;
+        flex-shrink: 0;
+      }
+
+      .landing-container-rh .feature-text {
+        font-family: "Bricolage Grotesque";
+        flex: 1;
+        margin: 0;
+      }
+
+      .landing-container-rh .cta-container {
+        align-self: start;
+        display: flex;
+        margin-top: 32px;
+        align-items: center;
+        gap: 24px;
+        font-weight: 600;
+        justify-content: start;
+      }
+
+      .landing-container-rh .cta-button {
+        border: none;
+        border-radius: 8px;
+        padding: 7px 30px;
+        font-weight: 600;
+        font-family: inherit;
+        cursor: pointer;
+        font-family: "Bricolage Grotesque";
+        text-decoration: none;
+      }
+
+      .landing-container-rh .cta-button.primary {
+        background-color: #8b3dff;
+        color: #fff;
+      }
+
+      .landing-container-rh .cta-button.secondary {
+        background-color: #fff;
+        color: #8b3dff;
+   
+        display: inline-block;
+        width: fit-content;
+      }
+
+      .landing-container-rh .business-image-container {
+        justify-content: center;
+        align-items: stretch;
+        border-radius: 8px;
+        background: linear-gradient(
+          217deg,
+          #6d5cf6 -11.74%,
+          #6f9fef 47.87%,
+          #a065fd 102.24%
+        );
+        align-self: stretch;
+        display: flex;
+        min-width: 240px;
+        margin: auto 0;
+        flex-direction: column;
+        overflow: hidden;
+        flex: 1;
+        width: 581px;
+      }
+
+      .landing-container-rh .business-image {
+        aspect-ratio: 1.24;
+        object-fit: contain;
+        object-position: center;
+        width: 100%;
+      }
+
+      .landing-container-rh .government-section {
+        align-items: end;
+        border-radius: 8px;
+        background-color: #f3ecff;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        font-family: "Bricolage Grotesque", -apple-system, Roboto, Helvetica,
+          sans-serif;
+        justify-content: start;
+        max-width: 1416px;
+        margin: 80px auto 0;
+      }
+
+      .landing-container-rh .government-content {
+        display: flex;
+        align-items: center;
+        gap: 40px 146px;
+        justify-content: start;
+        flex-wrap: wrap;
+      }
+
+      .landing-container-rh .government-info {
+        align-self: stretch;
+        display: flex;
+        min-width: 240px;
+        margin: auto 0;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: start;
+        width: 632px;
+      }
+
+      .landing-container-rh .government-text {
+        min-height: 105px;
+        width: 100%;
+        color: #0d1216;
+      }
+
+      .landing-container-rh .government-heading {
+        font-family: "Bricolage Grotesque";
+        font-size: 40px;
+        font-weight: 500;
+        line-height: 1;
+        letter-spacing: -0.24px;
+        margin: 0;
+      }
+
+      .landing-container-rh .government-description {
+        font-family: "Bricolage Grotesque";
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 26px;
+        margin-top: 24px;
+        flex: 1;
+        margin-bottom: 20px;
+      }
+
+      .landing-container-rh .government-image {
+        aspect-ratio: 1.88;
+        object-fit: contain;
+        object-position: center;
+        width: 574px;
+        align-self: stretch;
+        min-width: 240px;
+        margin: auto 0;
+      }
+
+      @media (max-width: 991px) {
+        .landing-container-rh .landing-container {
+          padding: 100px 20px;
+        }
+        .landing-container-rh .government-section {
+          padding: 30px 30px 0;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+        }
+        .landing-container-rh .government-content{
+            justify-content: center;
+        }
+
+        .landing-container-rh .business-section,
+        .landing-container-rh .business-content,
+        .landing-container-rh .business-info,
+        .landing-container-rh .business-image-container,
+        .landing-container-rh .business-image,
+        .landing-container-rh .government-section,
+        .landing-container-rh .government-content,
+        .landing-container-rh .government-info,
+        .landing-container-rh .government-text,
+        .landing-container-rh .government-heading,
+        .landing-container-rh .government-description,
+        .landing-container-rh .government-image {
+          max-width: 100%;
+        }
+
+        .landing-container-rh .main-heading {
+          font-size: 40px;
+          line-height: 47px;
+        }
+
+        .landing-container-rh .government-section {
+          margin-top: 40px;
+        }
+
+        .landing-container-rh .cta-button {
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+      }
+    </style>

@@ -1,0 +1,210 @@
+<section class="rh-student-reviews-sec">
+  <div class="container-rh">
+    <div class="slider-wrapper">
+      <div class="swiper StudentReviewSwiper">
+        <div class="swiper-wrapper">
+          {% for block in section.blocks %}
+            <div class="swiper-slide">
+              <div class="review-card">
+                <h3 class="title">
+                  {{ section.settings.title }}
+                </h3>
+                <div class="quote">
+                  {% if section.settings.quote_icon != blank %}
+                    <img src="{{ section.settings.quote_icon | img_url: '50x' }}" alt="Quote icon">
+                  {% else %}
+                    <img src="{{ 'quote-up.png' | asset_url }}" alt="Quote icon">
+                  {% endif %}
+                </div>
+                <p class="review">
+                  {{ block.settings.review_text }}
+                </p>
+                <p class="student-name">
+                  {{ block.settings.student_name }}
+                </p>
+                <div class="rating-date">
+                  <div class="ks-star-rating">
+                    <svg viewBox="0 0 1000 200" class="rating">
+                      <defs>
+                        <polygon
+                          id="star-{{ block.id }}"
+                          points="100,0 131,66 200,76 150,128 162,200 100,166 38,200 50,128 0,76 69,66 "
+                        ></polygon>
+                        <clipPath id="stars-{{ block.id }}">
+                          <use xlink:href="#star-{{ block.id }}"></use>
+                          <use xlink:href="#star-{{ block.id }}" x="20%"></use>
+                          <use xlink:href="#star-{{ block.id }}" x="40%"></use>
+                          <use xlink:href="#star-{{ block.id }}" x="60%"></use>
+                          <use xlink:href="#star-{{ block.id }}" x="80%"></use>
+                        </clipPath>
+                      </defs>
+                      <rect class="rating__background" clip-path="url(#stars-{{ block.id }})"></rect>
+                      <rect
+                        width="{{ block.settings.rating | times: 20 }}%"
+                        class="rating__value"
+                        clip-path="url(#stars-{{ block.id }})"
+                      ></rect>
+                    </svg>
+                  </div>
+                  <span>, {{ block.settings.review_date }}</span>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Student Reviews",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Section Title",
+      "default": "Student Reviews"
+    },
+    {
+      "type": "image_picker",
+      "id": "quote_icon",
+      "label": "Quote Icon"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "review",
+      "name": "Student Review",
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "review_text",
+          "label": "Review Text",
+          "default": "Once you get going, it gets really interesting and the topics are covered really well."
+        },
+        {
+          "type": "text",
+          "id": "student_name",
+          "label": "Student Name",
+          "default": "Nicolas M."
+        },
+        {
+          "type": "range",
+          "id": "rating",
+          "label": "Rating",
+          "min": 1,
+          "max": 5,
+          "step": 1,
+          "default": 5
+        },
+        {
+          "type": "text",
+          "id": "review_date",
+          "label": "Review Date",
+          "default": "February 14, 2023",
+          "info": "Enter date in format: Month Day, Year (e.g. February 14, 2023)"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "RH Student Reviews",
+      "category": "Reviews",
+      "blocks": [
+        {
+          "type": "review"
+        },
+        {
+          "type": "review"
+        },
+        {
+          "type": "review"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+<style>
+  .rh-student-reviews-sec{
+    padding: 60px 20px;
+  }
+  .rh-student-reviews-sec .container-rh{
+    max-width: 1416px;
+    margin: 0 auto;
+    width: 100%;
+    background: #F6F7F8;
+    border-radius: 8px;
+    padding: 40px 5px;
+  }
+  .rh-student-reviews-sec .container-rh .slider-wrapper{
+    max-width: 936px;
+    margin: 0 auto;
+    width: 100%;
+    background: transparent;
+  }
+  .rh-student-reviews-sec .container-rh .slider-wrapper .review-card{
+    width: 100%;
+    padding-bottom: 60px;
+  }
+  .rh-student-reviews-sec .container-rh .slider-wrapper .review-card .title{
+    font-family: "Bricolage Grotesque";
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 104%;
+  letter-spacing: normal;
+  text-align: center;
+  color: #282C30;
+  margin: 0 0 24px;
+  }
+  .rh-student-reviews-sec .container-rh .slider-wrapper .review-card .quote{
+    text-align: center;
+    margin: 0 0 24px;
+  }
+  .rh-student-reviews-sec .container-rh .slider-wrapper .review-card .quote img{
+    width: 40px;
+  }
+  .rh-student-reviews-sec .container-rh .slider-wrapper .review-card .review {
+    font-family: "Bricolage Grotesque";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 160%;
+  letter-spacing: normal;
+  text-align: center;
+  color: #0D1216;
+  margin: 0 0 32px;
+  }
+  .rh-student-reviews-sec .container-rh .slider-wrapper .review-card .student-name {
+    font-family: "Bricolage Grotesque";
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 160%;
+    letter-spacing: normal;
+    text-align: center;
+  color: #0D1216;
+  margin: 0;
+  }
+  .rh-student-reviews-sec .container-rh .slider-wrapper .review-card .rating-date {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .rh-student-reviews-sec .container-rh .slider-wrapper .review-card .rating-date span{
+    font-family: "Bricolage Grotesque";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 160%;
+  letter-spacing: normal;
+  color: #6E7173;
+  }
+
+  .rh-student-reviews-sec span.swiper-pagination-bullet {
+    width: 40px;
+    border-radius: 8px
+  }
+</style>

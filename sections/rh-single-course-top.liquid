@@ -1,0 +1,641 @@
+{% schema %}
+{
+  "name": "Program Details",
+  "class": "program-details-section",
+  "settings": [],
+  "presets": [
+    {
+      "name": "RH Single course top",
+      "category": "Product"
+    }
+  ]
+}
+{% endschema %}
+
+{%- comment -%}
+  Course Single Page
+  - Displays course modules in an accordion format
+  - Uses product metafields for dynamic content
+{%- endcomment -%}
+
+<section class="rh-single-course-top-sec">
+  <div class="container-rh">
+    <div class="left-top">
+      <div class="breadcrumbs">
+        <a href="#">All Programs</a> > <a href="#">{{ product.collections[0] }}</a> >
+        <span>{{ product.title }}</span>
+      </div>
+      <div class="program-names">
+        <h5 class="program-name">{{ product.type | default: 'New' }}</h5>
+      </div>
+      <h2 class="course-tite">{{ product.title }}</h2>
+      <div class="course-short-description">
+        {{ product.description | strip_html | truncatewords: 15, '...' }}
+      </div>
+
+      <h3 class="module-title">Courses In This Program</h3>
+      <div class="modules-accordion">
+        <div class="rh-accordion">
+          {% assign modules = product.metafields.custom.course_modules.value %}
+          {% for module in modules %}
+            <div class="accordion-item-rh">
+              <button class="rh-accordion-header">
+                <div class="header-content">
+                  <div class="img">
+                    <img src="{{ module.module_image | img_url: '200x' }}" alt="{{ product.title }}" loading="lazy">
+                  </div>
+                  <div class="text">
+                    <div class="module-info">
+                      <span>Course {{ forloop.index }}</span>|<span>{{ module.module_duration }}</span>
+                    </div>
+                    <h4>{{ module.module_name }}</h4>
+                  </div>
+                  <div class="icon">
+                    <img src="{{ 'arrow-down-01-sharp.png' | asset_url }}" alt="">
+                  </div>
+                </div>
+              </button>
+              <div class="accordion-content-rh">
+                <p>{{ module.module_detail }}</p>
+                <div class="lessions">
+                  {% assign lessons = module.lession_name.value %}
+                  {% assign details = module.lesson_description.value %}
+                  {% for lesson in lessons %}
+                    <div class="lession">
+                      <span>lession {{ forloop.index }}</span>
+                      <h5 class="lession-title">{{ lesson }}</h5>
+                      {% if details[forloop.index0] %}
+                        <div class="lession-description">{{ details[forloop.index0] }}</div>
+                      {% endif %}
+                    </div>
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+
+      <h3 class="course-des-title">About {{ product.title }}</h3>
+      <div class="course-full-description">
+        {{ product.description }}
+      </div>
+    </div>
+    <div class="right-bottom">
+      <div class="course-tumbnail-image">
+        <img
+          src="{{ product.featured_image | img_url: 'large' }}"
+          alt="{{ product.title }}"
+        >
+      </div>
+      <button type="button" class="enroll-now-button" onclick="addToCart(1)">Enroll Now</button>
+      <script>
+        function addToCart(quantity) {
+          // Get product variant ID
+          const variantId = {{ product.selected_or_first_available_variant.id }};
+
+          // Create form data
+          const formData = new FormData();
+          formData.append('id', variantId);
+          formData.append('quantity', quantity);
+
+          // Submit to cart and redirect
+          fetch('/cart/add', {
+            method: 'POST',
+            body: formData
+          })
+          .then(() => {
+            // Redirect to cart page
+            window.location.href = '/cart';
+          })
+          .catch(error => {
+            console.error('Error:', error);
+            window.location.href = '/cart';
+          });
+        }
+      </script>
+      <a href="#" class="download-syl">Download syllabus</a>
+      <div class="rating-course">
+        <div class="ks-star-rating">
+          <svg viewBox="0 0 1000 200" class="rating">
+            <defs>
+              <polygon
+                id="star"
+                points="100,0 131,66 200,76 150,128 162,200 100,166 38,200 50,128 0,76 69,66 "
+              ></polygon>
+              <clipPath id="stars">
+                <use xlink:href="#star"></use>
+                <use xlink:href="#star" x="20%"></use>
+                <use xlink:href="#star" x="40%"></use>
+                <use xlink:href="#star" x="60%"></use>
+                <use xlink:href="#star" x="80%"></use>
+              </clipPath>
+            </defs>
+            <rect class="rating__background" clip-path="url(#stars)"></rect>
+            <rect
+              width="{{ product.metafields.custom.course_rating | default: 5 | times: 20 }}%"
+              class="rating__value"
+              clip-path="url(#stars)"
+            ></rect>
+          </svg>
+        </div>
+        <span>({{ product.metafields.custom.student_count | default: 200 }})</span>
+      </div>
+      <div class="flex-features">
+        <div class="feature">
+          <div class="ftr-img">
+            <img src="{{ 'fluent_data-bar-vertical-20-regular.png' | asset_url }}" alt="">
+          </div>
+          <span>{{ product.type | default: 'New' }}</span>
+        </div>
+        <div class="feature">
+          <div class="ftr-img">
+            <img src="{{ 'clo0ck.png' | asset_url }}" alt="">
+          </div>
+          <span>{{ product.metafields.custom.course_duration }}</span>
+        </div>
+        <div class="feature">
+          <div class="ftr-img">
+            <img src="{{ 'famicons_sync-sharp.png' | asset_url }}" alt="">
+          </div>
+          <span>Last Updated {{ product.metafields.custom.last_updated | date: '%B %d, %Y' }}</span>
+        </div>
+      </div>
+      <div class="skills-learn">
+        <p>Skills you'll learn:</p>
+        <div class="skills">
+          {% for skill in product.metafields.custom.skills.value %}
+            <span>{{ skill }}</span>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+    /* main sec */
+    .rh-single-course-top-sec {
+      padding: 60px 20px;
+    }
+    .rh-single-course-top-sec .container-rh {
+      max-width: 1416px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 40px;
+    }
+    .rh-single-course-top-sec .container-rh .left-top {
+      width: 65%;
+    }
+    .rh-single-course-top-sec .container-rh .right-bottom {
+      width: 35%;
+    }
+    .rh-single-course-top-sec .container-rh .left-top .breadcrumbs {
+      font-family: "Bricolage Grotesque";
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 160%;
+      letter-spacing: 0%;
+      color: #282c30;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 0 0 24px;
+    }
+    .rh-single-course-top-sec .container-rh .left-top .breadcrumbs a {
+      font-family: "Bricolage Grotesque";
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 160%;
+      letter-spacing: 0%;
+      color: #282c30;
+      text-decoration: none;
+    }
+    .rh-single-course-top-sec .container-rh .left-top .program-names {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin: 0 0 16px;
+    }
+    .rh-single-course-top-sec .container-rh .left-top .program-names .program-name {
+      background: #e7dbff;
+      margin: 0;
+      padding: 4px 8px;
+      border-radius: 30px;
+      font-family: "Bricolage Grotesque";
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 160%;
+      letter-spacing: 0%;
+      color: #282c30;
+    }
+    .rh-single-course-top-sec .container-rh .left-top .course-tite {
+      font-family: "Bricolage Grotesque";
+      font-weight: 500;
+      font-size: 64px;
+      line-height: 104%;
+      letter-spacing: -0.6%;
+      color: #282c30;
+      margin: 0 0 24px;
+    }
+    .rh-single-course-top-sec .container-rh .left-top .course-short-description {
+      font-family: "Bricolage Grotesque";
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 160%;
+      letter-spacing: 0%;
+      color: #282c30;
+      margin: 0 0 64px;
+    }
+    .rh-single-course-top-sec .container-rh .left-top .module-title {
+      font-family: "Bricolage Grotesque";
+      font-weight: 500;
+      font-size: 48px;
+      line-height: 104%;
+      letter-spacing: -0.6%;
+      color: #282c30;
+      margin: 0 0 32px;
+    }
+
+    /* accordion css  */
+    .rh-accordion {
+      width: 100%;
+      margin: 0px auto;
+      overflow: hidden;
+      font-family: sans-serif;
+      border-bottom: 1px solid #394c6026;
+    }
+
+    .rh-accordion .rh-accordion-header {
+      border: none;
+      padding: 20px;
+      width: 100%;
+      text-align: left;
+      cursor: pointer;
+      font-size: 1.1rem;
+      border-top: 1px solid #394c6026;
+      background: #fff;
+    }
+
+    .rh-accordion .accordion-content-rh {
+      display: none;
+      padding: 0 20px 20px;
+    }
+
+    .rh-accordion .header-content {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .rh-accordion .header-content .img {
+      width: 48px;
+    }
+    .rh-accordion .header-content .img img {
+      width: 100%;
+    }
+    .rh-accordion .header-content .icon {
+      width: 24px;
+    }
+    .rh-accordion .header-content .icon img {
+      width: 100%;
+    }
+    .rh-accordion .header-content .text {
+      width: calc(100% - 96px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .rh-accordion .header-content .text .module-info {
+      display: flex;
+      flex-direction: row;
+      gap: 8px;
+      font-family: "Bricolage Grotesque";
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 160%;
+      letter-spacing: 0%;
+      color: #5f6365;
+    }
+    .rh-accordion .header-content .text h4 {
+      font-family: "Bricolage Grotesque";
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 160%;
+      letter-spacing: 0%;
+      color: #0d1216;
+      margin: 0;
+    }
+    .rh-accordion .accordion-content-rh p {
+      font-family: "Bricolage Grotesque";
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 160%;
+      letter-spacing: 0%;
+      color: #0d1216;
+      margin: 0 0 20px;
+    }
+    .rh-accordion .accordion-content-rh .lessions {
+      display: flex;
+      gap: 15px;
+      align-items: flex-start;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .rh-accordion .accordion-content-rh .lession {
+      background: #f6f7f8;
+      width: 31.5%;
+      border: 1px solid #394c6026;
+      border-radius: 6px;
+      padding: 15px;
+    }
+    .rh-accordion .accordion-content-rh .lession span {
+      background: #fff;
+      border: 1px solid #ececec;
+      border-radius: 30px;
+      padding: 0px 8px;
+      font-family: "Bricolage Grotesque";
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 160%;
+      letter-spacing: 0%;
+      color: #0d1216;
+    }
+    .rh-accordion .accordion-content-rh .lession .lession-title {
+      font-family: "Bricolage Grotesque";
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 160%;
+      letter-spacing: 0%;
+      color: #0d1216;
+      margin: 12px 0 8px;
+    }
+
+    .rh-single-course-top-sec .container-rh .left-top .course-des-title {
+      font-family: "Bricolage Grotesque";
+      font-weight: 500;
+      font-size: 32px;
+      line-height: 104%;
+      letter-spacing: -0.6%;
+      color: #282c30;
+      margin: 64px 0 24px;
+    }
+    .rh-single-course-top-sec .container-rh .left-top .course-full-description {
+      font-family: "Bricolage Grotesque";
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 160%;
+      letter-spacing: 0%;
+      color: #282c30;
+      margin: 0;
+    }
+
+    /* right side */
+    .rh-single-course-top-sec .container-rh .right-bottom .course-tumbnail-image {
+      width: 100%;
+      overflow: hidden;
+      margin: 0 0 16px;
+    }
+    .rh-single-course-top-sec
+      .container-rh
+      .right-bottom
+      .course-tumbnail-image
+      img {
+      border-radius: 8px;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .rh-single-course-top-sec .container-rh .right-bottom .enroll-now-button {
+      background: #8b3dff;
+      display: block;
+      padding: 12px;
+      text-align: center;
+      font-family: "Bricolage Grotesque";
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 160%;
+      letter-spacing: 0%;
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 8px;
+      border: 0;
+      margin: 0 0 16px;
+      width: 100%;
+      cursor: pointer;
+    }
+    .rh-single-course-top-sec .container-rh .right-bottom .download-syl {
+      background: transparent;
+      display: block;
+      padding: 12px;
+      text-align: center;
+      font-family: "Bricolage Grotesque";
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 160%;
+      letter-spacing: 0%;
+      color: #8b3dff;
+      text-decoration: none;
+      border-radius: 8px;
+      border: 1px solid #8b3dff;
+      margin: 0 0 32px;
+    }
+    .rh-single-course-top-sec .container-rh .right-bottom .rating-course {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin: 0 0 16px;
+    }
+    .rh-single-course-top-sec .container-rh .right-bottom .rating-course span {
+      color: #393d40;
+      font-family: "Bricolage Grotesque";
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 160%;
+      letter-spacing: 0%;
+    }
+    .rh-single-course-top-sec .container-rh .right-bottom .flex-features {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      justify-content: center;
+    }
+    .rh-single-course-top-sec .container-rh .right-bottom .flex-features .feature {
+      display: flex;
+      flex-direction: row;
+      gap: 8px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .rh-single-course-top-sec
+      .container-rh
+      .right-bottom
+      .flex-features
+      .feature
+      .ftr-img {
+      width: 24px;
+      display: flex;l
+    }
+    .rh-single-course-top-sec
+      .container-rh
+      .right-bottom
+      .flex-features
+      .feature
+      .ftr-img
+      img {
+      width: 100%;
+    }
+    .rh-single-course-top-sec
+      .container-rh
+      .right-bottom
+      .flex-features
+      .feature
+      span {
+      color: #393d40;
+      font-family: "Bricolage Grotesque";
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 160%;
+      letter-spacing: 0%;
+    }
+    .rh-single-course-top-sec .container-rh .right-bottom .skills-learn {
+      margin: 32px 0 0;
+    }
+    .rh-single-course-top-sec .container-rh .right-bottom .skills-learn p {
+      color: #393d40;
+      font-family: "Bricolage Grotesque";
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 160%;
+      letter-spacing: 0%;
+      margin: 0 0 12px;
+    }
+    .rh-single-course-top-sec .container-rh .right-bottom .skills-learn .skills {
+      display: flex;
+      flex-direction: row;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .rh-single-course-top-sec
+      .container-rh
+      .right-bottom
+      .skills-learn
+      .skills
+      span {
+      border: 1px solid #c3c4c5;
+      border-radius: 8px;
+      background: transparent;
+      padding: 7px 14px;
+      color: #0d1216;
+      font-family: "Bricolage Grotesque";
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 160%;
+      letter-spacing: 0%;
+    }
+
+    .rotated {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease;
+  }
+
+    /* responsive  */
+
+    @media (max-width: 991px) {
+      .rh-single-course-top-sec {
+        padding: 40px 20px;
+      }
+      .rh-single-course-top-sec .container-rh {
+        flex-direction: column;
+        gap: 30px;
+      }
+      .rh-single-course-top-sec .container-rh .left-top {
+        width: 100%;
+      }
+      .rh-single-course-top-sec .container-rh .right-bottom {
+        width: 100%;
+      }
+
+      /* left top  */
+      .rh-single-course-top-sec .container-rh .left-top .course-tite {
+        font-size: 34px;
+        margin: 0 0 16px;
+    }
+    .rh-single-course-top-sec .container-rh .left-top .course-short-description {
+      font-size: 16px;
+      margin: 0 0 32px;
+    }
+    .rh-single-course-top-sec .container-rh .left-top .module-title {
+      font-size: 28px;
+      margin: 0 0 24px;
+    }
+    .rh-accordion .rh-accordion-header {
+      padding: 8px 0;
+    }
+    .rh-accordion .header-content {
+      gap: 8px;
+    }
+    .rh-accordion .header-content .img {
+      width: 28px;
+    }
+    .rh-accordion .header-content .text {
+      width: calc(100% - 58px);
+    }
+    .rh-accordion .header-content .icon {
+      width: 14px;
+    }
+    .rh-accordion .header-content .text h4 {
+      font-size: 14px;
+    }
+    .rh-accordion .accordion-content-rh{
+      padding: 0 0 8px;
+    }
+
+    .rh-accordion .accordion-content-rh .lession{
+      width: 100%;
+    }
+
+    .rh-single-course-top-sec .container-rh .left-top .course-des-title {
+      font-size: 24px;
+      margin: 32px 0 16px;
+    }
+    .rh-single-course-top-sec .container-rh .left-top .course-full-description {
+      font-size: 16px;
+    }
+    }
+</style>
+
+<script>
+    document.querySelectorAll(".rh-accordion-header").forEach((header) => {
+    header.addEventListener("click", () => {
+      const content = header.parentElement.querySelector(
+        ".accordion-content-rh"
+      );
+      const icon = header.querySelector(".icon img"); // or whatever selector targets your icon
+
+      const isOpen = content.style.display === "block";
+
+      // Close all
+      document.querySelectorAll(".accordion-content-rh").forEach((c) => {
+        c.style.display = "none";
+      });
+
+      // Reset all icons (optional - if you want to rotate only the active one)
+      document.querySelectorAll(".rh-accordion-header img").forEach((img) => {
+        img.classList.remove("rotated");
+      });
+
+      // Toggle current
+      content.style.display = isOpen ? "none" : "block";
+
+      // Toggle icon rotation
+      if (icon) {
+        icon.classList.toggle("rotated", !isOpen);
+      }
+    });
+  });
+</script>

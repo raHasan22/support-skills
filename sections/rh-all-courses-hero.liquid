@@ -1,0 +1,281 @@
+<style>
+    section.rh-all-hero-section .swiper-pagination span{
+      max-width: 80px;
+      width: 100%;
+      height: 4px;
+      border-radius: 8px;
+      background: #A264FF !important;
+    }
+    section.rh-all-hero-section .swiper-pagination{
+      bottom: -30px;
+    }
+    section.rh-all-hero-section{
+      position: relative;
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      padding: 42px 10px;
+    }
+    section.rh-all-hero-section .container{
+      max-width: 1451.76px;
+      margin: 0 auto;
+      display: flex;
+      gap: 20px;
+      justify-content: space-between;
+      align-items: center;
+    }
+    section.rh-all-hero-section .text-wrapper{
+      width: 50%;
+    }
+    section.rh-all-hero-section .text-wrapper .hero-text{
+      font-family: "Bricolage Grotesque", sans-serif;
+      font-weight: 500;
+      font-size: 32px;
+      line-height: 104%;
+      letter-spacing: -0.6%;
+      vertical-align: middle;
+      color: #0D1216;
+      max-width: 576px;
+    }
+    section.rh-all-hero-section .slide-wrapper{
+      width: 50%;
+      position: relative;
+    }
+    section.rh-all-hero-section .slide-wrapper .rh-hero-slider-card{
+      border: 1px solid #394C6026;
+      background: #fff;
+      max-width: 696px;
+      margin: 0 auto;
+      padding: 24px;
+      border-radius: 8px;
+    }
+    section.rh-all-hero-section .slide-wrapper .rh-hero-slider-card .card-heading{
+      font-family: "Bricolage Grotesque", sans-serif;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 160%;
+      letter-spacing: 0%;
+      vertical-align: middle;
+      color: #0D1216;
+    }
+    section.rh-all-hero-section .slide-wrapper .rh-hero-slider-card .card-txt{
+      font-family: "Bricolage Grotesque", sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 160%;
+      letter-spacing: 0%;
+      vertical-align: middle;
+      color: #0D1216;
+      margin-top: 8px;
+    }
+
+    section.rh-all-hero-section .slide-wrapper:before {
+      content: "";
+      height: 80px;
+      width: 80px;
+      position: absolute;
+      bottom: -40px;
+      right:-36px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-image: url('{{ section.settings.shape_image | img_url: '200x' }}');
+    }
+    section.rh-all-hero-section .slide-wrapper{
+      position: relative;
+      overflow: visible;
+    }
+    section.rh-all-hero-section .slide-wrapper:after {
+      content: "";
+      height: 80px;
+      width: 80px;
+      position: absolute;
+      top: -30px;
+      left:-37px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-image: url('{{ section.settings.star_image | img_url: '200x' }}');
+    }
+    @media (max-width: 1485px){
+      section.rh-all-hero-section .slide-wrapper::before {
+        right: 0;
+      }
+    }
+    @media (max-width: 767px){
+      section.rh-all-hero-section .container{
+        flex-direction: column;
+        gap: 60px;
+      }
+      section.rh-all-hero-section .text-wrapper{
+        width: 100%;
+      }
+      section.rh-all-hero-section .slide-wrapper{
+        width: 100%;
+      }
+    }
+
+    #FacetFiltersForm #verticalTitle{
+    display: none;
+  }
+
+  #FacetFiltersForm details{
+    border: 1px solid #B4B6B7;
+    padding: 13px 24px;
+    border-radius: 8px;
+    font-family: "Bricolage Grotesque", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  }
+  #FacetFiltersForm details summary{
+    margin: 0;
+  }
+  #FacetFiltersForm{
+    gap: 0;
+  }
+  .sorting .facet-filters__field{
+    border: 1px solid #B4B6B7;
+    padding: 13px 24px;
+    border-radius: 8px;
+  }
+  #FacetFiltersForm .product-count.light{
+    display: none;
+  }
+</style>
+
+<section
+  class="rh-all-hero-section"
+  style="background-image: url('{{ section.settings.background_image | img_url: '2000x' }}')"
+>
+  <div class="container">
+    <div class="text-wrapper">
+      <h3 class="hero-text">
+        {{ section.settings.hero_text }}
+      </h3>
+    </div>
+    <div
+      class="slide-wrapper"
+      style="
+        --shape-image: url('{{ section.settings.shape_image | img_url: '200x' }}');
+        --star-image: url('{{ section.settings.star_image | img_url: '200x' }}')
+      "
+    >
+      <div class="swiper all-testi-slider">
+        <div class="swiper-wrapper">
+          {% for block in section.blocks %}
+            <div class="swiper-slide">
+              <div class="rh-hero-slider-card">
+                <h4 class="card-heading">
+                  {{ block.settings.card_heading }}
+                </h4>
+                <p class="card-txt">
+                  {{ block.settings.card_text }}
+                </p>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</section>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var swiper = new Swiper(".rh-all-hero-section .all-testi-slider", {
+      spaceBetween: 30,
+      keyboard: {
+        enabled: true,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      slidesPerView: 1
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Hero Section with Slider",
+  "settings": [
+    {
+      "type": "text",
+      "id": "hero_text",
+      "label": "Hero Text",
+      "default": "Bootcamp level quality, on your own time, at a fraction of the cost."
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Background Image",
+      "info": "Recommended size: 2000px width"
+    },
+    {
+      "type": "image_picker",
+      "id": "shape_image",
+      "label": "Bottom Right Decoration Image",
+      "info": "Recommended size: 80x80px"
+    },
+    {
+      "type": "image_picker",
+      "id": "star_image",
+      "label": "Top Left Decoration Image",
+      "info": "Recommended size: 80x80px"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "Slide",
+      "settings": [
+        {
+          "type": "text",
+          "id": "card_heading",
+          "label": "Card Heading",
+          "default": "Unlimited Learning"
+        },
+        {
+          "type": "textarea",
+          "id": "card_text",
+          "label": "Card Text",
+          "default": "Access our entire catalog of 80+ Nanodegree programs, 350+ courses, and 2,500+ skills."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hero Section with Slider",
+      "category": "Custom",
+      "blocks": [
+        {
+          "type": "slide",
+          "settings": {
+            "card_heading": "Unlimited Learning",
+            "card_text": "Access our entire catalog of 80+ Nanodegree programs, 350+ courses, and 2,500+ skills."
+          }
+        },
+        {
+          "type": "slide",
+          "settings": {
+            "card_heading": "Expert Instructors",
+            "card_text": "Learn from industry professionals with real-world experience."
+          }
+        },
+        {
+          "type": "slide",
+          "settings": {
+            "card_heading": "Flexible Learning",
+            "card_text": "Study at your own pace with 24/7 access to materials."
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

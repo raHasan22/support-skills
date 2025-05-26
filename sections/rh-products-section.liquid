@@ -1,0 +1,180 @@
+<section class="rec-course-rh">
+  <div class="container-rh">
+    <h2 class="section-title">{{ section.settings.title | default: "Courses Recommended for You" }}</h2>
+    <div class="rec-courses">
+      {% for product in collections[section.settings.collection].products limit: section.settings.product_limit %}
+        <div class="common-course-card-rh">
+          <div class="course-image-level">
+            <img src="{{ product.featured_image | img_url: '300x300' }}" alt="{{ product.featured_image.alt }}" />
+            <span class="course-level">
+              {{ product.type | default: section.settings.default_level }}
+            </span>
+          </div>
+          <div class="course-description">
+            <div class="course-rating-duration">
+              <div class="course-rating">
+                <div class="ks-star-rating">
+                  <svg viewBox="0 0 1000 200" class="rating">
+                    <defs>
+                      <polygon
+                        id="star"
+                        points="100,0 131,66 200,76 150,128 162,200 100,166 38,200 50,128 0,76 69,66 "
+                      ></polygon>
+                      <clipPath id="stars">
+                        <use xlink:href="#star"></use>
+                        <use xlink:href="#star" x="20%"></use>
+                        <use xlink:href="#star" x="40%"></use>
+                        <use xlink:href="#star" x="60%"></use>
+                        <use xlink:href="#star" x="80%"></use>
+                      </clipPath>
+                    </defs>
+                    <rect
+                      class="rating__background"
+                      clip-path="url(#stars)"
+                    ></rect>
+                    <rect
+                      width="100%"
+                      class="rating__value"
+                      clip-path="url(#stars)"
+                    ></rect>
+                  </svg>
+                </div>
+                <span>
+                  ({{ product.metafields.custom.student_count | default: section.settings.default_student_count }})
+                </span>
+              </div>
+              <div class="course-duration">
+                <div class="icon">
+                  <img src="{{ 'clock.png' | asset_url }}" alt="" />
+                </div>
+                <span>
+                  {{ product.metafields.custom.course_duration | default: section.settings.default_duration }}
+                </span>
+              </div>
+            </div>
+            <a href="{{ product.url }}" class="course-title">{{ product.title }}</a>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    {% if section.settings.show_browse_button %}
+      <div class="course-button">
+        <a href="{{ section.settings.browse_button_link }}" class="rh-primary-button">
+          {{ section.settings.browse_button_text }}
+        </a>
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+<style>
+  .rec-course-rh {
+  padding: 100px 20px;
+}
+.rec-course-rh .container-rh {
+  max-width: 1700px;
+  margin: 0 auto;
+}
+.rec-course-rh .container-rh .section-title {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-weight: 500;
+  font-size: 64px;
+  line-height: 104%;
+  letter-spacing: -0.6;
+  text-align: center;
+  color: #0d1216;
+  margin: 0 0 64px;
+}
+.rec-course-rh .container-rh .rec-courses {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.rec-course-rh .container-rh .rec-courses .common-course-card-rh {
+  max-width: 266px;
+  width: 100%;
+}
+
+.rec-course-rh .container-rh .course-button{
+  margin: 50px 0 0;
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 1024px) {
+  .rec-course-rh .container-rh .section-title {
+    font-size: 34px;
+    margin: 0 0 34px;
+  }
+}
+</style>
+
+{% schema %}
+{
+  "name": "RH Recommended Courses",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Section Title",
+      "default": "Courses Recommended for You"
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Select Course Collection"
+    },
+    {
+      "type": "range",
+      "id": "product_limit",
+      "min": 1,
+      "max": 24,
+      "step": 1,
+      "label": "Number of courses to show",
+      "default": 12
+    },
+    {
+      "type": "text",
+      "id": "default_level",
+      "label": "Default Course Level",
+      "default": "Beginner"
+    },
+    {
+      "type": "text",
+      "id": "default_student_count",
+      "label": "Default Student Count",
+      "default": "223"
+    },
+    {
+      "type": "text",
+      "id": "default_duration",
+      "label": "Default Course Duration",
+      "default": "4 Month"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_browse_button",
+      "label": "Show Browse All Button",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "browse_button_text",
+      "label": "Button Text",
+      "default": "Browse all courses"
+    },
+    {
+      "type": "url",
+      "id": "browse_button_link",
+      "label": "Button Link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "RH Recommended Courses",
+      "category": "Courses"
+    }
+  ]
+}
+{% endschema %}

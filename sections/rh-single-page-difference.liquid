@@ -1,0 +1,356 @@
+{% schema %}
+{
+  "name": "SupportSkills Difference",
+  "settings": [
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "Section Title",
+      "default": "The SupportSkills Difference"
+    },
+    {
+      "type": "textarea",
+      "id": "section_description",
+      "label": "Section Description",
+      "default": "Combine technology training for employees with industry experts, mentors, and projects, for critical thinking that pushes innovation. Our proven upskilling system goes after success—relentlessly."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "hero_block",
+      "name": "Hero Block",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Main Image"
+        },
+        {
+          "type": "header",
+          "content": "Feature Items"
+        },
+        {
+          "type": "image_picker",
+          "id": "feature_1_icon",
+          "label": "Feature 1 Icon"
+        },
+        {
+          "type": "text",
+          "id": "feature_1_text",
+          "label": "Feature 1 Text"
+        },
+        {
+          "type": "image_picker",
+          "id": "feature_2_icon",
+          "label": "Feature 2 Icon"
+        },
+        {
+          "type": "text",
+          "id": "feature_2_text",
+          "label": "Feature 2 Text"
+        },
+        {
+          "type": "image_picker",
+          "id": "feature_3_icon",
+          "label": "Feature 3 Icon"
+        },
+        {
+          "type": "text",
+          "id": "feature_3_text",
+          "label": "Feature 3 Text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "RH SinglePage SupportSkills Difference",
+      "category": "Custom",
+      "settings": {
+        "section_title": "The SupportSkills Difference",
+        "section_description": "Combine technology training for employees with industry experts, mentors, and projects, for critical thinking that pushes innovation. Our proven upskilling system goes after success—relentlessly."
+      },
+      "blocks": [
+        {
+          "type": "hero_block",
+          "settings": {
+            "heading": "Demonstrate proficiency with practical projects",
+            "description": "Projects are based on real-world scenarios and challenges, allowing you to apply the skills you learn to practical situations, while giving you real hands-on experience.",
+            "feature_1_text": "Hands-on project-based approach",
+            "feature_2_text": "Top content co-developed with industry leaders",
+            "feature_3_text": "Global mentor network with 700+ domain experts"
+          }
+        },
+        {
+          "type": "hero_block",
+          "settings": {
+            "heading": "Top-tier services to ensure learner success",
+            "description": "Reviewers provide timely and constructive feedback on your project submissions, highlighting areas of improvement and offering practical tips to enhance your work.",
+            "feature_1_text": "Get help from subject matter experts",
+            "feature_2_text": "Learn industry best practices",
+            "feature_3_text": "Gain valuable insights and improve your skills"
+          }
+        }
+      ]
+    }
+  ],
+  "max_blocks": 2
+}
+{% endschema %}
+
+<section class="suuppoorrt-skill-diifference">
+  <div class="container-rh">
+    <h2 class="sec-title">{{ section.settings.section_title }}</h2>
+    <p class="sec-des">{{ section.settings.section_description }}</p>
+
+    {% for block in section.blocks %}
+      {% if forloop.first %}
+        <div class="her0-1">
+          <div class="text-part">
+            <h5>{{ block.settings.heading }}</h5>
+            <p>{{ block.settings.description }}</p>
+            <div class="features-container">
+              {% for i in (1..3) %}
+                {% assign feature_text = 'feature_' | append: i | append: '_text' %}
+                {% assign feature_icon = 'feature_' | append: i | append: '_icon' %}
+                {% if block.settings[feature_text] != blank %}
+                  <div class="feature-item">
+                    {% if block.settings[feature_icon] != blank %}
+                      <img
+                        src="{{ block.settings[feature_icon] | img_url: '24x24', crop: 'center' }}"
+                        alt="{{ block.settings[feature_text] | escape }}"
+                        class="feature-icon"
+                        width="24"
+                        height="24"
+                        loading="lazy"
+                      >
+                    {% else %}
+                      <img
+                        src="//support-skills.myshopify.com/cdn/shop/files/3f877251a2cc89eced48b6684f7916039f780f56_50x50.svg?v=1745922697"
+                        alt=""
+                        class="feature-icon"
+                      >
+                    {% endif %}
+                    <p class="feature-text">{{ block.settings[feature_text] }}</p>
+                  </div>
+                {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+          <div class="image-part">
+            {% if block.settings.image != blank %}
+              <img
+                src="{{ block.settings.image | img_url: 'master' }}"
+                alt="{{ block.settings.heading | escape }}"
+                loading="lazy"
+              >
+            {% else %}
+              <img src="{{ 'placeholder-image.png' | asset_img_url: 'master' }}" alt="Placeholder image" loading="lazy">
+            {% endif %}
+          </div>
+        </div>
+      {% else %}
+        <div class="her0-2">
+          <div class="image-part">
+            {% if block.settings.image != blank %}
+              <img
+                src="{{ block.settings.image | img_url: 'master' }}"
+                alt="{{ block.settings.heading | escape }}"
+                loading="lazy"
+              >
+            {% else %}
+              <img src="{{ 'placeholder-image.png' | asset_img_url: 'master' }}" alt="Placeholder image" loading="lazy">
+            {% endif %}
+          </div>
+          <div class="text-part">
+            <h5>{{ block.settings.heading }}</h5>
+            <p>{{ block.settings.description }}</p>
+            <div class="features-container">
+              {% for i in (1..3) %}
+                {% assign feature_text = 'feature_' | append: i | append: '_text' %}
+                {% assign feature_icon = 'feature_' | append: i | append: '_icon' %}
+                {% if block.settings[feature_text] != blank %}
+                  <div class="feature-item">
+                    {% if block.settings[feature_icon] != blank %}
+                      <img
+                        src="{{ block.settings[feature_icon] | img_url: '24x24', crop: 'center' }}"
+                        alt="{{ block.settings[feature_text] | escape }}"
+                        class="feature-icon"
+                        width="24"
+                        height="24"
+                        loading="lazy"
+                      >
+                    {% else %}
+                      <img
+                        src="//support-skills.myshopify.com/cdn/shop/files/3f877251a2cc89eced48b6684f7916039f780f56_50x50.svg?v=1745922697"
+                        alt=""
+                        class="feature-icon"
+                      >
+                    {% endif %}
+                    <p class="feature-text">{{ block.settings[feature_text] }}</p>
+                  </div>
+                {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>
+<style>
+    .suuppoorrt-skill-diifference {
+    padding: 100px 20px 0;
+  }
+  .suuppoorrt-skill-diifference .container-rh {
+    max-width: 1216px;
+    margin: 0 auto;
+  }
+  .suuppoorrt-skill-diifference .container-rh .sec-title {
+    font-family: "Bricolage Grotesque";
+    font-weight: 500;
+    font-size: 64px;
+    line-height: 104%;
+    letter-spacing: normal;
+    text-align: center;
+    color: #282c30;
+    margin: 0 0 16px;
+  }
+  .suuppoorrt-skill-diifference .container-rh .sec-des {
+    font-family: "Bricolage Grotesque";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    letter-spacing: normal;
+    text-align: center;
+    color: #282c30;
+  }
+  .suuppoorrt-skill-diifference .container-rh .her0-1,
+  .suuppoorrt-skill-diifference .container-rh .her0-2 {
+    padding: 100px 0;
+    display: flex;
+    flex-direction: row;
+    gap: 0px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .suuppoorrt-skill-diifference .container-rh .her0-1 .text-part,
+  .suuppoorrt-skill-diifference .container-rh .her0-1 .image-part,
+  .suuppoorrt-skill-diifference .container-rh .her0-2 .text-part,
+  .suuppoorrt-skill-diifference .container-rh .her0-2 .image-part {
+    width: 50%;
+  }
+  .suuppoorrt-skill-diifference .container-rh .image-part img {
+    width: 100%;
+    border-radius: 8px;
+  }
+  .suuppoorrt-skill-diifference .container-rh .her0-1 .text-part {
+    padding-right: 100px;
+  }
+  .suuppoorrt-skill-diifference .container-rh .her0-2 .text-part {
+    padding-left: 100px;
+  }
+  .suuppoorrt-skill-diifference .container-rh .text-part h5 {
+    font-family: "Bricolage Grotesque";
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 104%;
+    letter-spacing: normal;
+    vertical-align: middle;
+    color: #0d1216;
+    margin: 0 0 32px;
+  }
+  .suuppoorrt-skill-diifference .container-rh .text-part > p {
+    font-family: "Bricolage Grotesque";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    letter-spacing: normal;
+    vertical-align: middle;
+    color: #282c30;
+    margin: 0 0 16px;
+  }
+  .suuppoorrt-skill-diifference .container-rh .features-container {
+    margin-top: 32px;
+    width: 100%;
+    color: #0d1216;
+    font-weight: 400;
+  }
+
+  .suuppoorrt-skill-diifference .container-rh .feature-item {
+    display: flex;
+    margin-top: 16px;
+    width: 100%;
+    align-items: start;
+    gap: 8px;
+    justify-content: start;
+    flex-wrap: wrap;
+  }
+
+  .suuppoorrt-skill-diifference .container-rh .feature-icon {
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+    width: 24px;
+    flex-shrink: 0;
+  }
+
+  .suuppoorrt-skill-diifference .container-rh .feature-text {
+    font-family: "Bricolage Grotesque";
+    flex: 1;
+    margin: 0;
+    color: #0d1216;
+    font-size: 16px;
+  }
+  @media (max-width: 1024px) {
+    .suuppoorrt-skill-diifference .container-rh .her0-1 .text-part {
+      padding-right: 40px;
+    }
+    .suuppoorrt-skill-diifference .container-rh .her0-2 .text-part {
+      padding-left: 40px;
+    }
+  }
+  @media (max-width: 991px) {
+    .suuppoorrt-skill-diifference .container-rh .sec-title {
+      font-size: 34px;
+      margin: 0 0 16px;
+    }
+    .suuppoorrt-skill-diifference .container-rh .sec-des {
+      font-size: 14px;
+    }
+    .suuppoorrt-skill-diifference .container-rh .her0-1,
+    .suuppoorrt-skill-diifference .container-rh .her0-2 {
+      flex-direction: column;
+      gap: 40px;
+      padding: 60px 0;
+    }
+    .suuppoorrt-skill-diifference .container-rh .her0-1 .text-part,
+    .suuppoorrt-skill-diifference .container-rh .her0-1 .image-part,
+    .suuppoorrt-skill-diifference .container-rh .her0-2 .text-part,
+    .suuppoorrt-skill-diifference .container-rh .her0-2 .image-part {
+      width: 100%;
+      padding: 0;
+    }
+    .suuppoorrt-skill-diifference .container-rh .text-part h5 {
+      font-size: 28px;
+      margin: 0 0 22px;
+    }
+    .suuppoorrt-skill-diifference .container-rh .text-part > p {
+      font-size: 14px;
+      margin: 0 0 16px;
+    }
+    .suuppoorrt-skill-diifference .container-rh .feature-text {
+      font-size: 12px;
+    }
+  }
+</style>

@@ -1,0 +1,125 @@
+<section class="our-partners">
+  <div class="container-rh">
+    <h4 class="sec-title">
+      {{ section.settings.section_title }}
+    </h4>
+    <div class="image-box">
+      {% for block in section.blocks %}
+        <div class="image-c">
+          <img 
+            src="{{ block.settings.partner_image | img_url: '150x' }}" 
+            alt="{{ block.settings.partner_image.alt | escape }}"
+            loading="lazy"
+          >
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+<style>
+  .our-partners{
+  padding: 60px 20px;
+}
+.our-partners .container-rh{
+  max-width: 1416px;
+  margin: 0 auto;
+}
+.our-partners .container-rh .sec-title{
+  font-family: "Bricolage Grotesque";
+font-weight: 500;
+font-size: 18px;
+line-height: 160%;
+letter-spacing: 0%;
+text-align: center;
+color: #0D1216;
+margin: 0 0 32px;
+}
+.our-partners .container-rh .image-box{
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.our-partners .container-rh .image-box .image-c{
+  width: 120px;
+}
+.our-partners .container-rh .image-box .image-c img{
+  width: 100%;
+}
+@media (max-width: 767px) {
+  .our-partners .container-rh .image-box{
+    gap: 15px;
+  }
+  .our-partners .container-rh .image-box .image-c{
+    width: 100px;
+  }
+}
+</style>
+
+{% schema %}
+{
+  "name": "Partners Section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "Section Title",
+      "default": "Unlock Your Team's Potential with 2000+ Accredited Courses!"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "partner_logo",
+      "name": "Partner Logo",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "partner_image",
+          "label": "Partner Logo",
+          "info": "Recommended size: 120x60px"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "RH Partners Section",
+      "category": "Custom",
+      "blocks": [
+        {
+          "type": "partner_logo"
+        },
+        {
+          "type": "partner_logo"
+        },
+        {
+          "type": "partner_logo"
+        },
+        {
+          "type": "partner_logo"
+        },
+        {
+          "type": "partner_logo"
+        },
+        {
+          "type": "partner_logo"
+        },
+        {
+          "type": "partner_logo"
+        },
+        {
+          "type": "partner_logo"
+        },
+        {
+          "type": "partner_logo"
+        },
+        {
+          "type": "partner_logo"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

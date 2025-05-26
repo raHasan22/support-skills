@@ -1,0 +1,322 @@
+{%- style -%}
+  /* Your existing CSS styles here */
+  .rh-homepage-hero-section {
+    /* existing styles */
+  }
+  /* Add all other necessary styles */
+{%- endstyle -%}
+
+<!-- Add Swiper CSS CDN -->
+
+<section class="rh-homepage-hero-section">
+  <div class="container-rh">
+    <div class="headings-btns">
+      <h1 class="site-title">
+        {% assign title_lines = section.settings.title | newline_to_br | split: '<br />' %}
+        {% for line in title_lines %}
+          {% if forloop.last %}
+            <span>{{ line }}</span>
+          {% else %}
+            {{ line }}<br />
+          {% endif %}
+        {% endfor %}
+      </h1>
+      <p>{{ section.settings.subtitle }}</p>
+      <a href="{{ section.settings.button_link }}" class="rh-primary-button">
+        {{ section.settings.button_text }}
+      </a>
+    </div>
+    <div class="slider-rh-homepage-hero">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          {% for block in section.blocks %}
+            <div class="swiper-slide">
+              <div class="slider-card" style="background: linear-gradient(180deg, {{ block.settings.color_start }} 0%, {{ block.settings.color_end }} 100%);">
+                <div class="icon-cate-rh">
+                  <div class="icon">
+                    {% if block.settings.icon != blank %}
+                      <img src="{{ block.settings.icon | img_url: '100x' }}" alt="{{ block.settings.category }}" />
+                    {% else %}
+                      <img src="{{ 'Subject category.png' | asset_url }}" alt="{{ block.settings.category }}" />
+                    {% endif %}
+                  </div>
+                  <a href="{{ block.settings.category_link }}">{{ block.settings.category }}</a>
+                </div>
+                <div class="image-box-cate">
+                  {% if block.settings.image != blank %}
+                    <img src="{{ block.settings.image | img_url: '300x' }}" alt="{{ block.settings.category }}" />
+                  {% else %}
+                    <img src="{{ 'AI.png' | asset_url }}" alt="{{ block.settings.category }}" />
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Add Swiper JS CDN and initialization -->
+
+
+<style>
+  .rh-homepage-hero-section {
+  padding: 64px 0 120px;
+}
+.rh-homepage-hero-section .container-rh {
+  text-align: center;
+}
+.rh-homepage-hero-section .container-rh .headings-btns {
+  padding: 0 20px 64px;
+}
+.rh-homepage-hero-section .container-rh .headings-btns .site-title {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-weight: 500;
+  font-size: 128px;
+  line-height: 104%;
+  letter-spacing: -3.5;
+  text-align: center;
+  color: #0d1216;
+  margin: 0 0 24px;
+}
+.rh-homepage-hero-section .container-rh .headings-btns .site-title span {
+  background: linear-gradient(90deg, #00a0a8 0%, #7d2ae8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.rh-homepage-hero-section .container-rh .headings-btns p {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 160%;
+  letter-spacing: 0;
+  text-align: center;
+  color: #282c30;
+  margin: 0 0 32px;
+}
+
+.rh-homepage-hero-section .container-rh .slider-rh-homepage-hero {
+  padding: 0 0 0 40px;
+  overflow: hidden;
+}
+.rh-homepage-hero-section .container-rh .slider-rh-homepage-hero .swiper {
+  overflow: visible;
+}
+.rh-homepage-hero-section
+  .container-rh
+  .slider-rh-homepage-hero
+  .swiper
+  .swiper-button-prev {
+    display: flex;
+  height: 48px;
+  width: 48px;
+  border-radius: 48px;
+  background-color: #fff;
+  border: 2px solid #8b3dff;
+  font-size: 18px;
+}
+.rh-homepage-hero-section
+  .container-rh
+  .slider-rh-homepage-hero
+  .swiper
+  .swiper-button-prev:after {
+  color: #000;
+  font-size: 18px;
+}
+.rh-homepage-hero-section
+  .container-rh
+  .slider-rh-homepage-hero
+  .swiper
+  .swiper-button-next {
+    display: flex;
+  height: 48px;
+  width: 48px;
+  border-radius: 48px;
+  background-color: #fff;
+  border: 2px solid #8b3dff;
+  font-size: 18px;
+}
+.rh-homepage-hero-section
+  .container-rh
+  .slider-rh-homepage-hero
+  .swiper
+  .swiper-button-next:after {
+  color: #000;
+  font-size: 18px;
+}
+.rh-homepage-hero-section .container-rh .slider-rh-homepage-hero .slider-card {
+  border: 1px solid #e1e4e7;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 240px;
+  margin: 0 auto;
+}
+.rh-homepage-hero-section
+  .container-rh
+  .slider-rh-homepage-hero
+  .slider-card
+  .icon-cate-rh {
+  margin: 16px 16px 24px;
+  height: 64px;
+  overflow: hidden;
+  display: flex;
+  gap: 8px;
+}
+.rh-homepage-hero-section
+  .container-rh
+  .slider-rh-homepage-hero
+  .slider-card
+  .icon-cate-rh
+  .icon {
+  width: 28px;
+}
+.rh-homepage-hero-section
+  .container-rh
+  .slider-rh-homepage-hero
+  .slider-card
+  .icon-cate-rh
+  .icon
+  img {
+  width: 100%;
+}
+.rh-homepage-hero-section
+  .container-rh
+  .slider-rh-homepage-hero
+  .slider-card
+  .icon-cate-rh
+  a {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 160%;
+  letter-spacing: 0%;
+  text-align: left;
+  color: #fff;
+  text-decoration: none;
+}
+.rh-homepage-hero-section
+  .container-rh
+  .slider-rh-homepage-hero
+  .slider-card
+  .image-box-cate {
+  padding-left: 24px;
+  height: 232px;
+  width: 100%;
+  overflow: hidden;
+}
+.rh-homepage-hero-section
+  .container-rh
+  .slider-rh-homepage-hero
+  .slider-card
+  .image-box-cate
+  img {
+  width: 110%;
+  height: 110%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+@media (max-width: 1024px) {
+  .rh-homepage-hero-section {
+    padding: 44px 0 60px;
+  }
+  .rh-homepage-hero-section .container-rh .headings-btns {
+    padding: 0 20px 44px;
+  }
+  .rh-homepage-hero-section .container-rh .headings-btns .site-title {
+    font-size: 88px;
+    margin: 0 0 14px;
+  }
+}
+@media (max-width: 767px) {
+  .rh-homepage-hero-section .container-rh .headings-btns .site-title {
+    font-size: 58px;
+  }
+  .rh-homepage-hero-section .container-rh .slider-rh-homepage-hero {
+    padding: 0 0 0 30px;
+  }
+}
+</style>
+
+{% schema %}
+{
+  "name": "Hero RH",
+  "settings": [
+    {
+      "type": "textarea",
+      "id": "title",
+      "label": "Title",
+      "default": "Learn. Lead.\nTransform.",
+      "info": "The last line will be wrapped in a span tag"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "Explore courses by job function"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "View All courses"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "category",
+      "name": "Category",
+      "settings": [
+        {
+          "type": "text",
+          "id": "category",
+          "label": "Category Name",
+          "default": "Business"
+        },
+        {
+          "type": "url",
+          "id": "category_link",
+          "label": "Category Link"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Category Icon"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Category Image"
+        },
+        {
+          "type": "color",
+          "id": "color_start",
+          "label": "Gradient Start Color",
+          "default": "#da48e7"
+        },
+        {
+          "type": "color",
+          "id": "color_end",
+          "label": "Gradient End Color",
+          "default": "#f4a7fc"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "RH Hero support slills",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

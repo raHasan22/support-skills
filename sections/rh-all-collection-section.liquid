@@ -1,0 +1,156 @@
+<style>
+  .rh-collection-section .container {
+    max-width: 1416px;
+    margin: 0 auto;
+  }
+  .rh-collection-section {
+    padding: 100px 10px;
+  }
+  .rh-collection-section .container .rh-text-heading {
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-weight: 500;
+    font-size: 64px;
+    line-height: 104%;
+    letter-spacing: -0.6%;
+    text-align: center;
+    vertical-align: middle;
+    color: #0D1216;
+  }
+  .rh-collection-section .container .card-wrapper {
+    margin-top: 64px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(216px, 1fr));
+    gap: 24px;
+  }
+  .rh-collection-section .container .card-pr {
+    max-width: 216px;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    color: #0D1216;
+    border-radius: 8px;
+  }
+  .rh-collection-section .container .card-pr .img-wrapper {
+    padding: 30px 3px;
+    border-radius: 8px;
+  }
+  .rh-collection-section .container .card-pr .img-wrapper img {
+    z-index: 2;
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .rh-collection-section .container .card-pr .shape {
+    backdrop-filter: blur(50px);
+    width: 120px;
+    height: 120px;
+    border-radius: 136px;
+    position: absolute;
+    z-index: 1;
+    background: #0000000D;
+    top: -30px;
+    right: -40px;
+  }
+  .rh-collection-section .container .collection-name {
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 160%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    margin-top: 16px;
+  }
+</style>
+
+<section class="rh-collection-section">
+  <div class="container">
+    <h3 class="rh-text-heading">{{ section.settings.heading }}</h3>
+    <div class="card-wrapper">
+      {% for block in section.blocks %}
+        {% assign collection = collections[block.settings.collection] %}
+        {% if collection %}
+          <a href="{{ collection.url }}" class="card-pr">
+            <div class="img-wrapper" style="background: {{ block.settings.background_color }};">
+              <div class="shape"></div>
+              {% if block.settings.custom_image %}
+                <img src="{{ block.settings.custom_image | img_url: '400x' }}" alt="{{ collection.title }}">
+              {% elsif collection.image %}
+                <img src="{{ collection.image | img_url: '400x' }}" alt="{{ collection.title }}">
+              {% else %}
+                <img src="{{ 'placeholder-image.png' | asset_url }}" alt="{{ collection.title }}">
+              {% endif %}
+            </div>
+            <h4 class="collection-name">{{ collection.title }}</h4>
+          </a>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "RH All Collection Cards",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Section Heading",
+      "default": "Discover our Skill Collections"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "collection",
+      "name": "Collection",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Select Collection"
+        },
+        {
+          "type": "image_picker",
+          "id": "custom_image",
+          "label": "Custom Image",
+          "info": "Optional - will use collection image if not set"
+        },
+        {
+          "type": "color",
+          "id": "background_color",
+          "label": "Card Background Color",
+          "default": "#EBE4FF"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "RH All Collection Cards",
+      "category": "Collections",
+      "blocks": [
+        {
+          "type": "collection",
+          "settings": {
+            "background_color": "#EBE4FF"
+          }
+        },
+        {
+          "type": "collection",
+          "settings": {
+            "background_color": "#E4FFEE"
+          }
+        },
+        {
+          "type": "collection",
+          "settings": {
+            "background_color": "#FFE4E4"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

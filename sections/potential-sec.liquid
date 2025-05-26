@@ -1,0 +1,163 @@
+<section class="potential-sec">
+  <div class="container-rh">
+    <div class="text-part">
+      <h2 class="title">
+        {{ section.settings.heading }}
+      </h2>
+      <p class="text">
+        {{ section.settings.subheading }}
+      </p>
+      <a href="{{ section.settings.button_link }}" class="rh-secondary-button">
+        {{ section.settings.button_text }}
+      </a>
+    </div>
+    <div class="image-part">
+      <img
+        src="{{ section.settings.image | img_url: '800x' }}"
+        alt="{{ section.settings.image.alt | escape }}"
+        loading="lazy"
+      >
+    </div>
+  </div>
+</section>
+<style>
+    .potential-sec{
+    padding: 100px 20px;
+    background: linear-gradient(100.86deg, #00C4CC 0%, #5A32FA 50%, #7D2AE8 100%);
+  }
+  .potential-sec .container-rh{
+    max-width: 1416px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+  }
+  .potential-sec .container-rh .text-part{
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .potential-sec .container-rh .image-part{
+    width: 45%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+  }
+  .potential-sec .container-rh .text-part .title{
+    font-family: "Bricolage Grotesque";
+    font-weight: 500;
+    font-size: 64px;
+    line-height: 104%;
+    letter-spacing: -0.6%;
+    color: #FFFFFF;
+    margin: 0 0 24px;
+  }
+  .potential-sec .container-rh .text-part .text{
+    font-family: "Bricolage Grotesque";
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: 0%;
+  color: #ffffff;
+    margin: 0 0 24px;
+  }
+  .rh-secondary-button {
+    padding: 10px 30px;
+    border-radius: 8px;
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 160%;
+    letter-spacing: 0;
+    color: #0D1216;
+    background: #ffffff;
+    text-decoration: none;
+  }
+  .potential-sec .container-rh .image-part img{
+    max-width: 100%;
+  }
+  @media (max-width: 1024px) {
+    .potential-sec .container-rh .text-part{
+      width: 50%;
+    }
+    .potential-sec .container-rh .image-part{
+      width: 50%;
+    }
+    .potential-sec .container-rh .text-part .title {
+      font-size: 34px;
+      margin: 0 0 14px;
+    }
+    .potential-sec .container-rh .text-part .text {
+      font-size: 16px;
+      margin: 0 0 14px;
+    }
+  }
+  @media (max-width: 767px) {
+    .potential-sec .container-rh{
+      flex-direction: column;
+      justify-content: center;
+    }
+    .potential-sec .container-rh .text-part{
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+    }
+    .potential-sec .container-rh .image-part{
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+    }
+    .potential-sec .container-rh .text-part .title{
+      text-align: center;
+    }
+    .potential-sec .container-rh .text-part .text{
+      text-align: center;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Prove Your Potential",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Prove your potential"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Get Started Today"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Start for free"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image",
+      "info": "Recommended size: 800x600px"
+    }
+  ],
+  "presets": [
+    {
+      "name": "RH Prove Your Potential",
+      "category": "Custom Sections"
+    }
+  ]
+}
+{% endschema %}

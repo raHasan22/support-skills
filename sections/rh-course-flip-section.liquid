@@ -1,0 +1,273 @@
+<section class="course-flip-section">
+  <div
+    class="container-rh"
+    style="
+      --flex-direction: {{ section.settings.flex_direction }};
+      --flex-direction-mobile: {{ section.settings.flex_direction_mobile }};
+    "
+  >
+    <div class="rec-courses">
+      {% for product in collections[section.settings.collection].products limit: section.settings.product_limit %}
+        <div class="common-course-card-rh">
+          <div class="course-image-level">
+            <img src="{{ product.featured_image | img_url: '300x300' }}" alt="{{ product.featured_image.alt }}">
+            <span class="course-level">
+              {{ product.type | default: section.settings.default_level }}
+            </span>
+          </div>
+          <div class="course-description">
+            <div class="course-rating-duration">
+              <div class="course-rating">
+                <div class="ks-star-rating">
+                  <svg viewBox="0 0 1000 200" class="rating">
+                      <defs>
+                        <polygon id="star" points="100,0 131,66 200,76 150,128 162,200 100,166 38,200 50,128 0,76 69,66 "></polygon>
+                        <clipPath id="stars">
+                          <use xlink:href="#star"></use>
+                          <use xlink:href="#star" x="20%"></use>
+                          <use xlink:href="#star" x="40%"></use>
+                          <use xlink:href="#star" x="60%"></use>
+                          <use xlink:href="#star" x="80%"></use>
+                        </clipPath>
+                      </defs>
+                      <rect class="rating__background" clip-path="url(#stars)"></rect>
+  
+                      <rect width="100%" class="rating__value" clip-path="url(#stars)"></rect>
+                    </svg>
+                </div>
+                <span>
+                  ({{ product.metafields.custom.student_count | default: section.settings.default_student_count }})
+                </span>
+              </div>
+              <div class="course-duration">
+                <div class="icon">
+                  <img src="{{ 'clock.png' | asset_url }}" alt="">
+                </div>
+                <span>
+                  {{ product.metafields.custom.course_duration | default: section.settings.default_duration }}
+                </span>
+              </div>
+            </div>
+            <a href="{{ product.url }}" class="course-title">{{ product.title }}</a>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="text-part">
+      <h2 class="sec-title">
+        {{ section.settings.section_title }}
+      </h2>
+      <p class="section-description">
+        {{ section.settings.section_description }}
+      </p>
+      <a href="{{ section.settings.button_link }}" class="rh-primary-button">
+        {{ section.settings.button_text }}
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+    .course-flip-section {
+    padding: 100px 20px;
+  }
+  .course-flip-section .container-rh {
+    max-width: 1700px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: var(--flex-direction);
+    gap: 60px;
+    align-items: center;
+  }
+  .course-flip-section .container-rh .rec-courses {
+    width: 55%;
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .course-flip-section .container-rh .rec-courses .common-course-card-rh {
+    max-width: 266px;
+    width: 100%;
+  }
+  .course-flip-section .container-rh .text-part {
+    width: 45%;
+  }
+  .course-flip-section .container-rh .text-part .sec-title {
+    font-family: "Bricolage Grotesque";
+    font-weight: 500;
+    font-size: 64px;
+    line-height: 104%;
+    letter-spacing: -0.6%;
+    color: #0d1216;
+    margin: 0 0 32px;
+  }
+  .course-flip-section .container-rh .text-part .section-description {
+    font-family: "Bricolage Grotesque";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    letter-spacing: 0%;
+    color: #282c30;
+    margin: 0 0 32px;
+  }
+  @media (max-width: 1024px) {
+    .course-flip-section .container-rh {
+      gap: 30px;
+    }
+    .course-flip-section .container-rh .rec-courses {
+      width: 60%;
+      gap: 10px;
+    }
+    .course-flip-section .container-rh .text-part {
+      width: 40%;
+    }
+    .course-flip-section .container-rh .rec-courses .common-course-card-rh {
+      max-width: 220px;
+      width: 100%;
+    }
+  }
+  @media (max-width: 1024px) {
+    .course-flip-section .container-rh .text-part .sec-title {
+      font-size: 34px;
+      margin: 0 0 22px;
+    }
+    .course-flip-section .container-rh .text-part .section-description {
+      font-size: 14px;
+      margin: 0 0 22px;
+    }
+  }
+  @media (max-width: 1024px) {
+    .course-flip-section .container-rh .rec-courses{
+      width: 100%;
+    }
+    .course-flip-section .container-rh .text-part {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .course-flip-section .container-rh .text-part .sec-title {
+      text-align: center;
+    }
+    .course-flip-section .container-rh .text-part .section-description {
+      text-align: center;
+    }
+  }
+
+    @media (max-width: 767px) {
+      .course-flip-section .container-rh{
+       flex-direction: var(--flex-direction-mobile);
+    }
+    }
+</style>
+
+{% schema %}
+{
+  "name": "Course Flip Section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout Settings"
+    },
+    {
+      "type": "select",
+      "id": "flex_direction",
+      "label": "Desktop Layout",
+      "options": [
+        {"value": "row", "label": "Row (Left to Right)"},
+        {"value": "row-reverse", "label": "Row Reverse (Right to Left)"},
+        {"value": "column", "label": "Column (Top to Bottom)"},
+        {"value": "column-reverse", "label": "Column Reverse (Bottom to Top)"}
+      ],
+      "default": "row"
+    },
+    {
+      "type": "select",
+      "id": "flex_direction_mobile",
+      "label": "Mobile Layout",
+      "options": [
+        {"value": "row", "label": "Row (Left to Right)"},
+        {"value": "row-reverse", "label": "Row Reverse (Right to Left)"},
+        {"value": "column", "label": "Column (Top to Bottom)"},
+        {"value": "column-reverse", "label": "Column Reverse (Bottom to Top)"}
+      ],
+      "default": "column"
+    },
+    {
+      "type": "range",
+      "id": "product_limit",
+      "label": "Courses to Show",
+      "min": 1,
+      "max": 12,
+      "step": 1,
+      "default": 6
+    },
+    {
+      "type": "header",
+      "content": "Content Settings"
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Course Collection"
+    },
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "Section Title",
+      "default": "Most Popular Courses"
+    },
+    {
+      "type": "textarea",
+      "id": "section_description",
+      "label": "Description",
+      "default": "The Top AI & Data Skills Courses section highlights..."
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Browse all courses"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "header",
+      "content": "Default Values"
+    },
+    {
+      "type": "text",
+      "id": "default_level",
+      "label": "Default Course Level",
+      "default": "Beginner"
+    },
+    {
+      "type": "text",
+      "id": "default_student_count",
+      "label": "Default Student Count",
+      "default": "223"
+    },
+    {
+      "type": "text",
+      "id": "default_duration",
+      "label": "Default Duration",
+      "default": "4 Month"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Course Flip Section",
+      "category": "Courses",
+      "settings": {
+        "flex_direction": "row",
+        "flex_direction_mobile": "column"
+      }
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,583 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "rh_support_skills_hero_gEy6ew": {
+      "type": "rh-support-skills-hero",
+      "blocks": {
+        "category_yg86hp": {
+          "type": "category",
+          "settings": {
+            "category": "Data Science",
+            "category_link": "",
+            "icon": "shopify://shop_images/Subject_category.png",
+            "image": "shopify://shop_images/AI.png",
+            "color_start": "#da48e7",
+            "color_end": "#f4a7fc"
+          }
+        },
+        "category_KdFMhX": {
+          "type": "category",
+          "settings": {
+            "category": "Programming & Development",
+            "category_link": "",
+            "icon": "shopify://shop_images/Subject_category_1.png",
+            "image": "shopify://shop_images/Untitled_design_1_1.png",
+            "color_start": "#07983f",
+            "color_end": "#8fd7ac"
+          }
+        },
+        "category_eKPECN": {
+          "type": "category",
+          "settings": {
+            "category": "Artificial Intelligence",
+            "category_link": "",
+            "icon": "shopify://shop_images/Group.png",
+            "image": "shopify://shop_images/3_21.png",
+            "color_start": "#ed5802",
+            "color_end": "#feb387"
+          }
+        },
+        "category_E8cJNN": {
+          "type": "category",
+          "settings": {
+            "category": "Business",
+            "category_link": "",
+            "icon": "shopify://shop_images/Subject_category.png",
+            "image": "shopify://shop_images/AI.png",
+            "color_start": "#da48e7",
+            "color_end": "#f4a7fc"
+          }
+        },
+        "category_iEqUpD": {
+          "type": "category",
+          "settings": {
+            "category": "Autonomous Systems",
+            "category_link": "",
+            "icon": "shopify://shop_images/Subject_category_3.png",
+            "image": "shopify://shop_images/AI_1_1.png",
+            "color_start": "#8023db",
+            "color_end": "#c88bfe"
+          }
+        },
+        "category_riWXNY": {
+          "type": "category",
+          "settings": {
+            "category": "Product Management",
+            "category_link": "",
+            "icon": "shopify://shop_images/Subject_category_4.png",
+            "image": "shopify://shop_images/AI_2_1.png",
+            "color_start": "#3f3ad2",
+            "color_end": "#8e94fd"
+          }
+        },
+        "category_yAdeTB": {
+          "type": "category",
+          "settings": {
+            "category": "Cloud Computing",
+            "category_link": "",
+            "icon": "shopify://shop_images/Subject_category_5.png",
+            "image": "shopify://shop_images/AI_3_1.png",
+            "color_start": "#e7313f",
+            "color_end": "#ffa3ab"
+          }
+        },
+        "category_kbDVgU": {
+          "type": "category",
+          "settings": {
+            "category": "Programming & Development",
+            "category_link": "",
+            "icon": "shopify://shop_images/Subject_category_1.png",
+            "image": "shopify://shop_images/Untitled_design_1_1.png",
+            "color_start": "#07983f",
+            "color_end": "#8fd7ac"
+          }
+        },
+        "category_fgRpBE": {
+          "type": "category",
+          "settings": {
+            "category": "Artificial Intelligence",
+            "category_link": "",
+            "icon": "shopify://shop_images/Group.png",
+            "image": "shopify://shop_images/3_21.png",
+            "color_start": "#ed5802",
+            "color_end": "#feb387"
+          }
+        }
+      },
+      "block_order": [
+        "category_yg86hp",
+        "category_KdFMhX",
+        "category_eKPECN",
+        "category_E8cJNN",
+        "category_iEqUpD",
+        "category_riWXNY",
+        "category_yAdeTB",
+        "category_kbDVgU",
+        "category_fgRpBE"
+      ],
+      "name": "RH Hero support slills",
+      "settings": {
+        "title": "Learn. Lead.\nTransform.",
+        "subtitle": "Explore courses by job function",
+        "button_text": "View All courses",
+        "button_link": ""
+      }
+    },
+    "rh_support_skills_pricing_EEYfAn": {
+      "type": "rh-support-skills-pricing",
+      "blocks": {
+        "pricing_plan_xfE6Gr": {
+          "type": "pricing_plan",
+          "settings": {
+            "card_class": "access-monthly",
+            "tags": "For one person",
+            "plan_title": "All Access monthly",
+            "price": "$249",
+            "price_period": "/month",
+            "button_text": "Enroll now",
+            "button_link": "",
+            "features": "Cancel Anytime\nUnlimited access to our top-rated courses\nHands-on projects with expert feedback\nPersonalized career coaching and interview prep\nProgram Certificates"
+          }
+        },
+        "pricing_plan_qf8wWa": {
+          "type": "pricing_plan",
+          "settings": {
+            "card_class": "accesa-4-month monthly",
+            "tags": "Best Value, Save 15%",
+            "plan_title": "All Access bundle",
+            "price": "$212",
+            "price_period": "/month (for 4-month bundle)",
+            "button_text": "Enroll now",
+            "button_link": "",
+            "features": "Cancel Anytime\nAll the same great benefits as our monthly plan\nDiscount applies to the first 4 months of membership\nTotal price of $846 for a 4-month bundle"
+          }
+        },
+        "pricing_plan_iUD6t8": {
+          "type": "pricing_plan",
+          "settings": {
+            "card_class": "access-one-time",
+            "tags": "For one course",
+            "plan_title": "Only One course",
+            "price": "$949",
+            "price_period": "/one-time payment",
+            "button_text": "Enroll now",
+            "button_link": "",
+            "features": "Cancel Anytime\nFlexibility to finish the program in your own time\nHands-on projects with expert feedback\nPersonalized project reviews\nProgram Certificates"
+          }
+        }
+      },
+      "block_order": [
+        "pricing_plan_xfE6Gr",
+        "pricing_plan_qf8wWa",
+        "pricing_plan_iUD6t8"
+      ],
+      "name": "RH Pricing Plans",
+      "settings": {
+        "title": "Choose the plan that works for you"
+      }
+    },
+    "rh_products_section_6DRDUb": {
+      "type": "rh-products-section",
+      "name": "RH Recommended Courses",
+      "settings": {
+        "title": "Courses Recommended for You",
+        "collection": "all-courses",
+        "product_limit": 12,
+        "default_level": "Beginner",
+        "default_student_count": "223",
+        "default_duration": "4 Month",
+        "show_browse_button": true,
+        "browse_button_text": "Browse all courses",
+        "browse_button_link": ""
+      }
+    },
+    "rh_products_section_YjQBET": {
+      "type": "rh-products-section",
+      "name": "RH Recommended Courses",
+      "settings": {
+        "title": "Newly Released Courses",
+        "collection": "all-courses",
+        "product_limit": 12,
+        "default_level": "Beginner",
+        "default_student_count": "223",
+        "default_duration": "4 Month",
+        "show_browse_button": true,
+        "browse_button_text": "Browse all courses",
+        "browse_button_link": ""
+      }
+    },
+    "rh_products_section_8h7zxq": {
+      "type": "rh-products-section",
+      "name": "RH Recommended Courses",
+      "settings": {
+        "title": "Newly Released Courses",
+        "collection": "all-courses",
+        "product_limit": 12,
+        "default_level": "Beginner",
+        "default_student_count": "223",
+        "default_duration": "4 Month",
+        "show_browse_button": true,
+        "browse_button_text": "Browse all courses",
+        "browse_button_link": ""
+      }
+    },
+    "rh_products_section_nfb7hd": {
+      "type": "rh-products-section",
+      "name": "RH Recommended Courses",
+      "settings": {
+        "title": "Most Popular Courses",
+        "collection": "all-courses",
+        "product_limit": 12,
+        "default_level": "Beginner",
+        "default_student_count": "223",
+        "default_duration": "4 Month",
+        "show_browse_button": true,
+        "browse_button_text": "Browse all courses",
+        "browse_button_link": ""
+      }
+    },
+    "rh_course_flip_section_BD4Egk": {
+      "type": "rh-course-flip-section",
+      "name": "RH Course Flip Section",
+      "settings": {
+        "flex_direction": "row",
+        "flex_direction_mobile": "column-reverse",
+        "product_limit": 6,
+        "collection": "all-courses",
+        "section_title": "Most Popular Courses",
+        "section_description": "The Top AI & Data Skills Courses section highlights the most in-demand and future-ready courses carefully curated for learners eager to build a strong foundation in artificial intelligence and data science. From beginner-friendly introductions to advanced machine learning and data analytics, each course is designed to equip students with real-world, job-ready skills. This section not only showcases trending topics like Python for AI, deep learning, and data visualization but also helps learners stay ahead in a fast-evolving tech landscape by offering expert-led, industry-relevant content.",
+        "button_text": "Browse all courses",
+        "button_link": "",
+        "default_level": "Beginner",
+        "default_student_count": "223",
+        "default_duration": "4 Month"
+      }
+    },
+    "rh_course_flip_section_FcNQQ8": {
+      "type": "rh-course-flip-section",
+      "name": "RH Course Flip Section",
+      "settings": {
+        "flex_direction": "row-reverse",
+        "flex_direction_mobile": "column-reverse",
+        "product_limit": 6,
+        "collection": "all-courses",
+        "section_title": "Courses to Learn New Skills in 30 Days",
+        "section_description": "The Top AI & Data Skills Courses section highlights the most in-demand and future-ready courses carefully curated for learners eager to build a strong foundation in artificial intelligence and data science. From beginner-friendly introductions to advanced machine learning and data analytics, each course is designed to equip students with real-world, job-ready skills. This section not only showcases trending topics like Python for AI, deep learning, and data visualization but also helps learners stay ahead in a fast-evolving tech landscape by offering expert-led, industry-relevant content.",
+        "button_text": "Browse all courses",
+        "button_link": "",
+        "default_level": "Beginner",
+        "default_student_count": "223",
+        "default_duration": "4 Month"
+      }
+    },
+    "rh_course_flip_section_qeeFQK": {
+      "type": "rh-course-flip-section",
+      "name": "RH Course Flip Section",
+      "settings": {
+        "flex_direction": "row",
+        "flex_direction_mobile": "column-reverse",
+        "product_limit": 6,
+        "collection": "all-courses",
+        "section_title": "Top Free Online Courses",
+        "section_description": "The Top AI & Data Skills Courses section highlights the most in-demand and future-ready courses carefully curated for learners eager to build a strong foundation in artificial intelligence and data science. From beginner-friendly introductions to advanced machine learning and data analytics, each course is designed to equip students with real-world, job-ready skills. This section not only showcases trending topics like Python for AI, deep learning, and data visualization but also helps learners stay ahead in a fast-evolving tech landscape by offering expert-led, industry-relevant content.",
+        "button_text": "Browse all courses",
+        "button_link": "",
+        "default_level": "Beginner",
+        "default_student_count": "223",
+        "default_duration": "4 Month"
+      }
+    },
+    "rh_course_flip_section_Qyyk4D": {
+      "type": "rh-course-flip-section",
+      "name": "RH Course Flip Section",
+      "settings": {
+        "flex_direction": "row-reverse",
+        "flex_direction_mobile": "column-reverse",
+        "product_limit": 6,
+        "collection": "all-courses",
+        "section_title": "Beginner and Introduction Courses for Software Engineers",
+        "section_description": "The Top AI & Data Skills Courses section highlights the most in-demand and future-ready courses carefully curated for learners eager to build a strong foundation in artificial intelligence and data science. From beginner-friendly introductions to advanced machine learning and data analytics, each course is designed to equip students with real-world, job-ready skills. This section not only showcases trending topics like Python for AI, deep learning, and data visualization but also helps learners stay ahead in a fast-evolving tech landscape by offering expert-led, industry-relevant content.",
+        "button_text": "Browse all courses",
+        "button_link": "",
+        "default_level": "Beginner",
+        "default_student_count": "223",
+        "default_duration": "4 Month"
+      }
+    },
+    "rh_course_flip_section_nTWTtm": {
+      "type": "rh-course-flip-section",
+      "name": "RH Course Flip Section",
+      "settings": {
+        "flex_direction": "row",
+        "flex_direction_mobile": "column-reverse",
+        "product_limit": 6,
+        "collection": "all-courses",
+        "section_title": "Top AI and Python Courses",
+        "section_description": "The Top AI & Data Skills Courses section highlights the most in-demand and future-ready courses carefully curated for learners eager to build a strong foundation in artificial intelligence and data science. From beginner-friendly introductions to advanced machine learning and data analytics, each course is designed to equip students with real-world, job-ready skills. This section not only showcases trending topics like Python for AI, deep learning, and data visualization but also helps learners stay ahead in a fast-evolving tech landscape by offering expert-led, industry-relevant content.",
+        "button_text": "Browse all courses",
+        "button_link": "",
+        "default_level": "Beginner",
+        "default_student_count": "223",
+        "default_duration": "4 Month"
+      }
+    },
+    "rh_skill_difference_aFTTgJ": {
+      "type": "rh-skill-difference",
+      "name": "RH SupportSkills Difference Section",
+      "settings": {
+        "main_heading": "The SupportSkills Difference",
+        "feature_heading_1": "Prove Mastery Through Hands-On Projects",
+        "feature_description_1": "Our open-ended projects are modeled after real-world workplace scenarios, and require in-depth critical thinking and creative solutions.",
+        "feature_heading_2": "Succeed with Personalized Feedback",
+        "feature_description_2": "Every project receives personalized feedback from industry experts, and our mentors are available to answer questions whenever you're feeling stuck.",
+        "feature_image": "shopify://shop_images/e77f6e7397db022ed8c56be055d2362a.png",
+        "feature_image_alt": "Support Skills Illustration"
+      }
+    },
+    "rh_review_sec_byRwdH": {
+      "type": "rh-review-sec",
+      "blocks": {
+        "testimonial_wUTdgx": {
+          "type": "testimonial",
+          "settings": {
+            "image": "shopify://shop_images/Frame_40576.png",
+            "review_text": "“SupportSkills helped me gain on-the-job confidence, build a portfolio, and earn a microcredential to share with prospective employers.”",
+            "name": "Ben, Business Analyst",
+            "location": "Nanodegree program graduate"
+          }
+        },
+        "testimonial_f3ieLG": {
+          "type": "testimonial",
+          "settings": {
+            "image": "shopify://shop_images/Frame_40576.png",
+            "review_text": "“SupportSkills helped me gain on-the-job confidence, build a portfolio, and earn a microcredential to share with prospective employers.”",
+            "name": "Ben, Business Analyst",
+            "location": "Nanodegree program graduate"
+          }
+        },
+        "testimonial_pid4fB": {
+          "type": "testimonial",
+          "settings": {
+            "image": "shopify://shop_images/Frame_40576.png",
+            "review_text": "“SupportSkills helped me gain on-the-job confidence, build a portfolio, and earn a microcredential to share with prospective employers.”",
+            "name": "Ben, Business Analyst",
+            "location": "Nanodegree program graduate"
+          }
+        },
+        "review_platform_RCwQ4G": {
+          "type": "review_platform",
+          "settings": {
+            "logo": "shopify://shop_images/Facebook_logo__2023_1.png",
+            "platform_name": "Facebook",
+            "rating": 4.5,
+            "reviews_count": "2434"
+          }
+        },
+        "review_platform_WjPdkJ": {
+          "type": "review_platform",
+          "settings": {
+            "logo": "shopify://shop_images/image_21.png",
+            "platform_name": "Course Report",
+            "rating": 4.5,
+            "reviews_count": "2434"
+          }
+        },
+        "review_platform_EpW6ee": {
+          "type": "review_platform",
+          "settings": {
+            "logo": "shopify://shop_images/image_22.png",
+            "platform_name": "Switchup",
+            "rating": 4.5,
+            "reviews_count": "2434"
+          }
+        },
+        "review_platform_CzXRgU": {
+          "type": "review_platform",
+          "settings": {
+            "logo": "shopify://shop_images/Trustpilot_Logo__2022_1.png",
+            "platform_name": "Trustpilot",
+            "rating": 4.5,
+            "reviews_count": "2434"
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_wUTdgx",
+        "testimonial_f3ieLG",
+        "testimonial_pid4fB",
+        "review_platform_RCwQ4G",
+        "review_platform_WjPdkJ",
+        "review_platform_EpW6ee",
+        "review_platform_CzXRgU"
+      ],
+      "name": "RH Review Section",
+      "settings": {
+        "title": "Learners Love SupportSkills"
+      }
+    },
+    "rh_business_and_government_AqneiK": {
+      "type": "rh-business-and-government",
+      "blocks": {
+        "business_feature_ynk3HN": {
+          "type": "business_feature",
+          "settings": {
+            "feature_icon": "shopify://shop_images/3f877251a2cc89eced48b6684f7916039f780f56.svg",
+            "feature_text": "Hands-on project-based approach"
+          }
+        },
+        "business_feature_wgFxby": {
+          "type": "business_feature",
+          "settings": {
+            "feature_icon": "shopify://shop_images/3f877251a2cc89eced48b6684f7916039f780f56.svg",
+            "feature_text": "Top content co-developed with industry leaders"
+          }
+        },
+        "business_feature_fejBCt": {
+          "type": "business_feature",
+          "settings": {
+            "feature_icon": "shopify://shop_images/3f877251a2cc89eced48b6684f7916039f780f56.svg",
+            "feature_text": "Global mentor network with 700+ domain experts"
+          }
+        }
+      },
+      "block_order": [
+        "business_feature_ynk3HN",
+        "business_feature_wgFxby",
+        "business_feature_fejBCt"
+      ],
+      "name": "RH Business & Government Sections",
+      "settings": {
+        "business_heading": "SupportSkills for Business",
+        "features_heading": "Scale skills development for your organization",
+        "business_image": "shopify://shop_images/8fe706c861a9b17fd56cbb9c6cc33c50.webp",
+        "primary_button_text": "Learn more",
+        "primary_button_link": "",
+        "secondary_button_text": "Contact us",
+        "secondary_button_link": "",
+        "government_heading": "SupportSkills For Government",
+        "government_description": "SupportSkills creates job opportunities with GDP impact for nations embracing the global digital era.",
+        "government_image": "shopify://shop_images/07426fad3833f829a0af4fd26d7f9add03bddb64.svg",
+        "government_button_text": "Learn more",
+        "government_button_link": ""
+      }
+    },
+    "rh_partners_section_PEnkqk": {
+      "type": "rh-partners-section",
+      "blocks": {
+        "partner_logo_RJQyeJ": {
+          "type": "partner_logo",
+          "settings": {
+            "partner_image": "shopify://shop_images/Frame_3049.png"
+          }
+        },
+        "partner_logo_MMVfEk": {
+          "type": "partner_logo",
+          "settings": {
+            "partner_image": "shopify://shop_images/Frame_3050.png"
+          }
+        },
+        "partner_logo_CC88ib": {
+          "type": "partner_logo",
+          "settings": {
+            "partner_image": "shopify://shop_images/Frame_3051.png"
+          }
+        },
+        "partner_logo_EjPjJ6": {
+          "type": "partner_logo",
+          "settings": {
+            "partner_image": "shopify://shop_images/Frame_3052.png"
+          }
+        },
+        "partner_logo_aJbFUp": {
+          "type": "partner_logo",
+          "settings": {
+            "partner_image": "shopify://shop_images/Frame_3053.png"
+          }
+        },
+        "partner_logo_fdYQcp": {
+          "type": "partner_logo",
+          "settings": {
+            "partner_image": "shopify://shop_images/Frame_3054.png"
+          }
+        },
+        "partner_logo_nyMaNF": {
+          "type": "partner_logo",
+          "settings": {
+            "partner_image": "shopify://shop_images/Frame_3055.png"
+          }
+        },
+        "partner_logo_qzBdMf": {
+          "type": "partner_logo",
+          "settings": {
+            "partner_image": "shopify://shop_images/Frame_3056.png"
+          }
+        },
+        "partner_logo_W9m9YE": {
+          "type": "partner_logo",
+          "settings": {
+            "partner_image": "shopify://shop_images/Frame_3057.png"
+          }
+        },
+        "partner_logo_GpRG7c": {
+          "type": "partner_logo",
+          "settings": {
+            "partner_image": "shopify://shop_images/Frame_3058.png"
+          }
+        }
+      },
+      "block_order": [
+        "partner_logo_RJQyeJ",
+        "partner_logo_MMVfEk",
+        "partner_logo_CC88ib",
+        "partner_logo_EjPjJ6",
+        "partner_logo_aJbFUp",
+        "partner_logo_fdYQcp",
+        "partner_logo_nyMaNF",
+        "partner_logo_qzBdMf",
+        "partner_logo_W9m9YE",
+        "partner_logo_GpRG7c"
+      ],
+      "name": "RH Partners Section",
+      "settings": {
+        "section_title": "Unlock Your Team's Potential with 2000+ Accredited Courses!"
+      }
+    },
+    "potential_sec_H8LHap": {
+      "type": "potential-sec",
+      "name": "RH Prove Your Potential",
+      "settings": {
+        "heading": "Prove your potential",
+        "subheading": "Get Started Today",
+        "button_text": "Start for free",
+        "button_link": "",
+        "image": "shopify://shop_images/Frame_40604.png"
+      }
+    }
+  },
+  "order": [
+    "rh_support_skills_hero_gEy6ew",
+    "rh_support_skills_pricing_EEYfAn",
+    "rh_products_section_6DRDUb",
+    "rh_products_section_YjQBET",
+    "rh_products_section_8h7zxq",
+    "rh_products_section_nfb7hd",
+    "rh_course_flip_section_BD4Egk",
+    "rh_course_flip_section_FcNQQ8",
+    "rh_course_flip_section_qeeFQK",
+    "rh_course_flip_section_Qyyk4D",
+    "rh_course_flip_section_nTWTtm",
+    "rh_skill_difference_aFTTgJ",
+    "rh_review_sec_byRwdH",
+    "rh_business_and_government_AqneiK",
+    "rh_partners_section_PEnkqk",
+    "potential_sec_H8LHap"
+  ]
+}

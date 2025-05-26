@@ -1,0 +1,331 @@
+<section class="choose-the-plan-rh">
+  <div class="container-rh">
+    <h2 class="section-title">
+      {{ section.settings.title | default: "Choose the plan that works for you" }}
+    </h2>
+    <div class="pricing-cards-rh">
+      {% for block in section.blocks %}
+        <div class="{{ block.settings.card_class }} pay-card">
+          <div class="price-part">
+            <div class="tags">
+              {% assign tags = block.settings.tags | split: ',' %}
+              {% for tag in tags %}
+                <span class="tag">
+                  {{ tag | strip }}
+                </span>
+              {% endfor %}
+            </div>
+            <h2 class="title">
+              {{ block.settings.plan_title }}
+            </h2>
+            <div class="price">
+              {{ block.settings.price }} <br>
+              <span>{{ block.settings.price_period }}</span>
+            </div>
+            <a href="{{ block.settings.button_link }}" class="rh-primary-button">
+              {{ block.settings.button_text | default: "Enroll now" }}
+            </a>
+          </div>
+          <div class="features-part">
+            {% assign features = block.settings.features | newline_to_br | split: '<br />' %}
+            {% for feature in features %}
+              {% if feature != blank %}
+                <div class="feature">
+                  <img src="{{ 'Vector.png' | asset_url }}" alt="">
+                  <span>{{ feature | strip }}</span>
+                </div>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Pricing Plans",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Section Title",
+      "default": "Choose the plan that works for you"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "pricing_plan",
+      "name": "Pricing Plan",
+      "settings": [
+        {
+          "type": "text",
+          "id": "card_class",
+          "label": "Card CSS Class",
+          "info": "For styling purposes (e.g., access-monthly)"
+        },
+        {
+          "type": "text",
+          "id": "tags",
+          "label": "Tags (comma separated)",
+          "default": "For one person",
+          "info": "Separate multiple tags with commas"
+        },
+        {
+          "type": "text",
+          "id": "plan_title",
+          "label": "Plan Title",
+          "default": "All Access monthly"
+        },
+        {
+          "type": "text",
+          "id": "price",
+          "label": "Price",
+          "default": "$249"
+        },
+        {
+          "type": "text",
+          "id": "price_period",
+          "label": "Price Period",
+          "default": "/month"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button Text",
+          "default": "Enroll now"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button Link"
+        },
+        {
+          "type": "textarea",
+          "id": "features",
+          "label": "Features (one per line)",
+          "default": "Cancel Anytime\nUnlimited access to our top-rated courses\nHands-on projects with expert feedback\nPersonalized career coaching and interview prep\nProgram Certificates",
+          "info": "Enter one feature per line"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "RH Pricing Plans",
+      "category": "Pricing",
+      "blocks": [
+        {
+          "type": "pricing_plan",
+          "settings": {
+            "card_class": "access-monthly",
+            "tags": "For one person",
+            "plan_title": "All Access monthly",
+            "price": "$249",
+            "price_period": "/month",
+            "features": "Cancel Anytime\nUnlimited access to our top-rated courses\nHands-on projects with expert feedback\nPersonalized career coaching and interview prep\nProgram Certificates"
+          }
+        },
+        {
+          "type": "pricing_plan",
+          "settings": {
+            "card_class": "accesa-4-month monthly",
+            "tags": "Best Value, Save 15%",
+            "plan_title": "All Access bundle",
+            "price": "$212",
+            "price_period": "/month (for 4-month bundle)",
+            "features": "Cancel Anytime\nAll the same great benefits as our monthly plan\nDiscount applies to the first 4 months of membership\nTotal price of $846 for a 4-month bundle"
+          }
+        },
+        {
+          "type": "pricing_plan",
+          "settings": {
+            "card_class": "access-one-time",
+            "tags": "For one course",
+            "plan_title": "Only One course",
+            "price": "$949",
+            "price_period": "/one-time payment",
+            "features": "Cancel Anytime\nFlexibility to finish the program in your own time\nHands-on projects with expert feedback\nPersonalized project reviews\nProgram Certificates"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+<style>
+  .choose-the-plan-rh {
+  padding: 120px 20px;
+  background: #f6f7f8;
+}
+.choose-the-plan-rh .container-rh {
+  max-width: 1416px;
+  margin: 0 auto;
+}
+.choose-the-plan-rh .container-rh .section-title {
+  font-family: "Bricolage Grotesque";
+  font-weight: 500;
+  font-size: 64px;
+  line-height: 104%;
+  letter-spacing: -0.6%;
+  text-align: center;
+  color: #0d1216;
+  margin: 0 0 64px;
+}
+.choose-the-plan-rh .container-rh .pricing-cards-rh {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.choose-the-plan-rh .container-rh .pricing-cards-rh .pay-card {
+  width: 32.2%;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.choose-the-plan-rh .container-rh .pricing-cards-rh .pay-card .price-part {
+  padding: 32px;
+}
+.choose-the-plan-rh
+  .container-rh
+  .pricing-cards-rh
+  .pay-card
+  .price-part
+  .tags {
+  display: flex;
+  gap: 16px;
+  margin: 0 0 24px;
+  border-radius: 8px;
+}
+.choose-the-plan-rh .container-rh .pricing-cards-rh .pay-card .price-part .tag {
+  background-color: #fff;
+  padding: 0 8px;
+  border-radius: 30px;
+  font-family: "Bricolage Grotesque";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 160%;
+  letter-spacing: 0%;
+  color: #0d1216;
+}
+.choose-the-plan-rh
+  .container-rh
+  .pricing-cards-rh
+  .pay-card
+  .price-part
+  .title {
+  font-family: "Bricolage Grotesque";
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 160%;
+  letter-spacing: 0%;
+  color: #0d1216;
+  margin: 0 0 24px;
+}
+.choose-the-plan-rh
+  .container-rh
+  .pricing-cards-rh
+  .pay-card
+  .price-part
+  .price {
+  font-family: "Bricolage Grotesque";
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 104%;
+  letter-spacing: -0.6%;
+  vertical-align: middle;
+  color: #0d1216;
+  margin: 0 0 40px;
+}
+.choose-the-plan-rh
+  .container-rh
+  .pricing-cards-rh
+  .pay-card
+  .price-part
+  .price
+  span {
+  font-family: "Bricolage Grotesque";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
+  color: #0d1216;
+}
+.choose-the-plan-rh
+  .container-rh
+  .pricing-cards-rh
+  .pay-card
+  .price-part
+  .rh-primary-button {
+  width: 100%;
+}
+.choose-the-plan-rh .container-rh .pricing-cards-rh .pay-card .features-part {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.choose-the-plan-rh
+  .container-rh
+  .pricing-cards-rh
+  .pay-card
+  .features-part
+  .feature {
+  display: grid;
+  grid-template-columns: 15px 1fr;
+  align-items: start;
+  gap: 10px;
+}
+.choose-the-plan-rh
+  .container-rh
+  .pricing-cards-rh
+  .pay-card
+  .features-part
+  .feature img{
+  margin-top: 8px;
+}
+.choose-the-plan-rh
+  .container-rh
+  .pricing-cards-rh
+  .pay-card
+  .features-part
+  .feature
+  span {
+  font-family: "Bricolage Grotesque";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
+  letter-spacing: 0%;
+  color: #0d1216;
+}
+.choose-the-plan-rh .container-rh .pricing-cards-rh .access-monthly .price-part{
+  background-color: #E9ECEE;
+}
+.choose-the-plan-rh .container-rh .pricing-cards-rh .accesa-4-month .price-part{
+  background-color: #E7DBFF;
+}
+.choose-the-plan-rh .container-rh .pricing-cards-rh .access-one-time .price-part{
+  background-color: #E7DBFF;
+}
+@media (max-width: 1110px) {
+  .choose-the-plan-rh .container-rh .pricing-cards-rh .pay-card {
+    width: 48%;
+  }
+  .choose-the-plan-rh .container-rh .section-title {
+    font-size: 34px;
+    margin: 0 0 44px;
+  }
+}
+@media (max-width: 767px) {
+  .choose-the-plan-rh .container-rh .pricing-cards-rh .pay-card {
+    width: 100%;
+  }
+  .choose-the-plan-rh .container-rh .pricing-cards-rh .pay-card .price-part {
+    padding: 20px;
+  }
+  .choose-the-plan-rh .container-rh .pricing-cards-rh .pay-card .features-part {
+    padding: 20px;
+  }
+}
+</style>

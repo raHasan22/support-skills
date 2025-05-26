@@ -1,0 +1,388 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "vendor": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "share": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "vendor",
+        "title",
+        "price",
+        "variant_picker",
+        "quantity_selector",
+        "buy_buttons",
+        "description",
+        "share"
+      ],
+      "disabled": true,
+      "settings": {
+        "enable_sticky_info": true,
+        "color_scheme": "scheme-1",
+        "media_size": "large",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "stacked",
+        "mobile_thumbnails": "hide",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 12
+      }
+    },
+    "rh_single_course_top_Y84GU8": {
+      "type": "rh-single-course-top",
+      "name": "RH Single course top",
+      "settings": {}
+    },
+    "related-products": {
+      "type": "related-products",
+      "disabled": true,
+      "settings": {
+        "heading": "You may also like",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "columns_mobile": "2",
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "rh_instructor_slider_a7b9nW": {
+      "type": "rh-instructor-slider",
+      "blocks": {
+        "instructor_qqH4MF": {
+          "type": "instructor",
+          "settings": {
+            "instructor_image": "shopify://shop_images/image_31.png",
+            "background_image": "shopify://shop_images/BG.png",
+            "name": "Sean Murdock",
+            "designation": "Professor at Brigham Young University Idaho",
+            "bio": "Sean currently teaches cybersecurity and DevOps courses at Brigham Young University Idaho. He has been a software engineer for over 16 years. Some of the most exciting projects he has worked on involved data pipelines for DNA processing and vehicle telematics."
+          }
+        },
+        "instructor_QdXfeB": {
+          "type": "instructor",
+          "settings": {
+            "instructor_image": "shopify://shop_images/image_31_4.png",
+            "background_image": "shopify://shop_images/BG.png",
+            "name": "Sean Murdock",
+            "designation": "Professor at Brigham Young University Idaho",
+            "bio": "Sean currently teaches cybersecurity and DevOps courses at Brigham Young University Idaho. He has been a software engineer for over 16 years. Some of the most exciting projects he has worked on involved data pipelines for DNA processing and vehicle telematics."
+          }
+        },
+        "instructor_39BYRP": {
+          "type": "instructor",
+          "settings": {
+            "instructor_image": "shopify://shop_images/image_31_2.png",
+            "background_image": "shopify://shop_images/BG.png",
+            "name": "Sean Murdock",
+            "designation": "Professor at Brigham Young University Idaho",
+            "bio": "Sean currently teaches cybersecurity and DevOps courses at Brigham Young University Idaho. He has been a software engineer for over 16 years. Some of the most exciting projects he has worked on involved data pipelines for DNA processing and vehicle telematics."
+          }
+        },
+        "instructor_YhcpJx": {
+          "type": "instructor",
+          "settings": {
+            "instructor_image": "shopify://shop_images/image_31_3.png",
+            "background_image": "shopify://shop_images/BG.png",
+            "name": "Sean Murdock",
+            "designation": "Professor at Brigham Young University Idaho",
+            "bio": "Sean currently teaches cybersecurity and DevOps courses at Brigham Young University Idaho. He has been a software engineer for over 16 years. Some of the most exciting projects he has worked on involved data pipelines for DNA processing and vehicle telematics."
+          }
+        },
+        "instructor_4bCfLV": {
+          "type": "instructor",
+          "settings": {
+            "instructor_image": "shopify://shop_images/image_31_4.png",
+            "background_image": "shopify://shop_images/BG.png",
+            "name": "Sean Murdock",
+            "designation": "Professor at Brigham Young University Idaho",
+            "bio": "Sean currently teaches cybersecurity and DevOps courses at Brigham Young University Idaho. He has been a software engineer for over 16 years. Some of the most exciting projects he has worked on involved data pipelines for DNA processing and vehicle telematics."
+          }
+        }
+      },
+      "block_order": [
+        "instructor_qqH4MF",
+        "instructor_QdXfeB",
+        "instructor_39BYRP",
+        "instructor_YhcpJx",
+        "instructor_4bCfLV"
+      ],
+      "name": "RH Instructor Slider",
+      "settings": {
+        "heading": "Taught By The Best"
+      }
+    },
+    "rh_student_review_887qXy": {
+      "type": "rh-student-review",
+      "blocks": {
+        "review_QT6ymR": {
+          "type": "review",
+          "settings": {
+            "review_text": "Once you get going, it gets really interesting and the topics are covered really well.",
+            "student_name": "Nicolas M.",
+            "rating": 5,
+            "review_date": "February 14, 2023"
+          }
+        },
+        "review_CWarjm": {
+          "type": "review",
+          "settings": {
+            "review_text": "Once you get going, it gets really interesting and the topics are covered really well.",
+            "student_name": "Nicolas M.",
+            "rating": 5,
+            "review_date": "February 14, 2023"
+          }
+        },
+        "review_6aaQ6x": {
+          "type": "review",
+          "settings": {
+            "review_text": "Once you get going, it gets really interesting and the topics are covered really well.",
+            "student_name": "Nicolas M.",
+            "rating": 5,
+            "review_date": "February 14, 2023"
+          }
+        }
+      },
+      "block_order": [
+        "review_QT6ymR",
+        "review_CWarjm",
+        "review_6aaQ6x"
+      ],
+      "name": "RH Student Reviews",
+      "settings": {
+        "title": "Student Reviews"
+      }
+    },
+    "rh_single_page_difference_eRjzJd": {
+      "type": "rh-single-page-difference",
+      "blocks": {
+        "hero_block_PmhTEA": {
+          "type": "hero_block",
+          "settings": {
+            "heading": "Demonstrate proficiency with practical projects",
+            "description": "Projects are based on real-world scenarios and challenges, allowing you to apply the skills you learn to practical situations, while giving you real hands-on experience.",
+            "image": "shopify://shop_images/Frame_40571.png",
+            "feature_1_icon": "shopify://shop_images/3f877251a2cc89eced48b6684f7916039f780f56.svg",
+            "feature_1_text": "Hands-on project-based approach",
+            "feature_2_icon": "shopify://shop_images/3f877251a2cc89eced48b6684f7916039f780f56.svg",
+            "feature_2_text": "Top content co-developed with industry leaders",
+            "feature_3_icon": "shopify://shop_images/3f877251a2cc89eced48b6684f7916039f780f56.svg",
+            "feature_3_text": "Global mentor network with 700+ domain experts"
+          }
+        },
+        "hero_block_abW8x8": {
+          "type": "hero_block",
+          "settings": {
+            "heading": "Top-tier services to ensure learner success",
+            "description": "Reviewers provide timely and constructive feedback on your project submissions, highlighting areas of improvement and offering practical tips to enhance your work.",
+            "image": "shopify://shop_images/Frame_40572.png",
+            "feature_1_icon": "shopify://shop_images/3f877251a2cc89eced48b6684f7916039f780f56.svg",
+            "feature_1_text": "Get help from subject matter experts",
+            "feature_2_icon": "shopify://shop_images/3f877251a2cc89eced48b6684f7916039f780f56.svg",
+            "feature_2_text": "Learn industry best practices",
+            "feature_3_icon": "shopify://shop_images/3f877251a2cc89eced48b6684f7916039f780f56.svg",
+            "feature_3_text": "Gain valuable insights and improve your skills"
+          }
+        }
+      },
+      "block_order": [
+        "hero_block_PmhTEA",
+        "hero_block_abW8x8"
+      ],
+      "name": "RH SinglePage SupportSkills Difference",
+      "settings": {
+        "section_title": "The SupportSkills Difference",
+        "section_description": "Combine technology training for employees with industry experts, mentors, and projects, for critical thinking that pushes innovation. Our proven upskilling system goes after success—relentlessly."
+      }
+    },
+    "rh_support_skills_pricing_7Gf3aV": {
+      "type": "rh-support-skills-pricing",
+      "blocks": {
+        "pricing_plan_HkJLk8": {
+          "type": "pricing_plan",
+          "settings": {
+            "card_class": "access-monthly",
+            "tags": "For one person",
+            "plan_title": "All Access monthly",
+            "price": "$249",
+            "price_period": "/month",
+            "button_text": "Enroll now",
+            "button_link": "",
+            "features": "Cancel Anytime\nUnlimited access to our top-rated courses\nHands-on projects with expert feedback\nPersonalized career coaching and interview prep\nProgram Certificates"
+          }
+        },
+        "pricing_plan_7rNGjc": {
+          "type": "pricing_plan",
+          "settings": {
+            "card_class": "accesa-4-month monthly",
+            "tags": "Best Value, Save 15%",
+            "plan_title": "All Access bundle",
+            "price": "$212",
+            "price_period": "/month (for 4-month bundle)",
+            "button_text": "Enroll now",
+            "button_link": "",
+            "features": "Cancel Anytime\nAll the same great benefits as our monthly plan\nDiscount applies to the first 4 months of membership\nTotal price of $846 for a 4-month bundle"
+          }
+        },
+        "pricing_plan_aAq76k": {
+          "type": "pricing_plan",
+          "settings": {
+            "card_class": "access-one-time",
+            "tags": "For one course",
+            "plan_title": "Only One course",
+            "price": "$949",
+            "price_period": "/one-time payment",
+            "button_text": "Enroll now",
+            "button_link": "",
+            "features": "Cancel Anytime\nFlexibility to finish the program in your own time\nHands-on projects with expert feedback\nPersonalized project reviews\nProgram Certificates"
+          }
+        }
+      },
+      "block_order": [
+        "pricing_plan_HkJLk8",
+        "pricing_plan_7rNGjc",
+        "pricing_plan_aAq76k"
+      ],
+      "name": "RH Pricing Plans",
+      "settings": {
+        "title": "Enroll in Data Engineering with AWS.Choose the plan that works for you"
+      }
+    },
+    "rh_business_and_government_xTnpqb": {
+      "type": "rh-business-and-government",
+      "blocks": {
+        "business_feature_bEEJM8": {
+          "type": "business_feature",
+          "settings": {
+            "feature_icon": "shopify://shop_images/3f877251a2cc89eced48b6684f7916039f780f56.svg",
+            "feature_text": "Hands-on project-based approach"
+          }
+        },
+        "business_feature_jLja8A": {
+          "type": "business_feature",
+          "settings": {
+            "feature_icon": "shopify://shop_images/3f877251a2cc89eced48b6684f7916039f780f56.svg",
+            "feature_text": "Top content co-developed with industry leaders"
+          }
+        },
+        "business_feature_KY8mXf": {
+          "type": "business_feature",
+          "settings": {
+            "feature_icon": "shopify://shop_images/3f877251a2cc89eced48b6684f7916039f780f56.svg",
+            "feature_text": "Global mentor network with 700+ domain experts"
+          }
+        }
+      },
+      "block_order": [
+        "business_feature_bEEJM8",
+        "business_feature_jLja8A",
+        "business_feature_KY8mXf"
+      ],
+      "custom_css": [
+        "section.business-section {display: none !important;}"
+      ],
+      "name": "RH Business & Government Sections",
+      "settings": {
+        "business_heading": "SupportSkills for Business",
+        "features_heading": "Scale skills development for your organization",
+        "business_image": "shopify://shop_images/8fe706c861a9b17fd56cbb9c6cc33c50.webp",
+        "primary_button_text": "Learn more",
+        "primary_button_link": "",
+        "secondary_button_text": "Contact us",
+        "secondary_button_link": "",
+        "government_heading": "SupportSkills For Government",
+        "government_description": "SupportSkills creates job opportunities with GDP impact for nations embracing the global digital era.",
+        "government_image": "shopify://shop_images/07426fad3833f829a0af4fd26d7f9add03bddb64.svg",
+        "government_button_text": "Learn more",
+        "government_button_link": ""
+      }
+    },
+    "rh_products_section_AkmeEq": {
+      "type": "rh-products-section",
+      "name": "RH Recommended Courses",
+      "settings": {
+        "title": "Your subscription also includes",
+        "collection": "all-courses",
+        "product_limit": 12,
+        "default_level": "Beginner",
+        "default_student_count": "223",
+        "default_duration": "4 Month",
+        "show_browse_button": true,
+        "browse_button_text": "Browse all courses",
+        "browse_button_link": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rh_single_course_top_Y84GU8",
+    "related-products",
+    "rh_instructor_slider_a7b9nW",
+    "rh_student_review_887qXy",
+    "rh_single_page_difference_eRjzJd",
+    "rh_support_skills_pricing_7Gf3aV",
+    "rh_business_and_government_xTnpqb",
+    "rh_products_section_AkmeEq"
+  ]
+}
