@@ -16,10 +16,7 @@
                 <div class="ks-star-rating">
                   <svg viewBox="0 0 1000 200" class="rating">
                     <defs>
-                      <polygon
-                        id="star"
-                        points="100,0 131,66 200,76 150,128 162,200 100,166 38,200 50,128 0,76 69,66 "
-                      ></polygon>
+                      <polygon id="star" points="100,0 131,66 200,76 150,128 162,200 100,166 38,200 50,128 0,76 69,66 "></polygon>
                       <clipPath id="stars">
                         <use xlink:href="#star"></use>
                         <use xlink:href="#star" x="20%"></use>
@@ -28,15 +25,11 @@
                         <use xlink:href="#star" x="80%"></use>
                       </clipPath>
                     </defs>
-                    <rect
-                      class="rating__background"
-                      clip-path="url(#stars)"
-                    ></rect>
+                    <rect class="rating__background" clip-path="url(#stars)"></rect>
                     <rect
                       width="100%"
                       class="rating__value"
-                      clip-path="url(#stars)"
-                    ></rect>
+                      clip-path="url(#stars)"></rect>
                   </svg>
                 </div>
                 <span>
@@ -69,149 +62,164 @@
 
 <style>
   .rec-course-rh {
-  padding: 100px 20px;
-}
-.rec-course-rh .container-rh {
-  max-width: 1700px;
-  margin: 0 auto;
-}
-.rec-course-rh .container-rh .section-title {
-  font-family: "Bricolage Grotesque", sans-serif;
-  font-weight: 500;
-  font-size: 64px;
-  line-height: 104%;
-  letter-spacing: -0.6;
-  text-align: center;
-  color: #0d1216;
-  margin: 0 0 64px;
-}
-.rec-course-rh .container-rh .rec-courses {
-  /* display: flex;
-  gap: 16px;
-  flex-wrap: wrap;
-  justify-content: center; */
-
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-  width: 100%;
-}
-.rec-course-rh .container-rh .rec-courses .common-course-card-rh {
-  width: calc((100% - 80px) / 6); /* 6 columns with 16px gap (5 gaps = 80px) */
-  margin: 0 0 16px;
-}
-
-.rec-course-rh .container-rh .course-button{
-  margin: 50px 0 0;
-  display: flex;
-  justify-content: center;
-}
-
-@media (max-width: 1024px) {
+    padding: 100px 20px;
+  }
+  .rec-course-rh .container-rh {
+    max-width: 1700px;
+    margin: 0 auto;
+  }
   .rec-course-rh .container-rh .section-title {
-    font-size: 34px;
-    margin: 0 0 34px;
+    font-family: "Bricolage Grotesque"
+    , sans-serif;
+    font-weight: 500;
+    font-size: 64px;
+    line-height: 104%;
+    letter-spacing: -0.6;
+    text-align: center;
+    color: #0d1216;
+    margin: 0 0 64px;
   }
-}
+  .rec-course-rh .container-rh .rec-courses {
 
-/* @media (max-width: 1200px) {
-  .rec-course-rh .container-rh .rec-courses .common-course-card-rh {
-    width: calc((100% - 64px) / 5); 
-  }
-} */
 
-@media (max-width: 1200px) {
-  .rec-course-rh .container-rh .rec-courses .common-course-card-rh {
-    width: calc((100% - 48px) / 4); /* 4 columns */
-  }
-}
+    /*
+   display: flex;
+   gap: 16px;
+   flex-wrap: wrap;
+   justify-content: center;
+*/
 
-@media (max-width: 768px) {
-  .rec-course-rh .container-rh .rec-courses .common-course-card-rh {
-    width: calc((100% - 32px) / 2); /* 3 columns */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    width: 100%;
   }
-}
+  .rec-course-rh .container-rh .rec-courses .common-course-card-rh {
+    width: calc((100% - 80px) / 6);
+    /* 6 columns with 16px gap (5 gaps = 80px) */
+    margin: 0 0 16px;
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    height: 100%;
+  }
 
-@media (max-width: 480px) {
-  .rec-course-rh .container-rh .rec-courses .common-course-card-rh {
-    width: calc(100%); /* 2 columns */
+  .rec-course-rh .container-rh .rec-courses .common-course-card-rh:hover {
+    text-decoration: none;
   }
-}
+
+  .rec-course-rh .container-rh .course-button {
+    margin: 50px 0 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  @media (max-width: 1024px) {
+    .rec-course-rh .container-rh .section-title {
+      font-size: 34px;
+      margin: 0 0 34px;
+    }
+  }
+
+
+  /*
+   @media (max-width: 1200px) {
+   .rec-course-rh .container-rh .rec-courses .common-course-card-rh {
+   width: calc ( (100% - 64px) / 5) ;
+   }
+   }
+*/
+
+  @media (max-width: 1200px) {
+    .rec-course-rh .container-rh .rec-courses .common-course-card-rh {
+      width: calc((100% - 48px) / 4);
+      /* 4 columns */
+    }
+  }
+
+  @media (max-width: 768px) {
+    .rec-course-rh .container-rh .rec-courses .common-course-card-rh {
+      width: calc((100% - 32px) / 2);
+      /* 3 columns */
+    }
+  }
+
+  @media (max-width: 480px) {
+    .rec-course-rh .container-rh .rec-courses .common-course-card-rh {
+      width: calc(100%);
+      /* 2 columns */
+    }
+  }
 </style>
 
 {% schema %}
-{
-  "name": "RH Recommended Courses",
-  "settings": [
-    {
-      "type": "text",
-      "id": "title",
-      "label": "Section Title",
-      "default": "Courses Recommended for You"
-    },
-    {
-      "type": "collection",
-      "id": "collection",
-      "label": "Select Course Collection"
-    },
-    {
-      "type": "range",
-      "id": "product_limit",
-      "min": 1,
-      "max": 24,
-      "step": 1,
-      "label": "Number of courses to show",
-      "default": 12
-    },
-    {
-      "type": "text",
-      "id": "default_level",
-      "label": "Default Course Level",
-      "default": "Beginner"
-    },
-    {
-      "type": "text",
-      "id": "default_student_count",
-      "label": "Default Student Count",
-      "default": "223"
-    },
-    {
-      "type": "text",
-      "id": "default_duration",
-      "label": "Default Course Duration",
-      "default": "4 Month"
-    },
-    {
-      "type": "checkbox",
-      "id": "show_browse_button",
-      "label": "Show Browse All Button",
-      "default": true
-    },
-    {
-      "type": "text",
-      "id": "browse_button_text",
-      "label": "Button Text",
-      "default": "Browse all courses"
-    },
-    {
-      "type": "url",
-      "id": "browse_button_link",
-      "label": "Button Link",
-      "default": "/collections/all"
-    }
-  ],
-  "presets": [
-    {
-      "name": "RH Recommended Courses",
-      "category": "Courses"
-    }
-  ]
-}
+  {
+    "name": "RH Recommended Courses",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Section Title",
+        "default": "Courses Recommended for You"
+      },
+      {
+        "type": "collection",
+        "id": "collection",
+        "label": "Select Course Collection"
+      },
+      {
+        "type": "range",
+        "id": "product_limit",
+        "min": 1,
+        "max": 24,
+        "step": 1,
+        "label": "Number of courses to show",
+        "default": 12
+      },
+      {
+        "type": "text",
+        "id": "default_level",
+        "label": "Default Course Level",
+        "default": "Beginner"
+      }, {
+        "type": "text",
+        "id": "default_student_count",
+        "label": "Default Student Count",
+        "default": "223"
+      }, {
+        "type": "text",
+        "id": "default_duration",
+        "label": "Default Course Duration",
+        "default": "4 Month"
+      }, {
+        "type": "checkbox",
+        "id": "show_browse_button",
+        "label": "Show Browse All Button",
+        "default": true
+      }, {
+        "type": "text",
+        "id": "browse_button_text",
+        "label": "Button Text",
+        "default": "Browse all courses"
+      }, {
+        "type": "url",
+        "id": "browse_button_link",
+        "label": "Button Link",
+        "default": "/collections/all"
+      }
+    ],
+    "presets": [
+      {
+        "name": "RH Recommended Courses",
+        "category": "Courses"
+      }
+    ]
+  }
 {% endschema %}
 
 <script>
-var grids = document.querySelectorAll('.rec-courses');
-grids.forEach(function(grid) {
+  var grids = document.querySelectorAll('.rec-courses');
+  grids.forEach(function(grid) {
     imagesLoaded(grid, function() {
         var masonry = new Masonry(grid, {
             itemSelector: '.common-course-card-rh',
@@ -221,5 +229,5 @@ grids.forEach(function(grid) {
             initLayout: true
         });
     });
-});
+  });
 </script>

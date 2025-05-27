@@ -31,10 +31,12 @@
 /* course card common  */
 .common-course-card-rh {
   display: block;
+  text-decoration: none;
+  color: inherit;
   border-radius: 8px;
   border: 1px solid #394c6026;
   overflow: hidden;
-  height: fit-content;
+  height: max-content;
 }
 .common-course-card-rh .course-image-level {
   height: 170px;
