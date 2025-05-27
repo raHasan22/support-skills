@@ -1,5 +1,3 @@
-<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-<script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
 <section class="rec-course-rh">
   <div class="container-rh">
     <h2 class="section-title">{{ section.settings.title | default: "Courses Recommended for You" }}</h2>
@@ -124,13 +122,13 @@
 
 @media (max-width: 768px) {
   .rec-course-rh .container-rh .rec-courses .common-course-card-rh {
-    width: calc((100% - 32px) / 3); /* 3 columns */
+    width: calc((100% - 32px) / 2); /* 3 columns */
   }
 }
 
 @media (max-width: 480px) {
   .rec-course-rh .container-rh .rec-courses .common-course-card-rh {
-    width: calc((100% - 16px) / 2); /* 2 columns */
+    width: calc(100%); /* 2 columns */
   }
 }
 </style>
