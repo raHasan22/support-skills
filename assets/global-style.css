@@ -34,7 +34,6 @@
   flex-direction: column;
   justify-content: flex-start;
   text-decoration: none;
-  color: inherit;
   border-radius: 8px;
   border: 1px solid #394c6026;
   overflow: hidden;
@@ -147,6 +146,7 @@
   -webkit-line-clamp: 2;
   line-clamp: 2;
   -webkit-box-orient: vertical;
+  margin: 0;
 }
 
 /* shopify base override  */
