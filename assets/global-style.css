@@ -30,13 +30,15 @@
 }
 /* course card common  */
 .common-course-card-rh {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   text-decoration: none;
   color: inherit;
   border-radius: 8px;
   border: 1px solid #394c6026;
   overflow: hidden;
-  height: max-content;
+  
 }
 .common-course-card-rh .course-image-level {
   height: 170px;
