@@ -3,7 +3,7 @@
     <h2 class="section-title">{{ section.settings.title | default: "Courses Recommended for You" }}</h2>
     <div class="rec-courses">
       {% for product in collections[section.settings.collection].products limit: section.settings.product_limit %}
-        <div class="common-course-card-rh">
+        <a href="{{ product.url }}" class="common-course-card-rh">
           <div class="course-image-level">
             <img src="{{ product.featured_image | img_url: '300x300' }}" alt="{{ product.featured_image.alt }}" />
             <span class="course-level">
@@ -54,7 +54,7 @@
             </div>
             <a href="{{ product.url }}" class="course-title">{{ product.title }}</a>
           </div>
-        </div>
+        </a>
       {% endfor %}
     </div>
     {% if section.settings.show_browse_button %}

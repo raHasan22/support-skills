@@ -30,6 +30,7 @@
 }
 /* course card common  */
 .common-course-card-rh {
+  display: block;
   border-radius: 8px;
   border: 1px solid #394c6026;
   overflow: hidden;
