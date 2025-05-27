@@ -45,7 +45,7 @@
                 </span>
               </div>
             </div>
-            <a href="{{ product.url }}" class="course-title">{{ product.title }}</a>
+            <h5 class="course-title">{{ product.title }}</h5>
           </div>
         </a>
       {% endfor %}
@@ -96,12 +96,25 @@
   }
   .rec-course-rh .container-rh .rec-courses .common-course-card-rh {
     width: calc((100% - 80px) / 6);
-    /* 6 columns with 16px gap (5 gaps = 80px) */
     margin: 0 0 16px;
     display: block;
     text-decoration: none;
     color: inherit;
-    height: 100%;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .rec-course-rh .container-rh .rec-courses .common-course-card-rh .course-image-level,
+  .rec-course-rh .container-rh .rec-courses .common-course-card-rh .course-description {
+    width: 100%;
+  }
+
+  .rec-course-rh .container-rh .rec-courses .common-course-card-rh .course-title {
+    margin: 0;
+    text-decoration: none;
+    color: inherit;
   }
 
   .rec-course-rh .container-rh .rec-courses .common-course-card-rh:hover {
