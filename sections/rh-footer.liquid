@@ -4,44 +4,147 @@
     align-items: stretch;
     align-self: stretch;
     display: flex;
-    padding-left: 252px;
-    padding-right: 252px;
-    padding-top: 100px;
+    padding: 100px 40px;
     flex-direction: column;
     justify-content: start;
     background-color: #fff;
     font-family: Bricolage Grotesque, -apple-system, Roboto, Helvetica, sans-serif;
   }
 
-  @media (max-width: 991px) {
-    .nxt-footer__area {
-      padding-left: 20px;
-      padding-right: 20px;
-    }
+  .footer-container {
+    max-width: 1416px;
+    width: 100%;
+    margin: 0 auto;
   }
 
   /* Main Navigation Section */
   .footer-navigation {
-    display: flex;
-    width: 100%;
-    align-items: start;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 24px;
-    line-height: 1.6;
-    justify-content: start;
-    flex-wrap: wrap;
-  }
-
-  @media (max-width: 991px) {
-    .footer-navigation {
-      max-width: 100%;
-    }
+    width: 100%;
   }
 
   .footer-column {
     min-width: 240px;
-    flex-grow: 1;
-    flex-shrink: 1;
-    width: 211px;
+  }
+
+  /* Desktop Large (>1200px) - Keep original layout */
+  @media (min-width: 1201px) {
+    .nxt-footer__area {
+      padding: 100px 40px;
+    }
+    
+    .footer-navigation {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+
+    .footer-column {
+      flex: 1;
+      min-width: 240px;
+      max-width: 300px;
+    }
+  }
+
+  /* Desktop Medium (992px - 1200px) */
+  @media (max-width: 1200px) {
+    .nxt-footer__area {
+      padding: 80px 100px;
+    }
+
+    .footer-navigation {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .certificate-section {
+      grid-column: span 3;
+    }
+
+    .certificate-form {
+      max-width: 800px;
+    }
+  }
+
+  /* Tablet (768px - 991px) */
+  @media (max-width: 991px) {
+    .nxt-footer__area {
+      padding: 60px 40px;
+    }
+
+    .footer-navigation {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .certificate-section {
+      grid-column: span 2;
+    }
+
+    .certificate-form {
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .input-wrapper {
+      width: 100%;
+    }
+
+    .check-button {
+      width: 100%;
+      max-width: none;
+    }
+
+    .footer-bottom {
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+      text-align: center;
+    }
+
+    .legal-links {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  /* Mobile (<768px) */
+  @media (max-width: 767px) {
+    .nxt-footer__area {
+      padding: 40px 20px;
+    }
+
+    .footer-navigation {
+      grid-template-columns: 1fr;
+    }
+
+    .certificate-section {
+      grid-column: span 1;
+    }
+
+    .column-heading {
+      font-size: 16px;
+    }
+
+    .footer-links {
+      font-size: 14px;
+    }
+
+    .certificate-heading {
+      font-size: 16px;
+    }
+
+    .certificate-description {
+      font-size: 14px;
+    }
+
+    .legal-links {
+      gap: 16px;
+    }
+
+    .divider {
+      display: none;
+    }
   }
 
   .column-heading {
@@ -81,13 +184,6 @@
     margin-top: 48px;
   }
 
-  @media (max-width: 991px) {
-    .certificate-section {
-      max-width: 100%;
-      margin-top: 40px;
-    }
-  }
-
   .certificate-content {
     max-width: 100%;
     width: 694px;
@@ -101,12 +197,6 @@
     margin: 0;
   }
 
-  @media (max-width: 991px) {
-    .certificate-heading {
-      max-width: 100%;
-    }
-  }
-
   .certificate-description {
     color: #282c30;
     font-size: 14px;
@@ -114,12 +204,6 @@
     line-height: 22px;
     margin-top: 8px;
     margin-bottom: 0;
-  }
-
-  @media (max-width: 991px) {
-    .certificate-description {
-      max-width: 100%;
-    }
   }
 
   .certificate-form {
@@ -133,24 +217,12 @@
     flex-wrap: wrap;
   }
 
-  @media (max-width: 991px) {
-    .certificate-form {
-      max-width: 100%;
-    }
-  }
-
   .input-wrapper {
     align-self: stretch;
     min-width: 240px;
     margin-top: auto;
     margin-bottom: auto;
     width: 456px;
-  }
-
-  @media (max-width: 991px) {
-    .input-wrapper {
-      max-width: 100%;
-    }
   }
 
   .certificate-input {
@@ -165,12 +237,6 @@
     font-family: inherit;
     font-size: 16px;
     box-sizing: border-box;
-  }
-
-  @media (max-width: 991px) {
-    .certificate-input {
-      max-width: 100%;
-    }
   }
 
   .check-button {
@@ -194,14 +260,6 @@
     cursor: pointer;
     font-family: inherit;
     font-size: 16px;
-  }
-
-  @media (max-width: 991px) {
-    .check-button {
-      padding-left: 20px;
-      padding-right: 20px;
-      white-space: initial;
-    }
   }
 
   .button-text {
@@ -235,13 +293,6 @@
     flex-wrap: wrap;
   }
 
-  @media (max-width: 991px) {
-    .footer-bottom {
-      max-width: 100%;
-      margin-top: 40px;
-    }
-  }
-
   /* Copyright Section */
   .copyright-section {
     display: flex;
@@ -255,22 +306,10 @@
     width: 774px;
   }
 
-  @media (max-width: 991px) {
-    .copyright-section {
-      max-width: 100%;
-    }
-  }
-
   .copyright-text {
     width: 100%;
     color: #6e7173;
     text-align: center;
-  }
-
-  @media (max-width: 991px) {
-    .copyright-text {
-      max-width: 100%;
-    }
   }
 
   .copyright-notice {
@@ -278,22 +317,10 @@
     margin: 0;
   }
 
-  @media (max-width: 991px) {
-    .copyright-notice {
-      max-width: 100%;
-    }
-  }
-
   .cookie-notice {
     color: #6e7173;
     margin-top: 4px;
     margin-bottom: 0;
-  }
-
-  @media (max-width: 991px) {
-    .cookie-notice {
-      max-width: 100%;
-    }
   }
 
   .legal-links {
@@ -350,74 +377,76 @@
 {%- endstyle -%}
 
 <footer class="nxt-footer__area">
-  <div class="footer-main">
-    <nav class="footer-navigation">
-      {% for block in section.blocks %}
-        {% case block.type %}
-          {% when 'menu' %}
-            <section class="footer-column">
-              <h3 class="column-heading">{{ block.settings.heading }}</h3>
-              <ul class="footer-links">
-                {% for link in linklists[block.settings.menu].links %}
-                  <li>
-                    <a href="{{ link.url }}" class="footer-link">{{ link.title }}</a>
-                  </li>
-                {% endfor %}
-              </ul>
-            </section>
+  <div class="footer-container">
+    <div class="footer-main">
+      <nav class="footer-navigation">
+        {% for block in section.blocks %}
+          {% case block.type %}
+            {% when 'menu' %}
+              <section class="footer-column">
+                <h3 class="column-heading">{{ block.settings.heading }}</h3>
+                <ul class="footer-links">
+                  {% for link in linklists[block.settings.menu].links %}
+                    <li>
+                      <a href="{{ link.url }}" class="footer-link">{{ link.title }}</a>
+                    </li>
+                  {% endfor %}
+                </ul>
+              </section>
 
-          {% when 'certificate' %}
-            <section class="certificate-section">
-              <div class="certificate-content">
-                <h3 class="certificate-heading">{{ block.settings.heading }}</h3>
-                <p class="certificate-description">
-                  {{ block.settings.description }}
-                </p>
-              </div>
-              <form method="post" action="/contact#ContactFooter" id="ContactFooter" accept-charset="UTF-8" class="certificate-form">
-                <input type="hidden" name="form_type" value="customer">
-                <input type="hidden" name="utf8" value="✓">
-                <div class="input-wrapper">
-                  <input type="email" 
-                    name="contact[email]"
-                    class="certificate-input"
-                    value=""
-                    placeholder="{{ block.settings.placeholder }}"
-                    required
-                  >
+            {% when 'certificate' %}
+              <section class="certificate-section">
+                <div class="certificate-content">
+                  <h3 class="certificate-heading">{{ block.settings.heading }}</h3>
+                  <p class="certificate-description">
+                    {{ block.settings.description }}
+                  </p>
                 </div>
-                <button type="submit" class="check-button">
-                  <span class="button-text">{{ block.settings.button_text }}</span>
-                </button>
-              </form>
-            </section>
-        {% endcase %}
-      {% endfor %}
-    </nav>
+                <form method="post" action="/contact#ContactFooter" id="ContactFooter" accept-charset="UTF-8" class="certificate-form">
+                  <input type="hidden" name="form_type" value="customer">
+                  <input type="hidden" name="utf8" value="✓">
+                  <div class="input-wrapper">
+                    <input type="email" 
+                      name="contact[email]"
+                      class="certificate-input"
+                      value=""
+                      placeholder="{{ block.settings.placeholder }}"
+                      required
+                    >
+                  </div>
+                  <button type="submit" class="check-button">
+                    <span class="button-text">{{ block.settings.button_text }}</span>
+                  </button>
+                </form>
+              </section>
+          {% endcase %}
+        {% endfor %}
+      </nav>
 
-    <div class="footer-bottom">
-      <div class="copyright-section">
-        <div class="copyright-text">
-          <p class="copyright-notice">
-            &copy; {{ 'now' | date: '%Y' }}
-            {{ shop.name }}. All rights reserved.
-          </p>
-          <p class="cookie-notice">
-            {{ section.settings.cookie_notice }}
-          </p>
+      <div class="footer-bottom">
+        <div class="copyright-section">
+          <div class="copyright-text">
+            <p class="copyright-notice">
+              &copy; {{ 'now' | date: '%Y' }}
+              {{ shop.name }}. All rights reserved.
+            </p>
+            <p class="cookie-notice">
+              {{ section.settings.cookie_notice }}
+            </p>
+          </div>
+          <div class="legal-links">
+            {% for link in linklists[section.settings.legal_menu].links %}
+              <a href="{{ link.url }}" class="legal-link">{{ link.title }}</a>
+              {% unless forloop.last %}<span class="divider"></span>{% endunless %}
+            {% endfor %}
+          </div>
         </div>
-        <div class="legal-links">
-          {% for link in linklists[section.settings.legal_menu].links %}
-            <a href="{{ link.url }}" class="legal-link">{{ link.title }}</a>
-            {% unless forloop.last %}<span class="divider"></span>{% endunless %}
-          {% endfor %}
-        </div>
-      </div>
 
-      <div class="social-links">
-        {% if section.settings.show_social_icons %}
-          {% render 'social-icons' %}
-        {% endif %}
+        <div class="social-links">
+          {% if section.settings.show_social_icons %}
+            {% render 'social-icons' %}
+          {% endif %}
+        </div>
       </div>
     </div>
   </div>
