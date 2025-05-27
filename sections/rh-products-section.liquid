@@ -204,14 +204,16 @@
 {% endschema %}
 
 <script>
-var grid = document.querySelector('.rec-courses');
-imagesLoaded(grid, function() {
-    var masonry = new Masonry(grid, {
-        itemSelector: '.common-course-card-rh',
-        columnWidth: '.common-course-card-rh',
-        gutter: 16,
-        percentPosition: true,
-        initLayout: true
+var grids = document.querySelectorAll('.rec-courses');
+grids.forEach(function(grid) {
+    imagesLoaded(grid, function() {
+        var masonry = new Masonry(grid, {
+            itemSelector: '.common-course-card-rh',
+            columnWidth: '.common-course-card-rh',
+            gutter: 16,
+            percentPosition: true,
+            initLayout: true
+        });
     });
 });
 </script>
