@@ -347,28 +347,28 @@
                 </ul>
               </section>
 
-            {% when 'certificate' %}
-              <section class="certificate-section">
-                <div class="certificate-content">
-                  <h3 class="certificate-heading">{{ block.settings.heading }}</h3>
-                  <p class="certificate-description">
+            {% when 'newsletter' %}
+              <section class="newsletter-section">
+                <div class="newsletter-content">
+                  <h3 class="newsletter-heading">{{ block.settings.heading }}</h3>
+                  <p class="newsletter-description">
                     {{ block.settings.description }}
                   </p>
                 </div>
-                <form method="post" action="/contact#ContactFooter" id="ContactFooter" accept-charset="UTF-8" class="certificate-form">
+                <form method="post" action="/contact#ContactFooter" id="ContactFooter" accept-charset="UTF-8" class="newsletter-form">
                   <input type="hidden" name="form_type" value="customer">
                   <input type="hidden" name="utf8" value="✓">
                   <div class="input-wrapper">
                     <input type="email" 
                       name="contact[email]"
-                      class="certificate-input"
+                      class="newsletter-input"
                       value=""
                       placeholder="{{ block.settings.placeholder }}"
                       required
                     >
                   </div>
-                  <button type="submit" class="check-button">
-                    <span class="button-text">{{ block.settings.button_text }}</span>
+                  <button type="submit" class="newsletter-button">
+                    {{ block.settings.button_text }}
                   </button>
                 </form>
               </section>
@@ -451,8 +451,8 @@
       ]
     },
     {
-      "type": "certificate",
-      "name": "Newsletter Subscription",
+      "type": "newsletter",
+      "name": "Newsletter Signup",
       "limit": 1,
       "settings": [
         {
@@ -465,7 +465,7 @@
           "type": "text",
           "id": "description",
           "label": "Description",
-          "default": "Stay up to date with our latest courses, updates, and educational resources."
+          "default": "Stay up to date with our latest news, updates, and exclusive offers."
         },
         {
           "type": "text",
@@ -485,7 +485,7 @@
   "presets": [
     {
       "name": "RH Footer",
-      "category": "custom"
+      "category": "Footer"
     }
   ]
 }
