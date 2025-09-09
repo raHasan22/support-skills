@@ -39,13 +39,113 @@
         "title": "Upskilling talent for the careers of the future",
         "description": "Support Skills began when Stanford instructors Sebastian Thrun and Peter Norvig had a revolutionary idea to offer their Introduction to Artificial Intelligence course online—to anyone, for free. Over 160,000 students in more than 190 countries enrolled, demanding a new way to deliver education. A startling discovery emerged: The top 400 students were not from Stanford. This revelation sparked a mission to make lifelong learning more equitable and inclusive. Support Skills has been expanding opportunities ever since.",
         "image": "shopify://shop_images/Rectangle_34624347.png",
-        "image_alt": "About Support Skills"
+        "image_alt": "About Support Skills",
+        "padding_top_desktop": 100,
+        "padding_bottom_desktop": 50,
+        "padding_top_mobile": 60,
+        "padding_bottom_mobile": 30
+      }
+    },
+    "rh_about_our_partners_nyJCHm": {
+      "type": "rh-about-our-partners",
+      "blocks": {
+        "partner_logo_BJYcAB": {
+          "type": "partner_logo",
+          "settings": {
+            "logo": "shopify://shop_images/image_3_1.png",
+            "alt_text": "Partner Logo"
+          }
+        },
+        "partner_logo_HUJWLF": {
+          "type": "partner_logo",
+          "settings": {
+            "logo": "shopify://shop_images/image_9.png",
+            "alt_text": "Partner Logo"
+          }
+        },
+        "partner_logo_A3C8mF": {
+          "type": "partner_logo",
+          "settings": {
+            "logo": "shopify://shop_images/image_5.png",
+            "alt_text": "Partner Logo"
+          }
+        },
+        "partner_logo_RwJdpG": {
+          "type": "partner_logo",
+          "settings": {
+            "logo": "shopify://shop_images/image_6.png",
+            "alt_text": "Partner Logo"
+          }
+        },
+        "partner_logo_ULmpwD": {
+          "type": "partner_logo",
+          "settings": {
+            "logo": "shopify://shop_images/image_7.png",
+            "alt_text": "Partner Logo"
+          }
+        },
+        "partner_logo_Q9AqhU": {
+          "type": "partner_logo",
+          "settings": {
+            "logo": "shopify://shop_images/image_8.png",
+            "alt_text": "Partner Logo"
+          }
+        },
+        "partner_logo_AUF7Rb": {
+          "type": "partner_logo",
+          "settings": {
+            "logo": "shopify://shop_images/image_11.png",
+            "alt_text": "Partner Logo"
+          }
+        },
+        "partner_logo_EwMhrY": {
+          "type": "partner_logo",
+          "settings": {
+            "logo": "shopify://shop_images/image_10.png",
+            "alt_text": "Partner Logo"
+          }
+        },
+        "partner_logo_XCnaiw": {
+          "type": "partner_logo",
+          "settings": {
+            "logo": "shopify://shop_images/image_12.png",
+            "alt_text": "Partner Logo"
+          }
+        },
+        "partner_logo_LpY8jV": {
+          "type": "partner_logo",
+          "settings": {
+            "logo": "shopify://shop_images/image_4_1.png",
+            "alt_text": "Partner Logo"
+          }
+        }
+      },
+      "block_order": [
+        "partner_logo_BJYcAB",
+        "partner_logo_HUJWLF",
+        "partner_logo_A3C8mF",
+        "partner_logo_RwJdpG",
+        "partner_logo_ULmpwD",
+        "partner_logo_Q9AqhU",
+        "partner_logo_AUF7Rb",
+        "partner_logo_EwMhrY",
+        "partner_logo_XCnaiw",
+        "partner_logo_LpY8jV"
+      ],
+      "name": "RH About Our Partners",
+      "settings": {
+        "title": "Unlock Your Team's Potential with 2000+ Accredited Courses!",
+        "padding_top_desktop": 50,
+        "padding_bottom_desktop": 100,
+        "padding_top_mobile": 30,
+        "padding_bottom_mobile": 60
       }
     }
   },
   "order": [
     "main",
     "rh_about_hero_dtbe3T",
-    "rh_about_after_hero_qNAM48"
+    "rh_about_after_hero_qNAM48",
+    "rh_about_our_partners_nyJCHm"
   ]
 }
