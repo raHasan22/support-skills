@@ -16,9 +16,25 @@
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "rh_about_hero_dtbe3T": {
+      "type": "rh-about-hero",
+      "name": "RH About Hero",
+      "settings": {
+        "title_part1": "We turn talent into",
+        "title_part2": "greatness.",
+        "description": "Support Skills changes lives, organizations, and nations through digital upskilling, developing the edge you need to conquer what's next.",
+        "image_1": "shopify://shop_images/Rectangle_34624346.png",
+        "image_2": "shopify://shop_images/Rectangle_34624341.png",
+        "image_3": "shopify://shop_images/Rectangle_34624342.png",
+        "image_4": "shopify://shop_images/Rectangle_34624344.png",
+        "image_5": "shopify://shop_images/Rectangle_34624340.png",
+        "image_6": "shopify://shop_images/Rectangle_34624343.png"
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "rh_about_hero_dtbe3T"
   ]
 }
