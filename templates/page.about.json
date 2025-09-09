@@ -198,6 +198,7 @@
         "team_member_FKMFJh": {
           "type": "team_member",
           "settings": {
+            "image": "shopify://shop_images/Rectangle_34624349.png",
             "name": "Michael Conway",
             "role": "VP, Content"
           }
@@ -205,6 +206,7 @@
         "team_member_LLET6F": {
           "type": "team_member",
           "settings": {
+            "image": "shopify://shop_images/Rectangle_34624349_1.png",
             "name": "Kattie McGinnis",
             "role": "VP, People"
           }
@@ -212,6 +214,7 @@
         "team_member_z8ghFd": {
           "type": "team_member",
           "settings": {
+            "image": "shopify://shop_images/Rectangle_34624349_2.png",
             "name": "James Richards",
             "role": "Chief Technology Officer"
           }
@@ -219,6 +222,7 @@
         "team_member_qm9hKj": {
           "type": "team_member",
           "settings": {
+            "image": "shopify://shop_images/Rectangle_34624349_3.png",
             "name": "Matthew Franks",
             "role": "Chief Revenue Officer"
           }
@@ -235,6 +239,7 @@
         "title": "Our Team",
         "description": "Our leadership team comes together with one goal: to help learners, organizations, and nations prepare for and strengthen the digital workforce of the next generation.",
         "button_text": "Learn more",
+        "button_link": "/collections/all",
         "padding_top_desktop": 100,
         "padding_bottom_desktop": 50,
         "padding_top_mobile": 60,
