@@ -1,0 +1,365 @@
+{% style %}
+.rh-our-team-section *{
+  margin: 0;
+  padding: 0;
+  letter-spacing: normal;
+  line-height: normal;
+}
+.rh-our-team-section {
+    padding: {{ section.settings.padding_top_desktop | default: 100 }}px 20px {{ section.settings.padding_bottom_desktop | default: 50 }}px; 
+    background: #ffffff;
+}
+.rh-our-team-section .container-rh {
+  max-width: 1420px;
+  margin: 0 auto;
+}
+
+/* Team Section Styles */
+.team-content-wrapper__rh {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+}
+
+.team-header__rh {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.team-text-content__rh {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1;
+  min-width: 300px;
+}
+
+.team-title__rh {
+  color: #0d1216;
+  font-size: clamp(40px, 6vw, 80px);
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-weight: 500;
+  line-height: 1.04;
+  margin: 0;
+}
+
+.team-description__rh {
+  color: #282c30;
+  font-size: clamp(16px, 2.5vw, 22px);
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  margin: 0;
+  max-width: 600px;
+}
+
+.team-cta-button__rh {
+  padding: 7px 30px;
+  border-radius: 8px;
+  border: 1px solid #8b3dff;
+  background: transparent;
+  color: #8b3dff;
+  font-size: 16px;
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-weight: 600;
+  line-height: 1.6;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.team-cta-button__rh:hover {
+  background: #8b3dff;
+  color: white;
+}
+
+.team-members-grid__rh {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 24px;
+  width: 100%;
+}
+
+.team-member-card__rh {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.team-member-image-wrapper__rh {
+  width: 100%;
+  aspect-ratio: 336/400;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.team-member-image__rh {
+  width: 100%;
+  height: 100%;
+  background: #d9d9d9;
+  object-fit: cover;
+}
+
+.team-member-info__rh {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  text-align: center;
+  width: 100%;
+}
+
+.team-member-name__rh {
+  color: #0d1216;
+  font-size: clamp(16px, 2.5vw, 22px);
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-weight: 600;
+  line-height: 1.04;
+  margin: 0;
+}
+
+.team-member-role__rh {
+  color: #0d1216;
+  font-size: clamp(16px, 2.5vw, 22px);
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-weight: 400;
+  line-height: 1.04;
+  margin: 0;
+}
+
+/* Responsive Design for Team Section */
+@media (max-width: 1200px) {
+  .team-header__rh {
+    gap: 24px;
+  }
+
+  .team-members-grid__rh {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 992px) {
+  .team-header__rh {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .team-text-content__rh {
+    min-width: 100%;
+  }
+
+  .team-members-grid__rh {
+    gap: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .team-content-wrapper__rh {
+    gap: 32px;
+  }
+
+  .team-members-grid__rh {
+    justify-content: center;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .rh-our-team-section {
+    padding: {{ section.settings.padding_top_mobile | default: 60 }}px 15px {{ section.settings.padding_bottom_mobile | default: 30 }}px;
+  }
+
+  .team-content-wrapper__rh {
+    gap: 28px;
+  }
+
+  .team-header__rh {
+    gap: 20px;
+  }
+
+  .team-members-grid__rh {
+    gap: 20px;
+  }
+}
+{% endstyle %}
+
+<div class="rh-our-team-section">
+    <div class="container-rh">
+        <div class="team-content-wrapper__rh">
+            <div class="team-header__rh">
+              <div class="team-text-content__rh">
+                <h2 class="team-title__rh">{{ section.settings.title | default: "Our Team" }}</h2>
+                <p class="team-description__rh">{{ section.settings.description | default: "Our leadership team comes together with one goal: to help learners, organizations, and nations prepare for and strengthen the digital workforce of the next generation." }}</p>
+              </div>
+              {% if section.settings.button_text != blank %}
+                <button class="team-cta-button__rh">{{ section.settings.button_text }}</button>
+              {% endif %}
+            </div>
+            <div class="team-members-grid__rh">
+              {% for block in section.blocks %}
+                {% case block.type %}
+                  {% when 'team_member' %}
+                    <div class="team-member-card__rh">
+                      <div class="team-member-image-wrapper__rh">
+                        <img class="team-member-image__rh" 
+                          src="{% if block.settings.image %}{{ block.settings.image | img_url: '336x400' }}{% else %}https://dummyimage.com/336x400/8b3dff/ffffff&text=Team+Member+{{ forloop.index }}{% endif %}" 
+                          alt="{{ block.settings.image.alt | default: block.settings.name | default: 'Team Member' }}" />
+                      </div>
+                      <div class="team-member-info__rh">
+                        <h3 class="team-member-name__rh">{{ block.settings.name | default: "Team Member" }}</h3>
+                        <p class="team-member-role__rh">{{ block.settings.role | default: "Position" }}</p>
+                      </div>
+                    </div>
+                {% endcase %}
+              {% endfor %}
+            </div>
+          </div>
+    </div>
+</div>
+
+{% schema %}
+{
+  "name": "RH Our Team",
+  "max_blocks": 8,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section Content"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Section Title",
+      "default": "Our Team"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Section Description",
+      "default": "Our leadership team comes together with one goal: to help learners, organizations, and nations prepare for and strengthen the digital workforce of the next generation."
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Learn more"
+    },
+    {
+      "type": "header",
+      "content": "Desktop Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top_desktop",
+      "min": 0,
+      "max": 200,
+      "step": 5,
+      "unit": "px",
+      "label": "Top Padding (Desktop)",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_desktop",
+      "min": 0,
+      "max": 200,
+      "step": 5,
+      "unit": "px",
+      "label": "Bottom Padding (Desktop)",
+      "default": 50
+    },
+    {
+      "type": "header",
+      "content": "Mobile Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Top Padding (Mobile)",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Bottom Padding (Mobile)",
+      "default": 30
+    }
+  ],
+  "blocks": [
+    {
+      "type": "team_member",
+      "name": "Team Member",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Member Photo"
+        },
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Member Name",
+          "default": "Team Member"
+        },
+        {
+          "type": "text",
+          "id": "role",
+          "label": "Member Role/Position",
+          "default": "Position"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "RH Our Team",
+      "category": "Team",
+      "blocks": [
+        {
+          "type": "team_member",
+          "settings": {
+            "name": "Michael Conway",
+            "role": "VP, Content"
+          }
+        },
+        {
+          "type": "team_member",
+          "settings": {
+            "name": "Kattie McGinnis",
+            "role": "VP, People"
+          }
+        },
+        {
+          "type": "team_member",
+          "settings": {
+            "name": "James Richards",
+            "role": "Chief Technology Officer"
+          }
+        },
+        {
+          "type": "team_member",
+          "settings": {
+            "name": "Matthew Franks",
+            "role": "Chief Revenue Officer"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
