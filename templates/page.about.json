@@ -31,10 +31,21 @@
         "image_5": "shopify://shop_images/Rectangle_34624340.png",
         "image_6": "shopify://shop_images/Rectangle_34624343.png"
       }
+    },
+    "rh_about_after_hero_qNAM48": {
+      "type": "rh-about-after-hero",
+      "name": "RH About After Hero",
+      "settings": {
+        "title": "Upskilling talent for the careers of the future",
+        "description": "Support Skills began when Stanford instructors Sebastian Thrun and Peter Norvig had a revolutionary idea to offer their Introduction to Artificial Intelligence course online—to anyone, for free. Over 160,000 students in more than 190 countries enrolled, demanding a new way to deliver education. A startling discovery emerged: The top 400 students were not from Stanford. This revelation sparked a mission to make lifelong learning more equitable and inclusive. Support Skills has been expanding opportunities ever since.",
+        "image": "shopify://shop_images/Rectangle_34624347.png",
+        "image_alt": "About Support Skills"
+      }
     }
   },
   "order": [
     "main",
-    "rh_about_hero_dtbe3T"
+    "rh_about_hero_dtbe3T",
+    "rh_about_after_hero_qNAM48"
   ]
 }
