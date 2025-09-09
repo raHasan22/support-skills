@@ -1,0 +1,257 @@
+{% style %}
+.rh-about-out-partner-section *{
+  margin: 0;
+  padding: 0;
+  letter-spacing: normal;
+  line-height: normal;
+}
+.rh-about-out-partner-section {
+  padding: {{ section.settings.padding_top_desktop | default: 50 }}px 20px {{ section.settings.padding_bottom_desktop | default: 100 }}px;
+  background: #ffffff;
+}
+.rh-about-out-partner-section .container-rh {
+  max-width: 1420px;
+  margin: 0 auto;
+}
+
+/* Partner Section Styles */
+.partner-content-wrapper__rh {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  width: 100%;
+}
+
+.partner-title__rh {
+  color: #0d1216;
+  font-size: clamp(16px, 2vw, 18px);
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-weight: 500;
+  line-height: 1.6;
+  text-align: center;
+  margin: 0;
+}
+
+.partner-logos-container__rh {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+}
+
+.partner-logo-item__rh {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 16px;
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #e0e0e1;
+  min-width: 120px;
+  min-height: 60px;
+  flex: 0 0 auto;
+}
+
+.partner-logo__rh {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Responsive Design for Partner Section */
+@media (max-width: 1200px) {
+  .partner-logos-container__rh {
+    gap: 20px;
+  }
+
+  .partner-logo-item__rh {
+    min-width: 110px;
+    min-height: 55px;
+  }
+}
+
+@media (max-width: 992px) {
+  .partner-logos-container__rh {
+    gap: 16px;
+  }
+
+  .partner-logo-item__rh {
+    min-width: 100px;
+    min-height: 50px;
+    padding: 6px 13px;
+  }
+}
+
+@media (max-width: 768px) {
+  .partner-content-wrapper__rh {
+    gap: 24px;
+  }
+
+  .partner-logos-container__rh {
+    gap: 12px;
+  }
+
+  .partner-logo-item__rh {
+    min-width: 90px;
+    min-height: 45px;
+    padding: 5px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .rh-about-out-partner-section {
+    padding: {{ section.settings.padding_top_mobile | default: 30 }}px 15px {{ section.settings.padding_bottom_mobile | default: 60 }}px;
+  }
+
+  .partner-content-wrapper__rh {
+    gap: 20px;
+  }
+
+  .partner-logos-container__rh {
+    gap: 8px;
+  }
+
+  .partner-logo-item__rh {
+    min-width: 80px;
+    min-height: 40px;
+    padding: 4px 8px;
+  }
+}
+
+
+{% endstyle %}
+
+<div class="rh-about-out-partner-section">
+    <div class="container-rh">
+        <div class="partner-content-wrapper__rh">
+            <h2 class="partner-title__rh">{{ section.settings.title | default: "Unlock Your Team's Potential with 2000+ Accredited Courses!" }}</h2>
+            <div class="partner-logos-container__rh">
+              {% for block in section.blocks %}
+                {% case block.type %}
+                  {% when 'partner_logo' %}
+                    <div class="partner-logo-item__rh">
+                      <img class="partner-logo__rh" 
+                        src="{% if block.settings.logo %}{{ block.settings.logo | img_url: '200x80' }}{% else %}https://dummyimage.com/120x60/8b3dff/ffffff&text=Partner+{{ forloop.index }}{% endif %}" 
+                        alt="{{ block.settings.logo.alt | default: block.settings.alt_text | default: 'Partner Logo' }}" />
+                    </div>
+                {% endcase %}
+              {% endfor %}
+            </div>
+          </div>
+    </div>
+</div>
+
+{% schema %}
+{
+  "name": "RH About Partners",
+  "max_blocks": 12,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section Content"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Section Title",
+      "default": "Unlock Your Team's Potential with 2000+ Accredited Courses!"
+    },
+    {
+      "type": "header",
+      "content": "Desktop Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top_desktop",
+      "min": 0,
+      "max": 200,
+      "step": 5,
+      "unit": "px",
+      "label": "Top Padding (Desktop)",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_desktop",
+      "min": 0,
+      "max": 200,
+      "step": 5,
+      "unit": "px",
+      "label": "Bottom Padding (Desktop)",
+      "default": 100
+    },
+    {
+      "type": "header",
+      "content": "Mobile Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Top Padding (Mobile)",
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Bottom Padding (Mobile)",
+      "default": 60
+    }
+  ],
+  "blocks": [
+    {
+      "type": "partner_logo",
+      "name": "Partner Logo",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "logo",
+          "label": "Partner Logo"
+        },
+        {
+          "type": "text",
+          "id": "alt_text",
+          "label": "Alt Text",
+          "default": "Partner Logo"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "RH About Our Partners",
+      "category": "About",
+      "blocks": [
+        {
+          "type": "partner_logo"
+        },
+        {
+          "type": "partner_logo"
+        },
+        {
+          "type": "partner_logo"
+        },
+        {
+          "type": "partner_logo"
+        },
+        {
+          "type": "partner_logo"
+        },
+        {
+          "type": "partner_logo"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

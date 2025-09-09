@@ -1,6 +1,12 @@
 {% style %}
+ .rh-about-hero-after-section *{
+   margin: 0;
+   padding: 0;
+   letter-spacing: normal;
+   line-height: normal;
+ }
 .rh-about-hero-after-section {
-    padding: 100px 20px 50px; 
+    padding: {{ section.settings.padding_top_desktop | default: 100 }}px 20px {{ section.settings.padding_bottom_desktop | default: 50 }}px; 
     background: #ffffff;
 }
 .rh-about-hero-after-section .container-rh {
@@ -98,7 +104,7 @@
 
 @media (max-width: 480px) {
   .rh-about-hero-after-section {
-    padding: 60px 15px 30px;
+    padding: {{ section.settings.padding_top_mobile | default: 60 }}px 15px {{ section.settings.padding_bottom_mobile | default: 30 }}px;
   }
 
   .hero-content-wrapper__rh {
@@ -168,6 +174,54 @@
       "id": "image_alt",
       "label": "Image Alt Text",
       "default": "About Support Skills"
+    },
+    {
+      "type": "header",
+      "content": "Desktop Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top_desktop",
+      "min": 0,
+      "max": 200,
+      "step": 5,
+      "unit": "px",
+      "label": "Top Padding (Desktop)",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_desktop",
+      "min": 0,
+      "max": 200,
+      "step": 5,
+      "unit": "px",
+      "label": "Bottom Padding (Desktop)",
+      "default": 50
+    },
+    {
+      "type": "header",
+      "content": "Mobile Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Top Padding (Mobile)",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Bottom Padding (Mobile)",
+      "default": 30
     }
   ],
   "presets": [
