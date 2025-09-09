@@ -297,6 +297,19 @@
         "padding_top_mobile": 40,
         "padding_bottom_mobile": 40
       }
+    },
+    "rh_about_join_us_NVXfDV": {
+      "type": "rh-about-join-us",
+      "name": "RH About Join Us",
+      "settings": {
+        "title": "Join Super Skills today",
+        "button_text": "Explore Jobs",
+        "button_link": "/collections/all",
+        "padding_top_desktop": 50,
+        "padding_bottom_desktop": 100,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 60
+      }
     }
   },
   "order": [
@@ -306,6 +319,7 @@
     "rh_about_our_partners_nyJCHm",
     "rh_about_site_stats_y6GRQM",
     "rh_our_team_iEHKqL",
-    "rh_about_site_features_kFGdnP"
+    "rh_about_site_features_kFGdnP",
+    "rh_about_join_us_NVXfDV"
   ]
 }
