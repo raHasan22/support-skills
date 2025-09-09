@@ -139,7 +139,7 @@
 {% endstyle %}
 
 
-<div class="rh-about-site-stats-section">
+
     <div class="container-rh">
         <div class="stats-content-wrapper__rh">
             <p class="stats-description__rh">{{ section.settings.description | default: "Launched in 2013, Support Skills is an online design and publishing tool with a mission to empower everyone in the world to design anything and publish anywhere." }}</p>
@@ -159,11 +159,13 @@
             </div>
           </div> 
     </div>
-</div>
+
 
 {% schema %}
 {
   "name": "RH about Stats ",
+  "tag": "section",
+  "class": "rh-about-site-stats-section",
   "max_blocks": 6,
   "settings": [
     {

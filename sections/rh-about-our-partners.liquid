@@ -124,7 +124,7 @@
 
 {% endstyle %}
 
-<div class="rh-about-out-partner-section">
+
     <div class="container-rh">
         <div class="partner-content-wrapper__rh">
             <h2 class="partner-title__rh">{{ section.settings.title | default: "Unlock Your Team's Potential with 2000+ Accredited Courses!" }}</h2>
@@ -142,11 +142,13 @@
             </div>
           </div>
     </div>
-</div>
+
 
 {% schema %}
 {
   "name": "RH About Partners",
+  "tag": "section",
+  "class": "rh-about-our-partners-section",
   "max_blocks": 12,
   "settings": [
     {
