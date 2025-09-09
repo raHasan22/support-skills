@@ -140,12 +140,64 @@
         "padding_top_mobile": 30,
         "padding_bottom_mobile": 60
       }
+    },
+    "rh_about_site_stats_y6GRQM": {
+      "type": "rh-about-site-stats",
+      "blocks": {
+        "stat_item_z347qR": {
+          "type": "stat_item",
+          "settings": {
+            "main_number": "16.9",
+            "suffix": "M+",
+            "label": "registered users in more than 240 countries"
+          }
+        },
+        "stat_item_cYrVtm": {
+          "type": "stat_item",
+          "settings": {
+            "main_number": "2.6",
+            "suffix": "M+",
+            "label": "projects submitted"
+          }
+        },
+        "stat_item_p8YLkf": {
+          "type": "stat_item",
+          "settings": {
+            "main_number": "205",
+            "suffix": "k",
+            "label": "Nanodegree certificates earned"
+          }
+        },
+        "stat_item_DbiPrf": {
+          "type": "stat_item",
+          "settings": {
+            "main_number": "73",
+            "suffix": "%",
+            "label": "of graduates reported a favorable career change"
+          }
+        }
+      },
+      "block_order": [
+        "stat_item_z347qR",
+        "stat_item_cYrVtm",
+        "stat_item_p8YLkf",
+        "stat_item_DbiPrf"
+      ],
+      "name": "RH About Stats",
+      "settings": {
+        "description": "Launched in 2013, Support Skills is an online design and publishing tool with a mission to empower everyone in the world to design anything and publish anywhere.",
+        "padding_top_desktop": 55,
+        "padding_bottom_desktop": 55,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 40
+      }
     }
   },
   "order": [
     "main",
     "rh_about_hero_dtbe3T",
     "rh_about_after_hero_qNAM48",
-    "rh_about_our_partners_nyJCHm"
+    "rh_about_our_partners_nyJCHm",
+    "rh_about_site_stats_y6GRQM"
   ]
 }
