@@ -1,0 +1,631 @@
+{% style %}
+ .rh-about-hero-section *{
+   margin: 0;
+   padding: 0;
+   letter-spacing: normal;
+   line-height: normal;
+ }
+ .rh-about-hero-section {
+   padding: 45px 20px 70px;
+   background: linear-gradient(135deg, #f5fcfd 0%, #f0f8ff 100%);
+ }
+ .rh-about-hero-section .container-rh {
+    max-width: 1420px;
+    margin: 0 auto;
+ }
+
+/* Hero Section Styles */
+.hero-main-content-wrapper__rh {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  width: 100%;
+  padding: 350px 0 300px;
+  position: relative;
+}
+
+.hero-text-section__rh {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  text-align: center;
+  max-width: 58.75rem;
+  width: 100%;
+}
+
+.hero-main-title__rh {
+  margin: 0;
+  line-height: 1.04;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+.hero-title-part1__rh {
+  color: #0d1216;
+  font-size: clamp(3rem, 8vw, 6.25rem);
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-weight: 500;
+  display: block;
+}
+
+.hero-title-part2__rh {
+  background: linear-gradient(135deg, #00a0a8 0%, #5a32fa 50%, #7d2ae8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: clamp(3rem, 8vw, 6.25rem);
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-weight: 500;
+  display: block;
+}
+
+.hero-main-description__rh {
+  color: #282c30;
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  margin: 0;
+  max-width: 50rem;
+}
+
+
+
+.hero-image-item__rh {
+  overflow: hidden;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: absolute;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.hero-image-item__rh.one {
+  top: 70px;                 
+  left: 50px;
+  width: 200px;
+  height: 180px;
+}
+
+.hero-image-item__rh.two {
+  top: 0;
+  right: 70px;
+  width: 250px;
+  height: 250px;
+}
+
+.hero-image-item__rh.three {
+  top: 50%;
+  left: 50px;
+  transform: translateY(-50%);
+  width: 120px;
+  height: 120px;
+}
+
+.hero-image-item__rh.four {
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 200px;
+  height: 140px;
+}
+
+.hero-image-item__rh.five {
+  bottom: 0;
+  left: 0;
+  width: 320px;
+  height: 210px;
+}
+
+.hero-image-item__rh.six {
+  bottom: 50px;
+  right: 100px;
+  width: 300px;
+  height: 180px;
+}
+
+.hero-image__rh {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Specific grid positioning for the 6 images */
+
+/* Responsive Design for Hero Section */
+@media (min-width: 1400px) {
+  .hero-image-item__rh.one {
+    top: 5vw;                 
+    left: 3.5vw;
+    width: 14.3vw;
+    height: 12.9vw;
+    max-width: 200px;
+    max-height: 180px;
+  }
+  
+  .hero-image-item__rh.two {
+    top: 0;
+    right: 5vw;
+    width: 17.9vw;
+    height: 17.9vw;
+    max-width: 250px;
+    max-height: 250px;
+  }
+  
+  .hero-image-item__rh.three {
+    top: 50%;
+    left: 3.5vw;
+    transform: translateY(-50%);
+    width: 8.6vw;
+    height: 8.6vw;
+    max-width: 120px;
+    max-height: 120px;
+  }
+  
+  .hero-image-item__rh.four {
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 14.3vw;
+    height: 10vw;
+    max-width: 200px;
+    max-height: 140px;
+  }
+  
+  .hero-image-item__rh.five {
+    bottom: 0;
+    left: 0;
+    width: 22.9vw;
+    height: 15vw;
+    max-width: 320px;
+    max-height: 210px;
+  }
+  
+  .hero-image-item__rh.six {
+    bottom: 3.6vw;
+    right: 7.1vw;
+    width: 21.4vw;
+    height: 12.9vw;
+    max-width: 300px;
+    max-height: 180px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .rh-about-hero-section {
+    padding: 50px 20px 70px;
+  }
+  
+  .hero-main-content-wrapper__rh {
+    gap: 2.5rem;
+    padding: 280px 0 240px;
+  }
+  
+  /* Scale down images for 1200px and below */
+  .hero-image-item__rh.one {
+    top: 60px;
+    left: 40px;
+    width: 170px;
+    height: 150px;
+  }
+  
+  .hero-image-item__rh.two {
+    top: 0;
+    right: 60px;
+    width: 210px;
+    height: 210px;
+  }
+  
+  .hero-image-item__rh.three {
+    top: 50%;
+    left: 40px;
+    transform: translateY(-50%);
+    width: 100px;
+    height: 100px;
+  }
+  
+  .hero-image-item__rh.four {
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 170px;
+    height: 120px;
+  }
+  
+  .hero-image-item__rh.five {
+    bottom: 0;
+    left: 0;
+    width: 270px;
+    height: 180px;
+  }
+  
+  .hero-image-item__rh.six {
+    bottom: 40px;
+    right: 80px;
+    width: 250px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 1075px) {
+  .rh-about-hero-section {
+    padding: 45px 20px 65px;
+  }
+  
+  .hero-main-content-wrapper__rh {
+    gap: 2.25rem;
+    padding: 250px 0 210px;
+  }
+  
+  /* Further scale down for 1075px and below */
+  .hero-image-item__rh.one {
+    top: 55px;
+    left: 35px;
+    width: 155px;
+    height: 135px;
+  }
+  
+  .hero-image-item__rh.two {
+    top: 0;
+    right: 55px;
+    width: 190px;
+    height: 190px;
+  }
+  
+  .hero-image-item__rh.three {
+    top: 50%;
+    left: 35px;
+    transform: translateY(-50%);
+    width: 90px;
+    height: 90px;
+  }
+  
+  .hero-image-item__rh.four {
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 155px;
+    height: 110px;
+  }
+  
+  .hero-image-item__rh.five {
+    bottom: 0;
+    left: 0;
+    width: 245px;
+    height: 165px;
+  }
+  
+  .hero-image-item__rh.six {
+    bottom: 35px;
+    right: 70px;
+    width: 225px;
+    height: 135px;
+  }
+}
+
+@media (max-width: 912px) {
+  .rh-about-hero-section {
+    padding: 42px 20px 62px;
+  }
+  
+  .hero-main-content-wrapper__rh {
+    gap: 2.125rem;
+    padding: 235px 0 195px;
+  }
+  
+  /* Further scale down for 912px and below */
+  .hero-image-item__rh.one {
+    top: 52px;
+    left: 32px;
+    width: 145px;
+    height: 125px;
+  }
+  
+  .hero-image-item__rh.two {
+    top: 0;
+    right: 52px;
+    width: 175px;
+    height: 175px;
+  }
+  
+  .hero-image-item__rh.three {
+    top: 50%;
+    left: 32px;
+    transform: translateY(-50%);
+    width: 85px;
+    height: 85px;
+  }
+  
+  .hero-image-item__rh.four {
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 145px;
+    height: 105px;
+  }
+  
+  .hero-image-item__rh.five {
+    bottom: 0;
+    left: 0;
+    width: 230px;
+    height: 155px;
+  }
+  
+  .hero-image-item__rh.six {
+    bottom: 32px;
+    right: 65px;
+    width: 210px;
+    height: 130px;
+  }
+}
+
+@media (max-width: 992px) {
+  .rh-about-hero-section {
+    padding: 40px 20px 60px;
+  }
+  
+  .hero-main-content-wrapper__rh {
+    gap: 2rem;
+    padding: 220px 0 180px;
+  }
+  
+  .hero-text-section__rh {
+    gap: 1rem;
+  }
+  
+  /* Further scale down for tablets */
+  .hero-image-item__rh.one {
+    top: 50px;
+    left: 30px;
+    width: 140px;
+    height: 125px;
+  }
+  
+  .hero-image-item__rh.two {
+    top: 0;
+    right: 50px;
+    width: 180px;
+    height: 180px;
+  }
+  
+  .hero-image-item__rh.three {
+    top: 50%;
+    left: 30px;
+    transform: translateY(-50%);
+    width: 85px;
+    height: 85px;
+  }
+  
+  .hero-image-item__rh.four {
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 140px;
+    height: 100px;
+  }
+  
+  .hero-image-item__rh.five {
+    bottom: 0;
+    left: 0;
+    width: 220px;
+    height: 150px;
+  }
+  
+  .hero-image-item__rh.six {
+    bottom: 30px;
+    right: 60px;
+    width: 200px;
+    height: 120px;
+  }
+}
+
+@media (max-width: 768px) {
+  .rh-about-hero-section {
+    padding: 30px 20px 50px;
+  }
+  
+  .hero-main-content-wrapper__rh {
+    gap: 1.75rem;
+    padding: 60px 0 40px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .hero-text-section__rh {
+    gap: 0.875rem;
+    order: 1;
+    width: 100%;
+  }
+  
+  /* Move all images below text on mobile */
+  .hero-image-item__rh {
+    position: static !important;
+    transform: none !important;
+    width: 28% !important;
+    height: auto !important;
+    margin: 0.5rem 0;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .hero-image-item__rh.one { order: 2; }
+  .hero-image-item__rh.two { order: 3; }
+  .hero-image-item__rh.three { order: 4; }
+  .hero-image-item__rh.four { order: 5; }
+  .hero-image-item__rh.five { order: 6; }
+  .hero-image-item__rh.six { order: 7; }
+}
+
+@media (max-width: 480px) {
+  .rh-about-hero-section {
+    padding: 25px 15px 40px;
+  }
+  
+  .hero-main-content-wrapper__rh {
+    gap: 1rem;
+    padding: 40px 0 30px;
+  }
+  
+  .hero-text-section__rh {
+    gap: 0.75rem;
+  }
+  
+  .hero-main-description__rh {
+    font-size: 0.9rem;
+  }
+  
+  /* Maintain mobile layout for smaller screens */
+  .hero-image-item__rh {
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 360px) {
+  .rh-about-hero-section {
+    padding: 20px 10px 30px;
+  }
+  
+  .hero-main-content-wrapper__rh {
+    gap:  0.8rem;
+    padding: 30px 0 20px;
+  }
+  
+  .hero-text-section__rh {
+    gap: 0.5rem;
+  }
+  
+  .hero-main-description__rh {
+    font-size: 0.85rem;
+  }
+  
+  /* Further reduce image size for very small screens */
+  .hero-image-item__rh {
+    max-width: 200px;
+  }
+}
+
+{% endstyle %}
+
+<div class="rh-about-hero-section">
+    <div class="container-rh">
+        <div class="hero-main-content-wrapper__rh">
+            <div class="hero-text-section__rh">
+              <h1 class="hero-main-title__rh">
+                <span class="hero-title-part1__rh">{{ section.settings.title_part1 | default: "We turn talent into" }}</span>
+                <span class="hero-title-part2__rh">{{ section.settings.title_part2 | default: "greatness." }}</span>
+              </h1>
+              <p class="hero-main-description__rh">{{ section.settings.description | default: "Support Skills changes lives, organizations, and nations through digital upskilling, developing the edge you need to conquer what's next." }}</p>
+            </div>
+
+              <div class="hero-image-item__rh one">
+                <img class="hero-image__rh" 
+                  src="{% if section.settings.image_1 %}{{ section.settings.image_1 | img_url: '400x300' }}{% else %}https://dummyimage.com/400x300/8b3dff/ffffff&text=Hero+Image+1{% endif %}" 
+                  alt="{{ section.settings.image_1.alt | default: 'Hero image 1' }}" />
+              </div>
+              <div class="hero-image-item__rh two">
+                <img class="hero-image__rh" 
+                  src="{% if section.settings.image_2 %}{{ section.settings.image_2 | img_url: '400x300' }}{% else %}https://dummyimage.com/400x300/00a0a8/ffffff&text=Hero+Image+2{% endif %}" 
+                  alt="{{ section.settings.image_2.alt | default: 'Hero image 2' }}" />
+              </div>
+              <div class="hero-image-item__rh three">
+                <img class="hero-image__rh" 
+                  src="{% if section.settings.image_3 %}{{ section.settings.image_3 | img_url: '400x300' }}{% else %}https://dummyimage.com/400x300/5a32fa/ffffff&text=Hero+Image+3{% endif %}" 
+                  alt="{{ section.settings.image_3.alt | default: 'Hero image 3' }}" />
+              </div>
+              <div class="hero-image-item__rh four">
+                <img class="hero-image__rh" 
+                  src="{% if section.settings.image_4 %}{{ section.settings.image_4 | img_url: '400x300' }}{% else %}https://dummyimage.com/400x300/7d2ae8/ffffff&text=Hero+Image+4{% endif %}" 
+                  alt="{{ section.settings.image_4.alt | default: 'Hero image 4' }}" />
+              </div>
+              <div class="hero-image-item__rh five">
+                <img class="hero-image__rh" 
+                  src="{% if section.settings.image_5 %}{{ section.settings.image_5 | img_url: '400x300' }}{% else %}https://dummyimage.com/400x300/8b3dff/ffffff&text=Hero+Image+5{% endif %}" 
+                  alt="{{ section.settings.image_5.alt | default: 'Hero image 5' }}" />
+              </div>
+              <div class="hero-image-item__rh six">
+                <img class="hero-image__rh" 
+                  src="{% if section.settings.image_6 %}{{ section.settings.image_6 | img_url: '400x300' }}{% else %}https://dummyimage.com/400x300/00a0a8/ffffff&text=Hero+Image+6{% endif %}" 
+                  alt="{{ section.settings.image_6.alt | default: 'Hero image 6' }}" />
+              </div>
+
+          </div>
+    </div>
+</div>
+
+{% schema %}
+{
+  "name": "RH About Hero",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Hero Content"
+    },
+    {
+      "type": "text",
+      "id": "title_part1",
+      "label": "Title Part 1",
+      "default": "We turn talent into"
+    },
+    {
+      "type": "text",
+      "id": "title_part2",
+      "label": "Title Part 2",
+      "default": "greatness."
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "Support Skills changes lives, organizations, and nations through digital upskilling, developing the edge you need to conquer what's next."
+    },
+    {
+      "type": "header",
+      "content": "Hero Images"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_1",
+      "label": "Hero Image 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_2",
+      "label": "Hero Image 2"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_3",
+      "label": "Hero Image 3"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_4",
+      "label": "Hero Image 4"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_5",
+      "label": "Hero Image 5"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_6",
+      "label": "Hero Image 6"
+    }
+  ],
+  "presets": [
+    {
+      "name": "RH About Hero",
+      "category": "Hero"
+    }
+  ]
+}
+{% endschema %}
