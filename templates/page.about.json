@@ -245,6 +245,58 @@
         "padding_top_mobile": 60,
         "padding_bottom_mobile": 30
       }
+    },
+    "rh_about_site_features_kFGdnP": {
+      "type": "rh-about-site-features",
+      "blocks": {
+        "feature_card_73DwEb": {
+          "type": "feature_card",
+          "settings": {
+            "image": "shopify://shop_images/image_27_1.png",
+            "title": "Be Outcome Obsessed",
+            "description": "Center our actions around our customers and learners. Derive motion from and be guided by measurable outcomes."
+          }
+        },
+        "feature_card_Phy7GW": {
+          "type": "feature_card",
+          "settings": {
+            "image": "shopify://shop_images/7371507_3637611_1_1.png",
+            "title": "Embrace Curiosity",
+            "description": "Champion ongoing learning, challenge norms, and encourage healthy debate to foster a workplace of innovation."
+          }
+        },
+        "feature_card_9PRRXT": {
+          "type": "feature_card",
+          "settings": {
+            "image": "shopify://shop_images/image_27_2.png",
+            "title": "Take the lead",
+            "description": "Give the power to ourselves and others to speak up, take data-driven risks, innovate, and embrace change."
+          }
+        },
+        "feature_card_gtN8pT": {
+          "type": "feature_card",
+          "settings": {
+            "image": "shopify://shop_images/image_27_3.png",
+            "title": "Celebrate the Assist",
+            "description": "Collaborate with compassion, respect, and trust. Celebrate the unseen work that makes victories possible."
+          }
+        }
+      },
+      "block_order": [
+        "feature_card_73DwEb",
+        "feature_card_Phy7GW",
+        "feature_card_9PRRXT",
+        "feature_card_gtN8pT"
+      ],
+      "name": "RH About Site Features",
+      "settings": {
+        "title": "At SuperSkills, we are forging futures in tech",
+        "description": "We are delivering impactful and cutting edge tech education that enables individuals and organizations to unlock their potential.",
+        "padding_top_desktop": 50,
+        "padding_bottom_desktop": 50,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 40
+      }
     }
   },
   "order": [
@@ -253,6 +305,7 @@
     "rh_about_after_hero_qNAM48",
     "rh_about_our_partners_nyJCHm",
     "rh_about_site_stats_y6GRQM",
-    "rh_our_team_iEHKqL"
+    "rh_our_team_iEHKqL",
+    "rh_about_site_features_kFGdnP"
   ]
 }
