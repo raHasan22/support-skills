@@ -191,6 +191,55 @@
         "padding_top_mobile": 40,
         "padding_bottom_mobile": 40
       }
+    },
+    "rh_our_team_iEHKqL": {
+      "type": "rh-our-team",
+      "blocks": {
+        "team_member_FKMFJh": {
+          "type": "team_member",
+          "settings": {
+            "name": "Michael Conway",
+            "role": "VP, Content"
+          }
+        },
+        "team_member_LLET6F": {
+          "type": "team_member",
+          "settings": {
+            "name": "Kattie McGinnis",
+            "role": "VP, People"
+          }
+        },
+        "team_member_z8ghFd": {
+          "type": "team_member",
+          "settings": {
+            "name": "James Richards",
+            "role": "Chief Technology Officer"
+          }
+        },
+        "team_member_qm9hKj": {
+          "type": "team_member",
+          "settings": {
+            "name": "Matthew Franks",
+            "role": "Chief Revenue Officer"
+          }
+        }
+      },
+      "block_order": [
+        "team_member_FKMFJh",
+        "team_member_LLET6F",
+        "team_member_z8ghFd",
+        "team_member_qm9hKj"
+      ],
+      "name": "RH Our Team",
+      "settings": {
+        "title": "Our Team",
+        "description": "Our leadership team comes together with one goal: to help learners, organizations, and nations prepare for and strengthen the digital workforce of the next generation.",
+        "button_text": "Learn more",
+        "padding_top_desktop": 100,
+        "padding_bottom_desktop": 50,
+        "padding_top_mobile": 60,
+        "padding_bottom_mobile": 30
+      }
     }
   },
   "order": [
@@ -198,6 +247,7 @@
     "rh_about_hero_dtbe3T",
     "rh_about_after_hero_qNAM48",
     "rh_about_our_partners_nyJCHm",
-    "rh_about_site_stats_y6GRQM"
+    "rh_about_site_stats_y6GRQM",
+    "rh_our_team_iEHKqL"
   ]
 }
