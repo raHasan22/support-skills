@@ -58,6 +58,7 @@
 }
 
 .team-cta-button__rh {
+  display: inline-block;
   padding: 7px 30px;
   border-radius: 8px;
   border: 1px solid #8b3dff;
@@ -67,6 +68,7 @@
   font-family: "Bricolage Grotesque", sans-serif;
   font-weight: 600;
   line-height: 1.6;
+  text-decoration: none;
   cursor: pointer;
   transition: all 0.3s ease;
   flex-shrink: 0;
@@ -198,8 +200,8 @@
                 <h2 class="team-title__rh">{{ section.settings.title | default: "Our Team" }}</h2>
                 <p class="team-description__rh">{{ section.settings.description | default: "Our leadership team comes together with one goal: to help learners, organizations, and nations prepare for and strengthen the digital workforce of the next generation." }}</p>
               </div>
-              {% if section.settings.button_text != blank %}
-                <button class="team-cta-button__rh">{{ section.settings.button_text }}</button>
+              {% if section.settings.button_text != blank and section.settings.button_link != blank %}
+                <a href="{{ section.settings.button_link }}" class="team-cta-button__rh">{{ section.settings.button_text }}</a>
               {% endif %}
             </div>
             <div class="team-members-grid__rh">
@@ -250,6 +252,12 @@
       "id": "button_text",
       "label": "Button Text",
       "default": "Learn more"
+    },
+    {
+      "type": "text",
+      "id": "button_link",
+      "label": "Button Link",
+      "default": "/collections/all"
     },
     {
       "type": "header",
@@ -327,7 +335,7 @@
   ],
   "presets": [
     {
-      "name": "RH Our Team",
+      "name": "RH About Our Team",
       "category": "Team",
       "blocks": [
         {
