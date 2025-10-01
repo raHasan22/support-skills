@@ -147,33 +147,33 @@
         "stat_item_z347qR": {
           "type": "stat_item",
           "settings": {
-            "main_number": "16.9",
-            "suffix": "M+",
-            "label": "registered users in more than 240 countries"
+            "main_number": "5",
+            "suffix": "k+",
+            "label": "Learners in the UK"
           }
         },
         "stat_item_cYrVtm": {
           "type": "stat_item",
           "settings": {
-            "main_number": "2.6",
-            "suffix": "M+",
-            "label": "projects submitted"
+            "main_number": "500",
+            "suffix": "+",
+            "label": "Courses"
           }
         },
         "stat_item_p8YLkf": {
           "type": "stat_item",
           "settings": {
-            "main_number": "205",
-            "suffix": "k",
-            "label": "Nanodegree certificates earned"
+            "main_number": "24",
+            "suffix": "/7",
+            "label": "Learner Support"
           }
         },
         "stat_item_DbiPrf": {
           "type": "stat_item",
           "settings": {
-            "main_number": "73",
+            "main_number": "81",
             "suffix": "%",
-            "label": "of graduates reported a favorable career change"
+            "label": "of graduates report a positive career outcome within 6 months."
           }
         }
       },
@@ -254,32 +254,32 @@
           "type": "feature_card",
           "settings": {
             "image": "shopify://shop_images/image_27_1.png",
-            "title": "Be Outcome Obsessed",
-            "description": "Center our actions around our customers and learners. Derive motion from and be guided by measurable outcomes."
+            "title": "Simplify the Complex",
+            "description": "We believe learning should be exciting, not intimidating. We break down complex topics into simple, hands-on steps so you can build momentum from day one."
           }
         },
         "feature_card_Phy7GW": {
           "type": "feature_card",
           "settings": {
             "image": "shopify://shop_images/7371507_3637611_1_1.png",
-            "title": "Embrace Curiosity",
-            "description": "Champion ongoing learning, challenge norms, and encourage healthy debate to foster a workplace of innovation."
+            "title": "Learn by Creating",
+            "description": "True understanding comes from doing. We champion a practical, project-based approach that builds real skills and a portfolio you can be proud of."
           }
         },
         "feature_card_9PRRXT": {
           "type": "feature_card",
           "settings": {
             "image": "shopify://shop_images/image_27_2.png",
-            "title": "Take the lead",
-            "description": "Give the power to ourselves and others to speak up, take data-driven risks, innovate, and embrace change."
+            "title": "Champion Each Other",
+            "description": "Learning is a team sport. We foster a supportive community where everyone is encouraged to ask questions, share their work, and grow together."
           }
         },
         "feature_card_gtN8pT": {
           "type": "feature_card",
           "settings": {
             "image": "shopify://shop_images/image_27_3.png",
-            "title": "Celebrate the Assist",
-            "description": "Collaborate with compassion, respect, and trust. Celebrate the unseen work that makes victories possible."
+            "title": "Be a Force for Good",
+            "description": "We're passionate about empowering people to change their lives. We strive to make education accessible, inclusive, and a positive force for our community."
           }
         }
       },
@@ -291,8 +291,8 @@
       ],
       "name": "RH About Site Features",
       "settings": {
-        "title": "At SuperSkills, we are forging futures in tech",
-        "description": "We are delivering impactful and cutting edge tech education that enables individuals and organizations to unlock their potential.",
+        "title": "At NextGen Learning, we're building a better way to learn.",
+        "description": "Our values guide everything we do, from the courses we create to the community we build together.",
         "padding_top_desktop": 50,
         "padding_bottom_desktop": 50,
         "padding_top_mobile": 40,
@@ -303,8 +303,8 @@
       "type": "rh-about-join-us",
       "name": "RH About Join Us",
       "settings": {
-        "title": "Join Super Skills today",
-        "button_text": "Explore Jobs",
+        "title": "Ready to start your journey?",
+        "button_text": "Explore Our Courses",
         "button_link": "/collections/all",
         "padding_top_desktop": 50,
         "padding_bottom_desktop": 100,
