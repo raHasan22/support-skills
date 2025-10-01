@@ -334,27 +334,54 @@
           "type": "testimonial",
           "settings": {
             "image": "shopify://shop_images/Frame_40576.png",
-            "review_text": "“SupportSkills helped me gain on-the-job confidence, build a portfolio, and earn a microcredential to share with prospective employers.”",
-            "name": "Ben, Business Analyst",
-            "location": "Nanodegree program graduate"
+            "review_text": "“It was a great learning opportunity, and it was also engaging and informative. I enjoyed my time.”",
+            "name": "Stephen Olajugbagbe",
+            "location": ""
           }
         },
         "testimonial_f3ieLG": {
           "type": "testimonial",
           "settings": {
             "image": "shopify://shop_images/Frame_40576.png",
-            "review_text": "“SupportSkills helped me gain on-the-job confidence, build a portfolio, and earn a microcredential to share with prospective employers.”",
-            "name": "Ben, Business Analyst",
-            "location": "Nanodegree program graduate"
+            "review_text": "“The courses was so impactful and good resources to develop ur skills in the health care sector”",
+            "name": "Nofisat Adeyinka",
+            "location": ""
           }
         },
         "testimonial_pid4fB": {
           "type": "testimonial",
           "settings": {
             "image": "shopify://shop_images/Frame_40576.png",
-            "review_text": "“SupportSkills helped me gain on-the-job confidence, build a portfolio, and earn a microcredential to share with prospective employers.”",
-            "name": "Ben, Business Analyst",
-            "location": "Nanodegree program graduate"
+            "review_text": "“Lovely! Easy to read and easy to understand.”",
+            "name": " Ifeanyi Eweluso",
+            "location": ""
+          }
+        },
+        "testimonial_kgcDhj": {
+          "type": "testimonial",
+          "settings": {
+            "image": "shopify://shop_images/Frame_40576.png",
+            "review_text": "“ I am enjoying the training. It's really nice and easy to understand.”",
+            "name": "Nelson Zino Monnitey",
+            "location": ""
+          }
+        },
+        "testimonial_KycDm8": {
+          "type": "testimonial",
+          "settings": {
+            "image": "shopify://shop_images/Frame_40576.png",
+            "review_text": "“Completing the Level 3 Certificate in Health and Social Care has been an enriching experience. The course provided me with a deeper understanding of key concepts such as safeguarding, person-centred care, communication, health and safety, and legislation related to social care. The modules were well-structured, and the combination of theoretical knowledge and practical application helped to strengthen my skills and confidence in real-world care settings.”",
+            "name": "ADEWALE AZEEZ",
+            "location": ""
+          }
+        },
+        "testimonial_NqmJLi": {
+          "type": "testimonial",
+          "settings": {
+            "image": "shopify://shop_images/Frame_40576.png",
+            "review_text": "“The course is highly informative and carefully presented, I recommend it to everyone transiting into Health and social Care sector.”",
+            "name": "Funminiyi Taiwo",
+            "location": ""
           }
         },
         "review_platform_RCwQ4G": {
@@ -398,6 +425,9 @@
         "testimonial_wUTdgx",
         "testimonial_f3ieLG",
         "testimonial_pid4fB",
+        "testimonial_kgcDhj",
+        "testimonial_KycDm8",
+        "testimonial_NqmJLi",
         "review_platform_RCwQ4G",
         "review_platform_WjPdkJ",
         "review_platform_EpW6ee",
@@ -405,7 +435,7 @@
       ],
       "name": "RH Review Section",
       "settings": {
-        "title": "Learners Love SupportSkills"
+        "title": "Learners Love NextGen LearningLearners Love NextGen Learning"
       }
     },
     "rh_business_and_government_AqneiK": {
@@ -415,21 +445,21 @@
           "type": "business_feature",
           "settings": {
             "feature_icon": "shopify://shop_images/3f877251a2cc89eced48b6684f7916039f780f56.svg",
-            "feature_text": "Hands-on project-based approach"
+            "feature_text": "<b>A library of in-demand skills:</b> Give your team access to our complete catalogue of tech and data courses."
           }
         },
         "business_feature_wgFxby": {
           "type": "business_feature",
           "settings": {
             "feature_icon": "shopify://shop_images/3f877251a2cc89eced48b6684f7916039f780f56.svg",
-            "feature_text": "Top content co-developed with industry leaders"
+            "feature_text": "<b>A learn-by-doing approach:</b> Drive real results with hands-on projects, not just passive learning."
           }
         },
         "business_feature_fejBCt": {
           "type": "business_feature",
           "settings": {
             "feature_icon": "shopify://shop_images/3f877251a2cc89eced48b6684f7916039f780f56.svg",
-            "feature_text": "Global mentor network with 700+ domain experts"
+            "feature_text": "<b>Simple team management:</b> Easily track progress, manage seats, and see the impact of your investment."
           }
         }
       },
@@ -440,17 +470,17 @@
       ],
       "name": "RH Business & Government Sections",
       "settings": {
-        "business_heading": "SupportSkills for Business",
-        "features_heading": "Scale skills development for your organization",
+        "business_heading": "NextGen Learning for Teams",
+        "features_heading": "The simplest way to upskill your entire organisation.",
         "business_image": "shopify://shop_images/8fe706c861a9b17fd56cbb9c6cc33c50.webp",
         "primary_button_text": "Learn more",
-        "primary_button_link": "",
+        "primary_button_link": "shopify://collections/all",
         "secondary_button_text": "Contact us",
-        "secondary_button_link": "",
-        "government_heading": "SupportSkills For Government",
-        "government_description": "SupportSkills creates job opportunities with GDP impact for nations embracing the global digital era.",
+        "secondary_button_link": "shopify://pages/contact",
+        "government_heading": "Ready to build your future?",
+        "government_description": "Start learning in-demand skills today.",
         "government_image": "shopify://shop_images/07426fad3833f829a0af4fd26d7f9add03bddb64.svg",
-        "government_button_text": "Learn more",
+        "government_button_text": "Explore Our Courses",
         "government_button_link": ""
       }
     },
@@ -542,7 +572,7 @@
         "heading": "Prove your potential",
         "subheading": "Get Started Today",
         "button_text": "Start for free",
-        "button_link": "",
+        "button_link": "/account",
         "image": "shopify://shop_images/Frame_40604.png"
       }
     }
