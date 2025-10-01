@@ -125,10 +125,10 @@
       ],
       "name": "RH Hero support slills",
       "settings": {
-        "title": "Learn. Lead.\nTransform.",
+        "title": "Your Skills. Your Future.\nUnlocked.",
         "subtitle": "Explore courses by job function",
         "button_text": "View All courses",
-        "button_link": ""
+        "button_link": "shopify://collections/all"
       }
     },
     "rh_support_skills_pricing_EEYfAn": {
@@ -181,7 +181,7 @@
       ],
       "name": "RH Pricing Plans",
       "settings": {
-        "title": "Choose the plan that works for you"
+        "title": "Choose Your Way to Learn"
       }
     },
     "rh_products_section_6DRDUb": {
@@ -196,22 +196,7 @@
         "default_duration": "4 Month",
         "show_browse_button": true,
         "browse_button_text": "Browse all courses",
-        "browse_button_link": ""
-      }
-    },
-    "rh_products_section_YjQBET": {
-      "type": "rh-products-section",
-      "name": "RH Recommended Courses",
-      "settings": {
-        "title": "Newly Released Courses",
-        "collection": "all-courses",
-        "product_limit": 12,
-        "default_level": "Beginner",
-        "default_student_count": "223",
-        "default_duration": "4 Month",
-        "show_browse_button": true,
-        "browse_button_text": "Browse all courses",
-        "browse_button_link": ""
+        "browse_button_link": "shopify://collections/all"
       }
     },
     "rh_products_section_8h7zxq": {
@@ -226,7 +211,7 @@
         "default_duration": "4 Month",
         "show_browse_button": true,
         "browse_button_text": "Browse all courses",
-        "browse_button_link": ""
+        "browse_button_link": "shopify://collections/all"
       }
     },
     "rh_products_section_nfb7hd": {
@@ -241,7 +226,7 @@
         "default_duration": "4 Month",
         "show_browse_button": true,
         "browse_button_text": "Browse all courses",
-        "browse_button_link": ""
+        "browse_button_link": "shopify://collections/all"
       }
     },
     "rh_course_flip_section_BD4Egk": {
@@ -253,9 +238,9 @@
         "product_limit": 6,
         "collection": "all-courses",
         "section_title": "Most Popular Courses",
-        "section_description": "The Top AI & Data Skills Courses section highlights the most in-demand and future-ready courses carefully curated for learners eager to build a strong foundation in artificial intelligence and data science. From beginner-friendly introductions to advanced machine learning and data analytics, each course is designed to equip students with real-world, job-ready skills. This section not only showcases trending topics like Python for AI, deep learning, and data visualization but also helps learners stay ahead in a fast-evolving tech landscape by offering expert-led, industry-relevant content.",
-        "button_text": "Browse all courses",
-        "button_link": "",
+        "section_description": "See what thousands of learners are mastering to get ahead. This curated collection features our most in-demand courses, helping you build the skills that companies are hiring for right now.",
+        "button_text": "See Popular Courses",
+        "button_link": "shopify://collections/all",
         "default_level": "Beginner",
         "default_student_count": "223",
         "default_duration": "4 Month"
@@ -269,9 +254,9 @@
         "flex_direction_mobile": "column-reverse",
         "product_limit": 6,
         "collection": "all-courses",
-        "section_title": "Courses to Learn New Skills in 30 Days",
-        "section_description": "The Top AI & Data Skills Courses section highlights the most in-demand and future-ready courses carefully curated for learners eager to build a strong foundation in artificial intelligence and data science. From beginner-friendly introductions to advanced machine learning and data analytics, each course is designed to equip students with real-world, job-ready skills. This section not only showcases trending topics like Python for AI, deep learning, and data visualization but also helps learners stay ahead in a fast-evolving tech landscape by offering expert-led, industry-relevant content.",
-        "button_text": "Browse all courses",
+        "section_title": "Learn a New Skill in 7 Days",
+        "section_description": "Short on time? Big on ambition? This collection is for you. Each of these focused courses is designed to teach you a valuable new skill in about a week, helping you make a real impact, fast.",
+        "button_text": "Browse Courses",
         "button_link": "",
         "default_level": "Beginner",
         "default_student_count": "223",
@@ -287,9 +272,9 @@
         "product_limit": 6,
         "collection": "all-courses",
         "section_title": "Top Free Online Courses",
-        "section_description": "The Top AI & Data Skills Courses section highlights the most in-demand and future-ready courses carefully curated for learners eager to build a strong foundation in artificial intelligence and data science. From beginner-friendly introductions to advanced machine learning and data analytics, each course is designed to equip students with real-world, job-ready skills. This section not only showcases trending topics like Python for AI, deep learning, and data visualization but also helps learners stay ahead in a fast-evolving tech landscape by offering expert-led, industry-relevant content.",
-        "button_text": "Browse all courses",
-        "button_link": "",
+        "section_description": "Curious about a new career path? Start learning today with no commitment. Our free courses are the perfect way to explore a new subject, build foundational skills, and get a taste of the NextGen Learning experience.",
+        "button_text": "Browse Free Courses",
+        "button_link": "shopify://collections/all",
         "default_level": "Beginner",
         "default_student_count": "223",
         "default_duration": "4 Month"
@@ -303,10 +288,10 @@
         "flex_direction_mobile": "column-reverse",
         "product_limit": 6,
         "collection": "all-courses",
-        "section_title": "Beginner and Introduction Courses for Software Engineers",
-        "section_description": "The Top AI & Data Skills Courses section highlights the most in-demand and future-ready courses carefully curated for learners eager to build a strong foundation in artificial intelligence and data science. From beginner-friendly introductions to advanced machine learning and data analytics, each course is designed to equip students with real-world, job-ready skills. This section not only showcases trending topics like Python for AI, deep learning, and data visualization but also helps learners stay ahead in a fast-evolving tech landscape by offering expert-led, industry-relevant content.",
-        "button_text": "Browse all courses",
-        "button_link": "",
+        "section_title": "Starter Courses",
+        "section_description": "New to the industry? No problem. These beginner-friendly courses are your first step towards a new career in tech, data, and digital marketing.",
+        "button_text": "Browse beginner courses",
+        "button_link": "shopify://collections/all",
         "default_level": "Beginner",
         "default_student_count": "223",
         "default_duration": "4 Month"
@@ -320,10 +305,10 @@
         "flex_direction_mobile": "column-reverse",
         "product_limit": 6,
         "collection": "all-courses",
-        "section_title": "Top AI and Python Courses",
-        "section_description": "The Top AI & Data Skills Courses section highlights the most in-demand and future-ready courses carefully curated for learners eager to build a strong foundation in artificial intelligence and data science. From beginner-friendly introductions to advanced machine learning and data analytics, each course is designed to equip students with real-world, job-ready skills. This section not only showcases trending topics like Python for AI, deep learning, and data visualization but also helps learners stay ahead in a fast-evolving tech landscape by offering expert-led, industry-relevant content.",
-        "button_text": "Browse all courses",
-        "button_link": "",
+        "section_title": "Beginner Courses for Software Engineers",
+        "section_description": "Your journey to becoming a software engineer starts here. These introductory courses are designed to build your confidence from the ground up, covering the core languages and concepts you'll need to succeed.",
+        "button_text": "Browse Courses",
+        "button_link": "shopify://collections/all",
         "default_level": "Beginner",
         "default_student_count": "223",
         "default_duration": "4 Month"
@@ -333,11 +318,11 @@
       "type": "rh-skill-difference",
       "name": "RH SupportSkills Difference Section",
       "settings": {
-        "main_heading": "The SupportSkills Difference",
-        "feature_heading_1": "Prove Mastery Through Hands-On Projects",
-        "feature_description_1": "Our open-ended projects are modeled after real-world workplace scenarios, and require in-depth critical thinking and creative solutions.",
-        "feature_heading_2": "Succeed with Personalized Feedback",
-        "feature_description_2": "Every project receives personalized feedback from industry experts, and our mentors are available to answer questions whenever you're feeling stuck.",
+        "main_heading": "The NextGen Learning Difference",
+        "feature_heading_1": "Feature 1:",
+        "feature_description_1": "<b>• Title:</b> Learn by Doing, Not Just Watching<br>\n<b>• Description:</b> Go from theory to practice with hands-on projects that build real-world skills and a job-ready portfolio.",
+        "feature_heading_2": "Feature 2:",
+        "feature_description_2": "<b>• Title:</b> Support That Has Your Back<br>\n<b>• Description:</b> Get unstuck with helpful feedback on your projects and connect with a community of fellow learners and mentors.",
         "feature_image": "shopify://shop_images/e77f6e7397db022ed8c56be055d2362a.png",
         "feature_image_alt": "Support Skills Illustration"
       }
@@ -566,7 +551,6 @@
     "rh_support_skills_hero_gEy6ew",
     "rh_support_skills_pricing_EEYfAn",
     "rh_products_section_6DRDUb",
-    "rh_products_section_YjQBET",
     "rh_products_section_8h7zxq",
     "rh_products_section_nfb7hd",
     "rh_course_flip_section_BD4Egk",
