@@ -15,22 +15,22 @@
         "slide_RwpNbM": {
           "type": "slide",
           "settings": {
-            "card_heading": "Unlimited Learning",
-            "card_text": "Access our entire catalog of 80+ Nanodegree programs, 350+ courses, and 2,500+ skills."
+            "card_heading": "Learn On Your Schedule",
+            "card_text": "Our online courses are designed to fit your life. Learn at your own pace with 24/7 access to all course materials, wherever you are."
           }
         },
         "slide_tp6Nta": {
           "type": "slide",
           "settings": {
-            "card_heading": "Expert Instructors",
-            "card_text": "Learn from industry professionals with real-world experience."
+            "card_heading": "Build a Job-Ready Portfolio",
+            "card_text": "Move beyond theory with hands-on projects. You won't just learn new skills—you'll apply them to create real work you can showcase to employers"
           }
         },
         "slide_XyMY4M": {
           "type": "slide",
           "settings": {
-            "card_heading": "Flexible Learning",
-            "card_text": "Study at your own pace with 24/7 access to materials."
+            "card_heading": "Earn Recognised Certificates",
+            "card_text": "Receive a certificate of completion for every course you finish. Add valuable credentials to your CV and LinkedIn profile to stand out."
           }
         }
       },
@@ -41,7 +41,7 @@
       ],
       "name": "Hero Section with Slider",
       "settings": {
-        "hero_text": "Bootcamp level quality, on your own time, at a fraction of the cost.",
+        "hero_text": "The skills you need for the career you want.",
         "background_image": "shopify://shop_images/Frame_40627.png",
         "shape_image": "shopify://shop_images/Abstract-Rainbow-Curly-Line-2--Streamline-Variable-Scribbles.png",
         "star_image": "shopify://shop_images/Line-Asterisk--Streamline-Variable-Scribbles.png"
@@ -113,7 +113,7 @@
       ],
       "name": "RH All Collection Cards",
       "settings": {
-        "heading": "Discover our Skill Collections"
+        "heading": "Discover Our Course Bundles"
       }
     }
   },
