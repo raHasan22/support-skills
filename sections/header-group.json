@@ -58,6 +58,10 @@
     },
     "custom_header_XB7yzJ": {
       "type": "custom-header",
+      "custom_css": [
+        ".frame .div .site-logo{max-width: 200px;width: 100%;padding: 20px 0; height: 70px; display: block;}",
+        ".frame .div .site-logo img{max-width: 200px;width: 100%;}"
+      ],
       "name": "Custom Header",
       "settings": {
         "logo": "shopify://shop_images/Nextgen_Learning_Logo-02.png",
