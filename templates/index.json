@@ -569,7 +569,7 @@
       "type": "potential-sec",
       "name": "RH Prove Your Potential",
       "settings": {
-        "heading": "Prove your potential",
+        "heading": "",
         "subheading": "Get Started Today",
         "button_text": "Start for free",
         "button_link": "/account",
