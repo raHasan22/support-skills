@@ -46,99 +46,43 @@
         "padding_bottom_mobile": 30
       }
     },
-    "rh_about_our_partners_nyJCHm": {
-      "type": "rh-about-our-partners",
+    "rh_partners_section_R9kLWk": {
+      "type": "rh-partners-section",
       "blocks": {
-        "partner_logo_BJYcAB": {
+        "partner_logo_giJGTj": {
           "type": "partner_logo",
           "settings": {
-            "logo": "shopify://shop_images/image_3_1.png",
-            "alt_text": "Partner Logo"
+            "partner_image": "shopify://shop_images/Group-1000002626.webp"
           }
         },
-        "partner_logo_HUJWLF": {
+        "partner_logo_x8F6XC": {
           "type": "partner_logo",
           "settings": {
-            "logo": "shopify://shop_images/image_9.png",
-            "alt_text": "Partner Logo"
+            "partner_image": "shopify://shop_images/CPD-QS-CORPORATE-MEMBER-1-1.webp"
           }
         },
-        "partner_logo_A3C8mF": {
+        "partner_logo_9FrWhH": {
           "type": "partner_logo",
           "settings": {
-            "logo": "shopify://shop_images/image_5.png",
-            "alt_text": "Partner Logo"
+            "partner_image": "shopify://shop_images/Group-1000004155.webp"
           }
         },
-        "partner_logo_RwJdpG": {
+        "partner_logo_yMxJLa": {
           "type": "partner_logo",
           "settings": {
-            "logo": "shopify://shop_images/image_6.png",
-            "alt_text": "Partner Logo"
-          }
-        },
-        "partner_logo_ULmpwD": {
-          "type": "partner_logo",
-          "settings": {
-            "logo": "shopify://shop_images/image_7.png",
-            "alt_text": "Partner Logo"
-          }
-        },
-        "partner_logo_Q9AqhU": {
-          "type": "partner_logo",
-          "settings": {
-            "logo": "shopify://shop_images/image_8.png",
-            "alt_text": "Partner Logo"
-          }
-        },
-        "partner_logo_AUF7Rb": {
-          "type": "partner_logo",
-          "settings": {
-            "logo": "shopify://shop_images/image_11.png",
-            "alt_text": "Partner Logo"
-          }
-        },
-        "partner_logo_EwMhrY": {
-          "type": "partner_logo",
-          "settings": {
-            "logo": "shopify://shop_images/image_10.png",
-            "alt_text": "Partner Logo"
-          }
-        },
-        "partner_logo_XCnaiw": {
-          "type": "partner_logo",
-          "settings": {
-            "logo": "shopify://shop_images/image_12.png",
-            "alt_text": "Partner Logo"
-          }
-        },
-        "partner_logo_LpY8jV": {
-          "type": "partner_logo",
-          "settings": {
-            "logo": "shopify://shop_images/image_4_1.png",
-            "alt_text": "Partner Logo"
+            "partner_image": "shopify://shop_images/Group-1000002621.webp"
           }
         }
       },
       "block_order": [
-        "partner_logo_BJYcAB",
-        "partner_logo_HUJWLF",
-        "partner_logo_A3C8mF",
-        "partner_logo_RwJdpG",
-        "partner_logo_ULmpwD",
-        "partner_logo_Q9AqhU",
-        "partner_logo_AUF7Rb",
-        "partner_logo_EwMhrY",
-        "partner_logo_XCnaiw",
-        "partner_logo_LpY8jV"
+        "partner_logo_giJGTj",
+        "partner_logo_x8F6XC",
+        "partner_logo_9FrWhH",
+        "partner_logo_yMxJLa"
       ],
-      "name": "RH About Our Partners",
+      "name": "RH Partners Section",
       "settings": {
-        "title": "Our courses are trusted by industry leaders",
-        "padding_top_desktop": 50,
-        "padding_bottom_desktop": 100,
-        "padding_top_mobile": 30,
-        "padding_bottom_mobile": 60
+        "section_title": "Our courses are trusted by industry leaders"
       }
     },
     "rh_about_site_stats_y6GRQM": {
@@ -317,7 +261,7 @@
     "main",
     "rh_about_hero_dtbe3T",
     "rh_about_after_hero_qNAM48",
-    "rh_about_our_partners_nyJCHm",
+    "rh_partners_section_R9kLWk",
     "rh_about_site_stats_y6GRQM",
     "rh_our_team_iEHKqL",
     "rh_about_site_features_kFGdnP",
