@@ -515,61 +515,25 @@
         "partner_logo_RJQyeJ": {
           "type": "partner_logo",
           "settings": {
-            "partner_image": "shopify://shop_images/Frame_3049.png"
+            "partner_image": "shopify://shop_images/Group-1000002626.webp"
           }
         },
         "partner_logo_MMVfEk": {
           "type": "partner_logo",
           "settings": {
-            "partner_image": "shopify://shop_images/Frame_3050.png"
+            "partner_image": "shopify://shop_images/CPD-QS-CORPORATE-MEMBER-1-1.webp"
           }
         },
         "partner_logo_CC88ib": {
           "type": "partner_logo",
           "settings": {
-            "partner_image": "shopify://shop_images/Frame_3051.png"
+            "partner_image": "shopify://shop_images/Group-1000004155.webp"
           }
         },
         "partner_logo_EjPjJ6": {
           "type": "partner_logo",
           "settings": {
-            "partner_image": "shopify://shop_images/Frame_3052.png"
-          }
-        },
-        "partner_logo_aJbFUp": {
-          "type": "partner_logo",
-          "settings": {
-            "partner_image": "shopify://shop_images/Frame_3053.png"
-          }
-        },
-        "partner_logo_fdYQcp": {
-          "type": "partner_logo",
-          "settings": {
-            "partner_image": "shopify://shop_images/Frame_3054.png"
-          }
-        },
-        "partner_logo_nyMaNF": {
-          "type": "partner_logo",
-          "settings": {
-            "partner_image": "shopify://shop_images/Frame_3055.png"
-          }
-        },
-        "partner_logo_qzBdMf": {
-          "type": "partner_logo",
-          "settings": {
-            "partner_image": "shopify://shop_images/Frame_3056.png"
-          }
-        },
-        "partner_logo_W9m9YE": {
-          "type": "partner_logo",
-          "settings": {
-            "partner_image": "shopify://shop_images/Frame_3057.png"
-          }
-        },
-        "partner_logo_GpRG7c": {
-          "type": "partner_logo",
-          "settings": {
-            "partner_image": "shopify://shop_images/Frame_3058.png"
+            "partner_image": "shopify://shop_images/Group-1000002621.webp"
           }
         }
       },
@@ -577,28 +541,11 @@
         "partner_logo_RJQyeJ",
         "partner_logo_MMVfEk",
         "partner_logo_CC88ib",
-        "partner_logo_EjPjJ6",
-        "partner_logo_aJbFUp",
-        "partner_logo_fdYQcp",
-        "partner_logo_nyMaNF",
-        "partner_logo_qzBdMf",
-        "partner_logo_W9m9YE",
-        "partner_logo_GpRG7c"
+        "partner_logo_EjPjJ6"
       ],
       "name": "RH Partners Section",
       "settings": {
         "section_title": "Unlock Your Team's Potential with 2000+ Accredited Courses!"
-      }
-    },
-    "potential_sec_H8LHap": {
-      "type": "potential-sec",
-      "name": "RH Prove Your Potential",
-      "settings": {
-        "heading": "Prove Your Potential",
-        "subheading": "Get Started Today",
-        "button_text": "Start for free",
-        "button_link": "/account",
-        "image": "shopify://shop_images/Prove_your_potential_24039d32-e226-4245-95d1-85611f6262a5.webp"
       }
     }
   },
@@ -616,7 +563,6 @@
     "rh_skill_difference_aFTTgJ",
     "rh_review_sec_byRwdH",
     "rh_business_and_government_AqneiK",
-    "rh_partners_section_PEnkqk",
-    "potential_sec_H8LHap"
+    "rh_partners_section_PEnkqk"
   ]
 }
