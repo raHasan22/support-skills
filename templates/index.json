@@ -51,7 +51,7 @@
             "category": "Business",
             "category_link": "",
             "icon": "shopify://shop_images/Subject_category.png",
-            "image": "shopify://shop_images/AI.png",
+            "image": "shopify://shop_images/Category_-_Business.webp",
             "color_start": "#da48e7",
             "color_end": "#f4a7fc"
           }
@@ -84,7 +84,7 @@
             "category": "Cloud Computing",
             "category_link": "",
             "icon": "shopify://shop_images/Subject_category_5.png",
-            "image": "shopify://shop_images/AI_3_1.png",
+            "image": "shopify://shop_images/Category_-_Cloud_Computing.webp",
             "color_start": "#e7313f",
             "color_end": "#ffa3ab"
           }
