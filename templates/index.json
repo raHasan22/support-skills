@@ -18,7 +18,7 @@
             "category": "Data Science",
             "category_link": "",
             "icon": "shopify://shop_images/Subject_category.png",
-            "image": "shopify://shop_images/AI.png",
+            "image": "shopify://shop_images/Category_-_Data_Science.webp",
             "color_start": "#da48e7",
             "color_end": "#f4a7fc"
           }
@@ -103,10 +103,10 @@
         "category_fgRpBE": {
           "type": "category",
           "settings": {
-            "category": "Artificial Intelligence",
+            "category": "Dev Ops",
             "category_link": "",
             "icon": "shopify://shop_images/Group.png",
-            "image": "shopify://shop_images/3_21.png",
+            "image": "shopify://shop_images/Category_-_Dev_Ops.webp",
             "color_start": "#ed5802",
             "color_end": "#feb387"
           }
