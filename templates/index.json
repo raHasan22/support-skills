@@ -333,7 +333,7 @@
         "testimonial_wUTdgx": {
           "type": "testimonial",
           "settings": {
-            "image": "shopify://shop_images/Frame_40576.png",
+            "image": "shopify://shop_images/Learners_Love_SupportSkills_1.webp",
             "review_text": "“It was a great learning opportunity, and it was also engaging and informative. I enjoyed my time.”",
             "name": "Stephen Olajugbagbe",
             "location": ""
@@ -342,7 +342,7 @@
         "testimonial_f3ieLG": {
           "type": "testimonial",
           "settings": {
-            "image": "shopify://shop_images/Frame_40576.png",
+            "image": "shopify://shop_images/Learners_Love_SupportSkills_2.webp",
             "review_text": "“The courses was so impactful and good resources to develop ur skills in the health care sector”",
             "name": "Nofisat Adeyinka",
             "location": ""
@@ -351,7 +351,7 @@
         "testimonial_pid4fB": {
           "type": "testimonial",
           "settings": {
-            "image": "shopify://shop_images/Frame_40576.png",
+            "image": "shopify://shop_images/Learners_Love_SupportSkills_3.webp",
             "review_text": "“Lovely! Easy to read and easy to understand.”",
             "name": " Ifeanyi Eweluso",
             "location": ""
@@ -360,7 +360,7 @@
         "testimonial_kgcDhj": {
           "type": "testimonial",
           "settings": {
-            "image": "shopify://shop_images/Frame_40576.png",
+            "image": "shopify://shop_images/Learners_Love_SupportSkills_4.webp",
             "review_text": "“ I am enjoying the training. It's really nice and easy to understand.”",
             "name": "Nelson Zino Monnitey",
             "location": ""
@@ -377,6 +377,7 @@
         },
         "testimonial_NqmJLi": {
           "type": "testimonial",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Frame_40576.png",
             "review_text": "“The course is highly informative and carefully presented, I recommend it to everyone transiting into Health and social Care sector.”",
@@ -569,11 +570,11 @@
       "type": "potential-sec",
       "name": "RH Prove Your Potential",
       "settings": {
-        "heading": "",
+        "heading": "Prove Your Potential",
         "subheading": "Get Started Today",
         "button_text": "Start for free",
         "button_link": "/account",
-        "image": "shopify://shop_images/Frame_40604.png"
+        "image": "shopify://shop_images/Prove_your_potential_24039d32-e226-4245-95d1-85611f6262a5.webp"
       }
     }
   },
