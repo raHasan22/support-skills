@@ -116,6 +116,8 @@
           "settings": {
             "category": "Digital marketing",
             "category_link": "",
+            "icon": "shopify://shop_images/Group.png",
+            "image": "shopify://shop_images/Category_-_Digital_Marketing.webp",
             "color_start": "#da48e7",
             "color_end": "#f4a7fc"
           }
