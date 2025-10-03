@@ -56,17 +56,6 @@
             "color_end": "#c88bfe"
           }
         },
-        "category_riWXNY": {
-          "type": "category",
-          "settings": {
-            "category": "Product Management",
-            "category_link": "",
-            "icon": "shopify://shop_images/Subject_category_4.png",
-            "image": "shopify://shop_images/AI_2_1.png",
-            "color_start": "#3f3ad2",
-            "color_end": "#8e94fd"
-          }
-        },
         "category_yAdeTB": {
           "type": "category",
           "settings": {
@@ -150,7 +139,6 @@
         "category_eKPECN",
         "category_E8cJNN",
         "category_iEqUpD",
-        "category_riWXNY",
         "category_yAdeTB",
         "category_kbDVgU",
         "category_fgRpBE",
