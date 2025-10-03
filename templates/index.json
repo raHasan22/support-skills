@@ -23,17 +23,6 @@
             "color_end": "#f4a7fc"
           }
         },
-        "category_KdFMhX": {
-          "type": "category",
-          "settings": {
-            "category": "Programming & Development",
-            "category_link": "",
-            "icon": "shopify://shop_images/Subject_category_1.png",
-            "image": "shopify://shop_images/Untitled_design_1_1.png",
-            "color_start": "#07983f",
-            "color_end": "#8fd7ac"
-          }
-        },
         "category_eKPECN": {
           "type": "category",
           "settings": {
@@ -95,7 +84,7 @@
             "category": "Programming & Development",
             "category_link": "",
             "icon": "shopify://shop_images/Subject_category_1.png",
-            "image": "shopify://shop_images/Untitled_design_1_1.png",
+            "image": "shopify://shop_images/Category_-_Programming_and_Development.webp",
             "color_start": "#07983f",
             "color_end": "#8fd7ac"
           }
@@ -143,11 +132,20 @@
             "color_start": "#da48e7",
             "color_end": "#f4a7fc"
           }
+        },
+        "category_KeFyPW": {
+          "type": "category",
+          "settings": {
+            "category": "Social Media",
+            "category_link": "",
+            "icon": "shopify://shop_images/Subject_category_4.png",
+            "color_start": "#da48e7",
+            "color_end": "#f4a7fc"
+          }
         }
       },
       "block_order": [
         "category_yg86hp",
-        "category_KdFMhX",
         "category_eKPECN",
         "category_E8cJNN",
         "category_iEqUpD",
@@ -157,7 +155,8 @@
         "category_fgRpBE",
         "category_RgNdDc",
         "category_tVdajg",
-        "category_JhEEAy"
+        "category_JhEEAy",
+        "category_KeFyPW"
       ],
       "name": "RH Hero support slills",
       "settings": {
