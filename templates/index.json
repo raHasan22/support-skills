@@ -132,6 +132,16 @@
             "color_start": "#da48e7",
             "color_end": "#f4a7fc"
           }
+        },
+        "category_JhEEAy": {
+          "type": "category",
+          "settings": {
+            "category": "Product Management",
+            "category_link": "",
+            "icon": "shopify://shop_images/Subject_category_3.png",
+            "color_start": "#da48e7",
+            "color_end": "#f4a7fc"
+          }
         }
       },
       "block_order": [
@@ -145,7 +155,8 @@
         "category_kbDVgU",
         "category_fgRpBE",
         "category_RgNdDc",
-        "category_tVdajg"
+        "category_tVdajg",
+        "category_JhEEAy"
       ],
       "name": "RH Hero support slills",
       "settings": {
