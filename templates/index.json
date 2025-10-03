@@ -110,6 +110,15 @@
             "color_start": "#ed5802",
             "color_end": "#feb387"
           }
+        },
+        "category_RgNdDc": {
+          "type": "category",
+          "settings": {
+            "category": "Digital marketing",
+            "category_link": "",
+            "color_start": "#da48e7",
+            "color_end": "#f4a7fc"
+          }
         }
       },
       "block_order": [
@@ -121,7 +130,8 @@
         "category_riWXNY",
         "category_yAdeTB",
         "category_kbDVgU",
-        "category_fgRpBE"
+        "category_fgRpBE",
+        "category_RgNdDc"
       ],
       "name": "RH Hero support slills",
       "settings": {
