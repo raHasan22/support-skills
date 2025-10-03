@@ -24,7 +24,7 @@
         "menu_CMnRYw": {
           "type": "menu",
           "settings": {
-            "heading": "SupportSkills Schools",
+            "heading": "Pages",
             "menu": "main-menu"
           }
         },
@@ -38,17 +38,8 @@
         "menu_kBbeXW": {
           "type": "menu",
           "settings": {
-            "heading": "Only at SupportSkills",
+            "heading": "Only at Nextgen",
             "menu": "customer-account-main-menu"
-          }
-        },
-        "certificate_tMbRHd": {
-          "type": "certificate",
-          "settings": {
-            "heading": "News Letter",
-            "description": "Subscribe to get further update from us",
-            "placeholder": "Your Email",
-            "button_text": "Subscribe"
           }
         }
       },
@@ -56,10 +47,13 @@
         "menu_FJLrpL",
         "menu_CMnRYw",
         "menu_zrtjDg",
-        "menu_kBbeXW",
-        "certificate_tMbRHd"
+        "menu_kBbeXW"
       ],
       "settings": {
+        "newsletter_heading": "Subscribe to our newsletter",
+        "newsletter_description": "Stay up to date with our latest news, updates, and exclusive offers.",
+        "newsletter_placeholder": "Enter your email",
+        "newsletter_button_text": "Subscribe",
         "legal_menu": "customer-account-main-menu",
         "show_social_icons": true,
         "cookie_notice": "We use cookies and other data collection technologies to provide the best experience for our customers."
