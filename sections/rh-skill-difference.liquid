@@ -17,13 +17,39 @@
       </article>
     </div>
   </article>
-  <img
-    src="{{ section.settings.feature_image | img_url: 'master' }}"
-    alt="{{ section.settings.feature_image_alt }}"
-    class="feature-image"
-  >
+  {% if section.settings.video_url != blank %}
+    <div class="video-trigger" data-video-url="{{ section.settings.video_url }}">
+      <img
+        src="{{ section.settings.feature_image | img_url: 'master' }}"
+        alt="{{ section.settings.feature_image_alt }}"
+        class="feature-image clickable"
+      >
+      <div class="play-button-overlay">
+        <svg class="play-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="12" cy="12" r="12" fill="rgba(255, 255, 255, 0.9)"/>
+          <polygon points="10,8 16,12 10,16" fill="#0d1216"/>
+        </svg>
+      </div>
+    </div>
+  {% else %}
+    <img
+      src="{{ section.settings.feature_image | img_url: 'master' }}"
+      alt="{{ section.settings.feature_image_alt }}"
+      class="feature-image"
+    >
+  {% endif %}
  </div>
 </section>
+
+<!-- Video Popup Modal -->
+<div id="video-popup" class="video-popup-overlay" style="display: none;">
+  <div class="video-popup-container">
+    <button class="video-popup-close" aria-label="Close video">&times;</button>
+    <div class="video-popup-content">
+      <div id="video-container"></div>
+    </div>
+  </div>
+</div>
 
   <style>
       .skills-difference {
@@ -97,6 +123,125 @@
         flex: 1 1 auto;
       }
 
+      .video-trigger {
+        position: relative;
+        cursor: pointer;
+        display: inline-block;
+        transition: transform 0.3s ease;
+      }
+
+      .video-trigger:hover {
+        transform: scale(1.02);
+      }
+
+      .feature-image.clickable {
+        cursor: pointer;
+      }
+
+      .play-button-overlay {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80px;
+        height: 80px;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+      }
+
+      .video-trigger:hover .play-button-overlay {
+        opacity: 0.8;
+      }
+
+      .play-icon {
+        width: 100%;
+        height: 100%;
+        filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+      }
+
+      /* Video Popup Styles */
+      .video-popup-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        z-index: 9999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+      }
+
+      .video-popup-overlay.show {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .video-popup-container {
+        position: relative;
+        max-width: 90vw;
+        max-height: 90vh;
+        width: 800px;
+        background: #000;
+        border-radius: 8px;
+        overflow: hidden;
+        transform: scale(0.8);
+        transition: transform 0.3s ease;
+      }
+
+      .video-popup-overlay.show .video-popup-container {
+        transform: scale(1);
+      }
+
+      .video-popup-close {
+        position: absolute;
+        top: -40px;
+        right: 0;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 30px;
+        cursor: pointer;
+        z-index: 10001;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        transition: background-color 0.3s ease;
+      }
+
+      .video-popup-close:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+      }
+
+      .video-popup-content {
+        position: relative;
+        width: 100%;
+        padding-bottom: 56.25%; /* 16:9 aspect ratio */
+        height: 0;
+      }
+
+      #video-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      #video-container iframe,
+      #video-container video {
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+
       @media (max-width: 991px) {
         .skills-difference {
           padding: 100px 20px;
@@ -126,6 +271,23 @@
 
         .feature-image {
           max-width: 100%;
+        }
+
+        .video-popup-container {
+          width: 95vw;
+          max-width: 95vw;
+        }
+
+        .video-popup-close {
+          top: -35px;
+          font-size: 25px;
+          width: 35px;
+          height: 35px;
+        }
+
+        .play-button-overlay {
+          width: 60px;
+          height: 60px;
         }
       }
     </style>
@@ -174,6 +336,12 @@
       "id": "feature_image_alt",
       "label": "Feature Image Alt Text",
       "default": "Support Skills Illustration"
+    },
+    {
+      "type": "url",
+      "id": "video_url",
+      "label": "Video URL",
+      "info": "Enter the video URL (YouTube, Vimeo, or direct video file)"
     }
   ],
   "presets": [
@@ -192,3 +360,110 @@
   ]
 }
 {% endschema %}
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const videoTrigger = document.querySelector('.video-trigger');
+  const videoPopup = document.getElementById('video-popup');
+  const videoContainer = document.getElementById('video-container');
+  const closeButton = document.querySelector('.video-popup-close');
+
+  // Function to get video embed URL
+  function getVideoEmbedUrl(url) {
+    // YouTube URL patterns
+    if (url.includes('youtube.com/watch?v=')) {
+      const videoId = url.split('v=')[1].split('&')[0];
+      return `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
+    }
+    if (url.includes('youtu.be/')) {
+      const videoId = url.split('youtu.be/')[1].split('?')[0];
+      return `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
+    }
+    
+    // Vimeo URL patterns
+    if (url.includes('vimeo.com/')) {
+      const videoId = url.split('vimeo.com/')[1].split('?')[0];
+      return `https://player.vimeo.com/video/${videoId}?autoplay=1`;
+    }
+    
+    // Direct video file or other embeddable URLs
+    return url;
+  }
+
+  // Function to create video element
+  function createVideoElement(url) {
+    const embedUrl = getVideoEmbedUrl(url);
+    
+    // Check if it's a direct video file
+    if (url.match(/\.(mp4|webm|ogg|mov|avi)$/i)) {
+      return `<video controls autoplay>
+                <source src="${url}" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>`;
+    } else {
+      // Assume it's an embeddable URL (YouTube, Vimeo, etc.)
+      return `<iframe src="${embedUrl}" 
+                      frameborder="0" 
+                      allow="autoplay; fullscreen; picture-in-picture" 
+                      allowfullscreen>
+              </iframe>`;
+    }
+  }
+
+  // Function to show video popup
+  function showVideoPopup(videoUrl) {
+    if (!videoUrl) return;
+    
+    const videoElement = createVideoElement(videoUrl);
+    videoContainer.innerHTML = videoElement;
+    
+    videoPopup.style.display = 'flex';
+    setTimeout(() => {
+      videoPopup.classList.add('show');
+    }, 10);
+    
+    // Prevent body scroll
+    document.body.style.overflow = 'hidden';
+  }
+
+  // Function to hide video popup
+  function hideVideoPopup() {
+    videoPopup.classList.remove('show');
+    setTimeout(() => {
+      videoPopup.style.display = 'none';
+      videoContainer.innerHTML = '';
+    }, 300);
+    
+    // Restore body scroll
+    document.body.style.overflow = '';
+  }
+
+  // Event listeners
+  if (videoTrigger) {
+    videoTrigger.addEventListener('click', function() {
+      const videoUrl = this.getAttribute('data-video-url');
+      showVideoPopup(videoUrl);
+    });
+  }
+
+  if (closeButton) {
+    closeButton.addEventListener('click', hideVideoPopup);
+  }
+
+  // Close popup when clicking outside the video container
+  if (videoPopup) {
+    videoPopup.addEventListener('click', function(e) {
+      if (e.target === this) {
+        hideVideoPopup();
+      }
+    });
+  }
+
+  // Close popup with Escape key
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && videoPopup.classList.contains('show')) {
+      hideVideoPopup();
+    }
+  });
+});
+</script>
