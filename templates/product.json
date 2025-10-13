@@ -168,6 +168,7 @@
         "instructor_YhcpJx",
         "instructor_4bCfLV"
       ],
+      "disabled": true,
       "name": "RH Instructor Slider",
       "settings": {
         "heading": "Taught By The Best"
@@ -209,6 +210,7 @@
         "review_CWarjm",
         "review_6aaQ6x"
       ],
+      "disabled": true,
       "name": "RH Student Reviews",
       "settings": {
         "title": "Student Reviews"
@@ -220,8 +222,8 @@
         "hero_block_PmhTEA": {
           "type": "hero_block",
           "settings": {
-            "heading": "Demonstrate proficiency with practical projects",
-            "description": "Projects are based on real-world scenarios and challenges, allowing you to apply the skills you learn to practical situations, while giving you real hands-on experience.",
+            "heading": "Learn by Doing, Not Just Watching",
+            "description": "Go from theory to practice with hands-on projects that build real-world skills and a job-ready portfolio.",
             "image": "shopify://shop_images/Frame_40571.png",
             "feature_1_icon": "shopify://shop_images/3f877251a2cc89eced48b6684f7916039f780f56.svg",
             "feature_1_text": "Hands-on project-based approach",
@@ -234,8 +236,8 @@
         "hero_block_abW8x8": {
           "type": "hero_block",
           "settings": {
-            "heading": "Top-tier services to ensure learner success",
-            "description": "Reviewers provide timely and constructive feedback on your project submissions, highlighting areas of improvement and offering practical tips to enhance your work.",
+            "heading": "Support That Has Your Back",
+            "description": "Get unstuck with helpful feedback on your projects from tutors and connect with a community of fellow learners and mentors.",
             "image": "shopify://shop_images/Frame_40572.png",
             "feature_1_icon": "shopify://shop_images/3f877251a2cc89eced48b6684f7916039f780f56.svg",
             "feature_1_text": "Get help from subject matter experts",
@@ -252,8 +254,8 @@
       ],
       "name": "RH SinglePage SupportSkills Difference",
       "settings": {
-        "section_title": "The SupportSkills Difference",
-        "section_description": "Combine technology training for employees with industry experts, mentors, and projects, for critical thinking that pushes innovation. Our proven upskilling system goes after success—relentlessly."
+        "section_title": "The NextGen Learning Difference",
+        "section_description": "Real-world learning that blends expert-led content, and structured mentorship — designed to turn skills into measurable results."
       }
     },
     "rh_support_skills_pricing_7Gf3aV": {
@@ -304,6 +306,7 @@
         "pricing_plan_7rNGjc",
         "pricing_plan_aAq76k"
       ],
+      "disabled": true,
       "name": "RH Pricing Plans",
       "settings": {
         "title": "Enroll in Data Engineering with AWS.Choose the plan that works for you"
@@ -351,18 +354,18 @@
         "primary_button_link": "",
         "secondary_button_text": "Contact us",
         "secondary_button_link": "",
-        "government_heading": "SupportSkills For Government",
-        "government_description": "SupportSkills creates job opportunities with GDP impact for nations embracing the global digital era.",
+        "government_heading": "Ready to build your future?",
+        "government_description": "Start learning in-demand skills today.",
         "government_image": "shopify://shop_images/07426fad3833f829a0af4fd26d7f9add03bddb64.svg",
-        "government_button_text": "Learn more",
-        "government_button_link": ""
+        "government_button_text": "Start Now",
+        "government_button_link": "shopify://collections/all"
       }
     },
     "rh_products_section_AkmeEq": {
       "type": "rh-products-section",
       "name": "RH Recommended Courses",
       "settings": {
-        "title": "Your subscription also includes",
+        "title": "Related Course",
         "collection": "all-courses",
         "product_limit": 12,
         "default_level": "Beginner",
